@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ls -al</title>
+    <link>https://5hyn3.github.io/posts/</link>
+    <description>Recent content in Posts on ls -al</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
+    <lastBuildDate>Sat, 18 Nov 2017 10:57:55 -0500</lastBuildDate>
+    
+	<atom:link href="https://5hyn3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>移転について</title>
+      <link>https://5hyn3.github.io/posts/move-site/</link>
+      <pubDate>Sat, 18 Nov 2017 10:57:55 -0500</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/move-site/</guid>
+      <description>hatenaの旧ブログからこちらに移転しました。今後共よろしくお願いします。</description>
+    </item>
+    
+  </channel>
+</rss>
