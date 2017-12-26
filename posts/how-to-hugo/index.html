@@ -79,12 +79,12 @@
 
 
 
-<section id="home">
-        <ul>
-          
-          <li class="first">
-            <h1><a href="https://5hyn3.github.io/posts/how-to-hugo/" title="Hugoの使い方(ブログ更新編)">Hugoの使い方(ブログ更新編)</a></h1> 
-            <aside>
+<article>
+
+    <h1>Hugoの使い方(ブログ更新編)</h1>
+
+    
+        <aside>
     <ul>
         <li>
             <time class="post-date" datetime="2017-12-26T23:10:12&#43;09:00">
@@ -124,57 +124,110 @@
         <li>1 min read</li>
     </ul>
 </aside>
-            <p><p>自分用メモとして、また、同じようにHugoを使ってブログを書きたい人向けに、Hugoの使い方を簡単にまとめました。なお、ブログ立ち上げについてはここでは取り扱いません。
-</p></p>
-            
-            <a href="https://5hyn3.github.io/posts/how-to-hugo/">Read more&hellip;</a>
-            
-          </li>
-          
-          <li >
-            <h1><a href="https://5hyn3.github.io/posts/from-now-on/" title="今後">今後</a></h1> 
-            <aside>
+    
+
+    <p>自分用メモとして、また、同じようにHugoを使ってブログを書きたい人向けに、Hugoの使い方を簡単にまとめました。なお、ブログ立ち上げについてはここでは取り扱いません。
+</p>
+
+<hr />
+
+<ol>
+<li><p>新しい記事を生成する</p>
+
+<p>　サイトのルートディレクトリで以下のコマンドを実行します</p>
+
+<pre><code>hugo new post/&lt;記事のタイトル&gt;.md
+</code></pre>
+
+<p>これで、content/postに&lt;記事のタイトル&gt;.mdが生成されます。</p></li>
+
+<li><p>serverの起動</p>
+
+<p>　ディレクトリを移動する前に、続いて以下のコマンドを入力します</p>
+
+<pre><code>hugo server -D
+</code></pre>
+
+<p>これでhugoのサーバーがdraft=trueな記事も含めて表示する設定でローカル上に起動しました。ライブリロードが可能なので、変更をリアルタイムに確認しながらの執筆が可能です。</p></li>
+
+<li><p>記事の設定を編集する</p>
+
+<p>　生成した記事を開くと&mdash;で囲まれた設定があるのが見えます。これらを設定していきます。主要なものは以下の様なものでしょうか</p>
+
+<ul>
+<li>title
+
+<ul>
+<li>記事のタイトルを設定します。</li>
+</ul></li>
+<li>date
+
+<ul>
+<li>記事の執筆日時を設定します。</li>
+</ul></li>
+<li>categories
+
+<ul>
+<li>記事のカテゴリーを設定します。[&ldquo;hoge&rdquo;,&ldquo;fuga&rdquo;]といった配列の形式で設定できます。</li>
+</ul></li>
+<li>tags
+
+<ul>
+<li>記事のカテゴリーを設定します。[&ldquo;hoge&rdquo;,&ldquo;fuga&rdquo;]といった配列の形式で設定できます。</li>
+</ul></li>
+<li>draft
+
+<ul>
+<li>記事が下書きかどうかを設定します。trueで下書きと設定されます。デフォルトはtrueとなっており、下書きとなっています。下書きの記事はhugoによってpublicフォルダ以下に生成されないので、完成したらこの設定を忘れずにfalseにする必要があります。</li>
+</ul></li>
+</ul></li>
+
+<li><p>記事を書く</p>
+
+<p>　ブラウザで確認しながら記事を書きます。満足行く記事が完成したら、忘れずにdraftの設定をfalseにしましょう。</p></li>
+
+<li><p>生成する</p>
+
+<p>　ここまで出来たら後は生成するだけです。ルートディレクトリで以下のコマンドを実行します</p>
+
+<pre><code>hugo
+</code></pre>
+
+<p>これでpublicフォルダ以下にサイトが生成されました。</p></li>
+
+<li><p>デプロイする</p>
+
+<p>サイトの実体はpublicフォルダ以下にあるので、これをデプロイしてください。私の場合はgithub pagesを使っているので</p>
+
+<ol>
+<li>publicフォルダで
+<code>
+git add -A
+</code></li>
+<li>適当なメッセージを付けてコミット</li>
+<li>push</li>
+</ol>
+
+<p>となります。</p></li>
+</ol>
+
+<p>以上でブログの更新は完了です、お疲れ様でした。</p>
+
+</article>
+
+
+<section class="post-nav">
     <ul>
+        
         <li>
-            <time class="post-date" datetime="2017-11-20T01:54:42&#43;09:00">
-                Nov 20nd, 2017
-            </time>
+            <a href="https://5hyn3.github.io/posts/from-now-on/"><i class="fa fa-chevron-circle-left"></i> 今後</a>
         </li>
         
         
-
-        
-
-        <li>1 min read</li>
     </ul>
-</aside>
-            <p>以前は個人的に調べた技術系の記事を書いていきたいな～と考え実際にそのようにしていたのですが、現在ではその役割はQiitaに持って行かれ、更新が滞っていました。ブログも移転したことだし、今後はそういった「完成した技術のまとめ記事」だけでなく、ちょっとした進捗具合とか、気になった技術に対する考察とか、そういったものも記事にしていき、より日記的な物に近い形でやっていこうかな～と考えています。とりあえず、旧ブログから有用そうな情報をサルベージすることから初めましょうか。</p>
-            
-          </li>
-          
-          <li >
-            <h1><a href="https://5hyn3.github.io/posts/move-site/" title="移転について">移転について</a></h1> 
-            <aside>
-    <ul>
-        <li>
-            <time class="post-date" datetime="2017-11-18T10:57:55-05:00">
-                Nov 18nd, 2017
-            </time>
-        </li>
-        
-        
+</section>
+    
 
-        
-
-        <li>1 min read</li>
-    </ul>
-</aside>
-            <p>hatenaの旧ブログからこちらに移転しました。今後共よろしくお願いします。</p>
-            
-          </li>
-          
-        </ul>
-      </section>
 
 
 
