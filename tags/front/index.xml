@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Tue, 26 Dec 2017 23:10:12 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 11 Feb 2018 22:20:07 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/front/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoの機能</title>
+      <link>https://5hyn3.github.io/posts/function-of-hugo-introduced/</link>
+      <pubDate>Sun, 11 Feb 2018 22:20:07 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/function-of-hugo-introduced/</guid>
+      <description>&lt;p&gt;ブログ執筆のために便利なHugoの機能を幾つか紹介します。適宜追記予定。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugoの使い方(ブログ更新編)</title>
