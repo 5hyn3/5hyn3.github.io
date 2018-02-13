@@ -96,6 +96,59 @@
         <ul>
           
           <li class="first">
+            <h1><a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang/" title="NEMAPIをGo言語で叩く">NEMAPIをGo言語で叩く</a></h1> 
+            <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-02-13T23:12:51&#43;09:00">
+                Feb 13nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/golang/">#Golang</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/nem/">#NEM</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/learning/">#learning</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+            <p>現在Go言語を勉強中です。
+一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。
+ソースコード package main import ( &#34;fmt&#34; &#34;io/ioutil&#34; &#34;net/http&#34; ) func main() { resp, err := http.Get(&#34;http://alice2.nem.ninja:7890/heartbeat&#34;) if err != nil { fmt.Println(err) return } defer resp.Body.Close() execute(resp) } func execute(response *http.Response) { body, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Println(err) return } fmt.Println(string(body)) } 実行結果 {&#34;code&#34;:1,&#34;type&#34;:2,&#34;message&#34;:&#34;ok&#34;} 解説 ソースコードは殆ど参考元そのままです。
+http.Get()で指定URLのレスポンスを取得し、execute()でbody要素を読み出し
+文字列として出力しています。deferを利用し、最後にきちんとcloseします。
+今回のコードではスーパーノードのハートビートを確認しました。
+実行時点では正しく動作していることがわかります。
+参考 https://qiita.com/Rompei/items/cb6a1a77795264e64abc</p>
+            
+          </li>
+          
+          <li >
             <h1><a href="https://5hyn3.github.io/posts/function-of-hugo-introduced/" title="Hugoの機能">Hugoの機能</a></h1> 
             <aside>
     <ul>
