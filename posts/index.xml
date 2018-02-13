@@ -18,14 +18,9 @@
       <pubDate>Tue, 13 Feb 2018 23:12:51 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang/</guid>
-      <description>現在Go言語を勉強中です。
+      <description>&lt;p&gt;現在Go言語を勉強中です。&lt;br /&gt;
 一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。
-ソースコード package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; ) func main() { resp, err := http.Get(&amp;#34;http://alice2.nem.ninja:7890/heartbeat&amp;#34;) if err != nil { fmt.Println(err) return } defer resp.Body.Close() execute(resp) } func execute(response *http.Response) { body, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Println(err) return } fmt.Println(string(body)) } 実行結果 {&amp;#34;code&amp;#34;:1,&amp;#34;type&amp;#34;:2,&amp;#34;message&amp;#34;:&amp;#34;ok&amp;#34;} 解説 ソースコードは殆ど参考元そのままです。
-http.Get()で指定URLのレスポンスを取得し、execute()でbody要素を読み出し
-文字列として出力しています。deferを利用し、最後にきちんとcloseします。
-今回のコードではスーパーノードのハートビートを確認しました。
-実行時点では正しく動作していることがわかります。
-参考 https://qiita.com/Rompei/items/cb6a1a77795264e64abc</description>
+&lt;/p&gt;</description>
     </item>
     
     <item>
