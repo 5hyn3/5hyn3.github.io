@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/posts/</loc>
-    <lastmod>2018-02-14T23:33:07+09:00</lastmod>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
   </url>
   
   <url>
@@ -17,6 +17,11 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/</loc>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
   </url>
   
   <url>
@@ -62,7 +67,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/golang/</loc>
-    <lastmod>2018-02-14T23:33:07+09:00</lastmod>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -74,7 +79,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/learning/</loc>
-    <lastmod>2018-02-14T23:33:07+09:00</lastmod>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -86,13 +91,13 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/nem/</loc>
-    <lastmod>2018-02-14T23:33:07+09:00</lastmod>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://5hyn3.github.io/categories/programming/</loc>
-    <lastmod>2018-02-14T23:33:07+09:00</lastmod>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -110,7 +115,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/</loc>
-    <lastmod>2018-02-14T23:33:07+09:00</lastmod>
+    <lastmod>2018-02-16T01:31:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   

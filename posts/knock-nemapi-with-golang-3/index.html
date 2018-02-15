@@ -1,0 +1,354 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>NEMAPIをGo言語で叩く(3)</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-02-16T01:31:52&#43;09:00">
+                Feb 16nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/golang/">#Golang</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/nem/">#NEM</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/learning/">#learning</a>
+                
+            </em>
+        </li>
+        
+
+        <li>2 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>今回はGo言語の機能である「goroutine」を使います。<br />
+</p>
+
+<h2 id="ソースコード">ソースコード</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+    <span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Heartbeat</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Code</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;code&#34;`</span>
+    <span style="color:#a6e22e">Type</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+    <span style="color:#a6e22e">Message</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;message&#34;`</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span> <span style="color:#66d9ef">chan</span> <span style="color:#a6e22e">Heartbeat</span>, <span style="color:#a6e22e">err_c</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">error</span>) {
+    <span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://alice2.nem.ninja:7890/heartbeat&#34;</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">err_c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">err</span>
+        <span style="color:#66d9ef">return</span>
+    }
+
+    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+
+    <span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">err_c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">err</span>
+        <span style="color:#66d9ef">return</span>
+    }
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">heartbeat</span> <span style="color:#a6e22e">Heartbeat</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">body</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">heartbeat</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">err_c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">err</span>
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">result_c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">heartbeat</span>
+    }
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">result_c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#a6e22e">Heartbeat</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">err_c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">error</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span>, <span style="color:#a6e22e">err_c</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;main&#34;</span>)
+    <span style="color:#66d9ef">select</span> {
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">result_c</span>:
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">result</span>)
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">err_c</span>:
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+    }
+}</code></pre></div>
+<h2 id="実行結果">実行結果</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">main
+{1 2 ok}</code></pre></div>
+<h2 id="解説">解説</h2>
+
+<p>これは<u><a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/">こちらの記事</a></u>で紹介したソースコードを非同期化したものです。<br />
+実行結果から、APIを叩くため時間のかかるget_heartbeat()が非同期で実行されているため、メインスレッドで実行しているfmt.Println(&ldquo;main&rdquo;)の結果が先に出力されているのがわかります。</p>
+
+<hr />
+
+<h1 id="応用">応用</h1>
+
+<p><u><a href="https://qiita.com/nem_takanobu">Taka Nobu氏</a></u>の
+<u><a href="https://qiita.com/nem_takanobu/items/002dbe8dfd93cd19c5b1">ノード接続に失敗した場合に別ノードを自動選択するプログラム</a></u>をGo言語で実装してみます。</p>
+
+<h2 id="ソースコード-1">ソースコード</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+    <span style="color:#e6db74">&#34;math/rand&#34;</span>
+    <span style="color:#e6db74">&#34;net/http&#34;</span>
+    <span style="color:#e6db74">&#34;time&#34;</span>
+)
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Heartbeat</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Code</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;code&#34;`</span>
+    <span style="color:#a6e22e">Type</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+    <span style="color:#a6e22e">Message</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;message&#34;`</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get_endpoint</span>() <span style="color:#66d9ef">string</span> {
+    <span style="color:#75715e">/*
+</span><span style="color:#75715e">    実用する場合はこちら
+</span><span style="color:#75715e">    NODES := [...]string{
+</span><span style="color:#75715e">        &#34;alice2.nem.ninja:7890&#34;,
+</span><span style="color:#75715e">        &#34;alice3.nem.ninja:7890&#34;,
+</span><span style="color:#75715e">        &#34;alice4.nem.ninja:7890&#34;,
+</span><span style="color:#75715e">        &#34;alice5.nem.ninja:7890&#34;,
+</span><span style="color:#75715e">        &#34;alice6.nem.ninja:7890&#34;,
+</span><span style="color:#75715e">        &#34;alice7.nem.ninja:7890&#34;};
+</span><span style="color:#75715e">    */</span>
+    <span style="color:#75715e">//動作確認用、foo～fugaは無効なノード
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">NODES</span> <span style="color:#f92672">:=</span> [<span style="color:#f92672">...</span>]<span style="color:#66d9ef">string</span>{
+        <span style="color:#e6db74">&#34;foo&#34;</span>,
+        <span style="color:#e6db74">&#34;bar&#34;</span>,
+        <span style="color:#e6db74">&#34;baz&#34;</span>,
+        <span style="color:#e6db74">&#34;piyo&#34;</span>,
+        <span style="color:#e6db74">&#34;fuga&#34;</span>,
+        <span style="color:#e6db74">&#34;alice7.nem.ninja:7890&#34;</span>}
+    <span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Seed</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>().<span style="color:#a6e22e">UnixNano</span>())
+    <span style="color:#a6e22e">target_node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">NODES</span>[<span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Intn</span>(len(<span style="color:#a6e22e">NODES</span>))]
+    <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">target_node</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/heartbeat&#34;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">endpoint</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span> <span style="color:#66d9ef">chan</span> <span style="color:#a6e22e">Heartbeat</span>, <span style="color:#a6e22e">err_c</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">error</span>) {
+    <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">get_endpoint</span>()
+    <span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">endpoint</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+        <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span>, <span style="color:#a6e22e">err_c</span>)
+        <span style="color:#66d9ef">return</span>
+    }
+
+    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+
+    <span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+        <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span>, <span style="color:#a6e22e">err_c</span>)
+        <span style="color:#66d9ef">return</span>
+    }
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">heartbeat</span> <span style="color:#a6e22e">Heartbeat</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">body</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">heartbeat</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+        <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span>, <span style="color:#a6e22e">err_c</span>)
+        <span style="color:#66d9ef">return</span>
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">result_c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">heartbeat</span>
+    }
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">result_c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#a6e22e">Heartbeat</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">err_c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">error</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get_heartbeat</span>(<span style="color:#a6e22e">result_c</span>, <span style="color:#a6e22e">err_c</span>)
+    <span style="color:#66d9ef">select</span> {
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">result_c</span>:
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">result</span>)
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">err_c</span>:
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+    }
+}</code></pre></div>
+<h2 id="実行結果-1">実行結果</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">Get http://baz/heartbeat: dial tcp: lookup baz: no such host
+Get http://piyo/heartbeat: dial tcp: lookup piyo: no such host
+Get http://fuga/heartbeat: dial tcp: lookup fuga: no such host
+Get http://piyo/heartbeat: dial tcp: lookup piyo: no such host
+Get http://foo/heartbeat: dial tcp: lookup foo: no such host
+Get http://baz/heartbeat: dial tcp: lookup baz: no such host
+Get http://baz/heartbeat: dial tcp: lookup baz: no such host
+{1 2 ok}</code></pre></div>
+<h2 id="解説-1">解説</h2>
+
+<p>初めに紹介したソースコードに対し以下の変更がなされています。</p>
+
+<ul>
+<li>arrayからランダムにノードを取り出しendpointを取得するget_endpoint()の追加</li>
+<li>get_heartbeat()の変更
+
+<ul>
+<li>get_endpoint()を利用</li>
+<li>失敗時に再帰</li>
+</ul></li>
+</ul>
+
+<p>実行結果から、ノードへの接続に失敗すると、ランダムにノードを選び直し、再度接続する処理を行っていることがわかります。</p>
+
+<h2 id="参考">参考</h2>
+
+<p><u><a href="https://qiita.com/nem_takanobu/items/002dbe8dfd93cd19c5b1">Qiita - 仮想通貨NEMでJavaScriptによるノード接続に失敗した場合に別ノードを自動選択する。</a></u></p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/"><i class="fa fa-chevron-circle-left"></i> NEMAPIをGo言語で叩く(2)</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
