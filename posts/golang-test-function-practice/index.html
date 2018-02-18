@@ -1,0 +1,283 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>Go言語のテスト機能を触ってみる</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-02-19T00:44:57&#43;09:00">
+                Feb 19nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/golang/">#Golang</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/learning/">#learning</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>今回はGo言語のテスト機能を使ってみます。<br />
+まずは<u><a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/">こちらの記事</a></u>で紹介したソースコードをモジュール化してみます。
+</p>
+
+<hr />
+
+<p>nem/knock_nem_api.go</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">nem</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+    <span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Heartbeat</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Code</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;code&#34;`</span>
+    <span style="color:#a6e22e">Type</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+    <span style="color:#a6e22e">Message</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;message&#34;`</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">GetHeartbeat</span>() (<span style="color:#a6e22e">heartbeat</span> <span style="color:#a6e22e">Heartbeat</span>,<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>){
+    <span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://alice2.nem.ninja:7890/heartbeat&#34;</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">heartbeat</span>,<span style="color:#a6e22e">err</span>
+    }
+
+    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+
+    <span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">heartbeat</span>,<span style="color:#a6e22e">err</span>
+    }
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">body</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">heartbeat</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">heartbeat</span>,<span style="color:#a6e22e">err</span>
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">heartbeat</span>,<span style="color:#66d9ef">nil</span>
+}</code></pre></div>
+<hr />
+
+<hr />
+
+<p>main.go</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;./nem&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {   
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">heartbeat</span>,<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">nem</span>.<span style="color:#a6e22e">Get_heartbeat</span>();<span style="color:#a6e22e">err</span><span style="color:#f92672">!=</span><span style="color:#66d9ef">nil</span>{
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+    }<span style="color:#66d9ef">else</span>{
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">heartbeat</span>)
+    }
+    
+}</code></pre></div>
+<hr />
+
+<p>nemパッケージを作成し、GetHeartbeat()を他ファイルに分割しました。<br />
+main.goを実行するとハートビートが表示されます(結果は割愛します)。</p>
+
+<p>では、nem/knock_nem_api.goのGetHeartbeat()に対してテストを実装します。
+完成したものがこちらです。</p>
+
+<hr />
+
+<p>nem/knock_nem_api_test.go</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">nem</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;testing&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestGetHeartbeat</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
+    <span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GetHeartbeat</span>()
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;failed test %#v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    }
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">Message</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;ok&#34;</span> {
+        <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#e6db74">&#34;failed test&#34;</span>)
+    }
+}</code></pre></div>
+<hr />
+
+<p>このテストは常に対象のノードが生きていることを前提に作られているので<br />
+あまりよろしくはないかもしれません……<br />
+それはともかく、テストを作る際はGoの作法として、</p>
+
+<ul>
+<li>ファイル名は&rdquo;&lt;テスト対象のファイル&gt;_test.go&rdquo;とする</li>
+<li>テスト用の関数名は&rdquo;Test&lt;テスト対象の関数名&gt;(t *testing.T)&ldquo;とする</li>
+<li>testingパッケージをimportする</li>
+</ul>
+
+<p>ということが守られなければなりません。</p>
+
+<p>ここまでできれば、後はgo testコマンドでテストを実行することが出来ます。<br />
+実行結果は以下の通りになりました。(ディレクトリ名は一部変更しています)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">PASS
+ok      _/C_/～～～/go_example/test/nem     0.759s</code></pre></div>
+<p>より詳細な結果を表示したい場合は、-vを付与することで関数ごとの実行及びその結果が確認できます。go test -vコマンドの実行結果は以下の通り。(ディレクトリ名は一部変更しています)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">=== RUN   TestGetHeartbeat
+--- PASS: TestGetHeartbeat (0.54s)
+PASS
+ok      _/C_/～～～/go_example/test/nem     0.604s</code></pre></div>
+<p>これでGo言語のテスト機能を触ってみることが出来ました。</p>
+
+<h2 id="参考">参考</h2>
+
+<p><u><a href="https://qiita.com/Utr/items/5eca8b61e1857d193587">Qiita - Go言語のテスト方法初歩の初歩</a></u><br />
+<u><a href="https://qiita.com/shibukawa/items/59e939b606b05b548851">Qiita - Goのプログラムをパッケージに分ける方法</a></u></p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/"><i class="fa fa-chevron-circle-left"></i> NEMAPIをGo言語で叩く(3)</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
