@@ -1,0 +1,315 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>Rails5でOmniAuthを使ったTwitter連携(認証編)</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-02-21T02:23:45&#43;09:00">
+                Feb 21nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/ruby/">#Ruby</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/rails/">#Rails</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/twitter/">#Twitter</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/learning/">#learning</a>
+                
+            </em>
+        </li>
+        
+
+        <li>2 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>Rails5.1.5でOmniAuthを使ったTwitter連携機能を実装してみます。<br />
+今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。
+</p>
+
+<h2 id="目標">目標</h2>
+
+<p>以下のようなアプリの制作を目標とします。</p>
+
+<ul>
+<li>/ → アカウント情報表示、未ログインで/loginに遷移</li>
+<li>/auth/twitter → Twitter認証実行</li>
+<li>/auth/twitter/callback → Twitter認証後のコールバック先</li>
+<li>/logout → ログアウト処理</li>
+<li>/login → ログインを促す画面表示</li>
+</ul>
+
+<h2 id="準備">準備</h2>
+
+<p><u><a href="https://apps.twitter.com/">こちら</a></u>で[Create New App]ボタンを押し、新規にツイッターアプリを作ってください。Name~Websiteの項目は好きに埋めてください。Callback URLのみ、</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-url" data-lang="url">&lt;アプリのURL&gt;/auth/twitter/callback  </code></pre></div>
+<p>としてください。後ほどこのURLをコールバック先としてアプリを作ります。</p>
+
+<p>アプリを作ったらAPIキーを控えます。APIキーはKeys and Access Tokensタブ内のApplication Settings欄に表示されています。~/.bashrcや~/.bash_profile等の設定ファイルに以下を追記し、環境変数にAPIキーを保存します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export TWITTER_API_KEY<span style="color:#f92672">=</span>&lt;API_KEY&gt;
+export TWITTER_API_SECRET<span style="color:#f92672">=</span>&lt;API_SECRET&gt;</code></pre></div>
+<h2 id="omniauthの導入">OmniAuthの導入</h2>
+
+<p>gemfileに以下を追記します。</p>
+
+<p>gemfile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">gem <span style="color:#e6db74">&#39;omniauth&#39;</span>
+gem <span style="color:#e6db74">&#39;omniauth-twitter&#39;</span></code></pre></div>
+<p>追記後、bundle installを実行します。</p>
+
+<p>config/secrets.ymlにAPIキーを追記します。</p>
+
+<p>config/secrets.yml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">twitter: &amp;twitter
+  twitter_api_key: &lt;%= ENV[&#34;TWITTER_API_KEY&#34;] %&gt;
+  twitter_api_secret: &lt;%= ENV[&#34;TWITTER_API_SECRET&#34;] %&gt;
+
+development:
+  secret_key_base: &lt;hogehoge&gt;
+  &lt;&lt;: *twitter
+
+test:
+  secret_key_base: &lt;fugafuga&gt;
+  &lt;&lt;: *twitter
+
+production:
+  secret_key_base: &lt;%= ENV[&#34;SECRET_KEY_BASE&#34;] %&gt;
+  &lt;&lt;: *twitter</code></pre></div>
+<p>config/initializers/omniauth.rbにconfig/secrets.ymlを利用した設定を追記します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>middleware<span style="color:#f92672">.</span>use <span style="color:#66d9ef">OmniAuth</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Builder</span> <span style="color:#66d9ef">do</span>
+    provider <span style="color:#e6db74">:twitter</span>,<span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>secrets<span style="color:#f92672">.</span>twitter_api_key,<span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>secrets<span style="color:#f92672">.</span>twitter_api_secret
+<span style="color:#66d9ef">end</span></code></pre></div>
+<h2 id="ルーティング">ルーティング</h2>
+
+<p>以下のようにルーティングを行います。</p>
+
+<p>config/routes.rb</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">root <span style="color:#e6db74">:to</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;home#index&#39;</span>
+get <span style="color:#e6db74">&#39;/auth/twitter/callback&#39;</span>, <span style="color:#e6db74">to</span>: <span style="color:#e6db74">&#39;sessions#create&#39;</span>
+get <span style="color:#e6db74">&#39;/logout&#39;</span>, <span style="color:#e6db74">to</span>: <span style="color:#e6db74">&#39;sessions#destroy&#39;</span>
+get <span style="color:#e6db74">&#39;/login&#39;</span>, <span style="color:#e6db74">to</span>: <span style="color:#e6db74">&#39;home#login&#39;</span></code></pre></div>
+<h2 id="モデルの制作">モデルの制作</h2>
+
+<p>認証後に得られるユーザーの情報を格納するuserモデルを制作します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rails generate model User provider:string uid:string nickname:string name:string image_url:string description:string
+rails db:migrate</code></pre></div>
+<p>できたモデルに、認証後にデータの検索及び生成を実行するメソッドを追加します。</p>
+
+<p>models/user.rb</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">find_or_create_from_auth</span>(auth)
+    provider <span style="color:#f92672">=</span> auth<span style="color:#f92672">[</span><span style="color:#e6db74">:provider</span><span style="color:#f92672">]</span>
+    uid <span style="color:#f92672">=</span> auth<span style="color:#f92672">[</span><span style="color:#e6db74">:uid</span><span style="color:#f92672">]</span>
+    nickname <span style="color:#f92672">=</span> auth<span style="color:#f92672">[</span><span style="color:#e6db74">:info</span><span style="color:#f92672">][</span><span style="color:#e6db74">:nickname</span><span style="color:#f92672">]</span>
+    name <span style="color:#f92672">=</span> auth<span style="color:#f92672">[</span><span style="color:#e6db74">:info</span><span style="color:#f92672">][</span><span style="color:#e6db74">:name</span><span style="color:#f92672">]</span>
+    image_url <span style="color:#f92672">=</span> auth<span style="color:#f92672">[</span><span style="color:#e6db74">:info</span><span style="color:#f92672">][</span><span style="color:#e6db74">:image</span><span style="color:#f92672">]</span>
+    description <span style="color:#f92672">=</span> auth<span style="color:#f92672">[</span><span style="color:#e6db74">:info</span><span style="color:#f92672">][</span><span style="color:#e6db74">:description</span><span style="color:#f92672">]</span>
+    self<span style="color:#f92672">.</span>find_or_create_by(<span style="color:#e6db74">provider</span>: provider, <span style="color:#e6db74">uid</span>: uid) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>user<span style="color:#f92672">|</span>
+      user<span style="color:#f92672">.</span>nickname <span style="color:#f92672">=</span> nickname
+      user<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+      user<span style="color:#f92672">.</span>image_url <span style="color:#f92672">=</span> image_url
+      user<span style="color:#f92672">.</span>description <span style="color:#f92672">=</span> description
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span></code></pre></div>
+<h2 id="コントローラの制作">コントローラの制作</h2>
+
+<p>セッションを管理するSessionsと、ログイン画面及びアカウント情報を表示するHomeの二つのコントローラーを制作します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rails generate controller Sessions create destroy
+rails generate controller Home index login</code></pre></div>
+<p>sessions_controller.rbの中身を書いていきます。コールバック先のリクエスト内容に含まれる認証情報をuserモデルのfind_or_create_from_auth()に渡し、生成及び取得を行い、セッションにidを格納するcreateメソッドとreset_sessionを行い、セッション内容を破棄することでログアウトを行うdestroyメソッドを作成します。</p>
+
+<p>sessions_controller.rb</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SessionsController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">create</span>
+    user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_or_create_from_auth(request<span style="color:#f92672">.</span>env<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;omniauth.auth&#39;</span><span style="color:#f92672">]</span>)
+    session<span style="color:#f92672">[</span><span style="color:#e6db74">:user_id</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>id
+    redirect_to root_path
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">destroy</span>
+    reset_session
+    redirect_to root_path
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span></code></pre></div>
+<p>home_controller.rbの中身を書いていきます。session内のuser_idの存在を確認し、nilならば未ログインと見做し、login画面に遷移します。存在していれば、@user内に対象ユーザーのデータを格納します。</p>
+
+<p>home_controller.rb</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">index</span>
+    <span style="color:#66d9ef">if</span> session<span style="color:#f92672">[</span><span style="color:#e6db74">:user_id</span><span style="color:#f92672">].</span>nil?
+      redirect_to <span style="color:#e6db74">action</span>:<span style="color:#e6db74">&#39;login&#39;</span>
+    <span style="color:#66d9ef">else</span>
+      @user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find(session<span style="color:#f92672">[</span><span style="color:#e6db74">:user_id</span><span style="color:#f92672">]</span>)
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+  
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">login</span>
+    
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span></code></pre></div>
+<h2 id="ビューの制作">ビューの制作</h2>
+
+<p>ユーザー情報を表示するビューを制作します。@user内にユーザー情報を格納してあるので、これらを全て表示し、さらにログアウト用のリンクも追加します。</p>
+
+<p>home/index.html.erb</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-erb" data-lang="erb">&lt;p&gt;&lt;%= &#34;name:&#34; + @user[:nickname]%&gt;&lt;/p&gt;
+&lt;p&gt;&lt;%= &#34;screen_name:&#34; + @user[:name]%&gt;&lt;/p&gt;
+&lt;p&gt;&lt;%= &#34;image_url:&#34; + @user[:image_url]%&gt;&lt;/p&gt;
+&lt;p&gt;&lt;%= &#34;description:&#34; + @user[:description]%&gt;&lt;/p&gt;
+&lt;%= link_to &#34;logout&#34; ,:controller =&gt; &#34;sessions&#34;, :action =&gt; &#34;destroy&#34; %&gt;</code></pre></div>
+<p>ログインを促すビューを制作します。といっても、認証を行う/auth/twitterに遷移するリンクを表示するだけです。</p>
+
+<p>home/login.html.erb</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-erb" data-lang="erb">&lt;%= link_to &#34;login&#34; ,&#34;/auth/twitter&#34; %&gt;</code></pre></div>
+<h2 id="参考">参考</h2>
+
+<p><u><a href="http://marimomemo.hatenablog.jp/entry/2017/06/17/223640">RailsでTwitterのユーザー情報と連携して認証を行う</a></u></p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/golang-test-function-practice/"><i class="fa fa-chevron-circle-left"></i> Go言語のテスト機能を触ってみる</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

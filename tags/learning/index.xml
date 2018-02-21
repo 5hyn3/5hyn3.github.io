@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Mon, 19 Feb 2018 00:44:57 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 21 Feb 2018 02:23:45 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rails5でOmniAuthを使ったTwitter連携(認証編)</title>
+      <link>https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/</link>
+      <pubDate>Wed, 21 Feb 2018 02:23:45 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/</guid>
+      <description>&lt;p&gt;Rails5.1.5でOmniAuthを使ったTwitter連携機能を実装してみます。&lt;br /&gt;
+今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Go言語のテスト機能を触ってみる</title>
