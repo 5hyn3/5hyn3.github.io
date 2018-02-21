@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Wed, 21 Feb 2018 02:23:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 22 Feb 2018 00:58:55 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -43,6 +43,18 @@
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>TravisCIでGo言語のCI環境を作る</title>
+      <link>https://5hyn3.github.io/posts/practice-using-golang-with-travisci/</link>
+      <pubDate>Thu, 22 Feb 2018 00:58:55 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/practice-using-golang-with-travisci/</guid>
+      <description>&lt;p&gt;Githubとの連携機能を使って、TravisCIでGo言語のCI環境を作りました。&lt;br /&gt;
+&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
