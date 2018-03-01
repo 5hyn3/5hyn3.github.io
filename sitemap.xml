@@ -3,12 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://5hyn3.github.io/posts/</loc>
-    <lastmod>2018-02-22T00:58:55+09:00</lastmod>
+    <loc>https://5hyn3.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>https://5hyn3.github.io/about/</loc>
+    <loc>https://5hyn3.github.io/products/</loc>
   </url>
   
   <url>
@@ -17,6 +16,11 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://5hyn3.github.io/posts/</loc>
+    <lastmod>2018-02-22T00:58:55+09:00</lastmod>
   </url>
   
   <url>
