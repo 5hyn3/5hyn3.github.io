@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Thu, 22 Feb 2018 00:58:55 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 02 Mar 2018 14:58:52 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WebApostilleの紹介</title>
+      <link>https://5hyn3.github.io/posts/introduction-of-webapostille/</link>
+      <pubDate>Fri, 02 Mar 2018 14:58:52 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/introduction-of-webapostille/</guid>
+      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>TravisCIでGo言語のCI環境を作る</title>
