@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Wed, 21 Feb 2018 02:23:45 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 05 Mar 2018 14:53:42 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rails5でOmniAuthを使ったTwitter連携(応用編)</title>
+      <link>https://5hyn3.github.io/posts/make-content-published-only-on-twitter-followers-with-rails/</link>
+      <pubDate>Mon, 05 Mar 2018 14:53:42 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/make-content-published-only-on-twitter-followers-with-rails/</guid>
+      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Rails5でOmniAuthを使ったTwitter連携(認証編)</title>
