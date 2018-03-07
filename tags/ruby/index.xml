@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Mon, 05 Mar 2018 14:53:42 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 07 Mar 2018 20:23:24 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>RubyでNEMのWebSocketを使う</title>
+      <link>https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/</link>
+      <pubDate>Wed, 07 Mar 2018 20:23:24 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/</guid>
+      <description>&lt;p&gt;RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Rails5でOmniAuthを使ったTwitter連携(応用編)</title>
