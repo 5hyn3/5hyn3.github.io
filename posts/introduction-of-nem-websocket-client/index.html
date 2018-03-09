@@ -1,0 +1,379 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>自作gem&#39;nem_websocket_client&#39;の紹介</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-03-09T20:27:49&#43;09:00">
+                Mar 9nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/products/">Products</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/ruby/">#Ruby</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/rails/">#Rails</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/nem/">#NEM</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/websocket/">#WebSocket</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/gem/">#gem</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p><u><a href="https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/">こちらの記事</a></u>でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。
+</p>
+
+<h1 id="リンク">リンク</h1>
+
+<p><u><a href="https://github.com/5hyn3/nem_websocket_client">github - nem_websocket_client</a></u><br />
+<u><a href="https://rubygems.org/gems/nem_websocket_client">rubygems - nem_websocket_client</a></u></p>
+
+<h1 id="インストール">インストール</h1>
+
+<p>rubygemsに登録済み(ページは<u><a href="https://rubygems.org/gems/nem_websocket_client">こちら</a></u>)なのでgemコマンドからインストールできます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gem install nem_websocket_client</code></pre></div>
+<h1 id="使い方">使い方</h1>
+
+<h2 id="例">例</h2>
+
+<p>こんな感じで使えます</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#34;nem_websocket_client&#34;</span>
+
+host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://alice5.nem.ninja&#34;</span>
+port <span style="color:#f92672">=</span> <span style="color:#ae81ff">7778</span>
+<span style="color:#f92672"></span>ws <span style="color:#f92672">=</span> <span style="color:#66d9ef">NemWebsocketClient</span><span style="color:#f92672">::</span>connect(host,port)
+
+ws<span style="color:#f92672">.</span>connected <span style="color:#66d9ef">do</span>
+  p <span style="color:#e6db74">&#34;Connected!&#34;</span>
+<span style="color:#66d9ef">end</span>
+
+ws<span style="color:#f92672">.</span>subscribe_block <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>transaction<span style="color:#f92672">|</span>
+  p transaction<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;timeStamp&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">end</span>
+
+ws<span style="color:#f92672">.</span>errors <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>e<span style="color:#f92672">|</span>
+  p e
+<span style="color:#66d9ef">end</span>
+
+ws<span style="color:#f92672">.</span>closed <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>e<span style="color:#f92672">|</span>
+  p e
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
+  
+<span style="color:#66d9ef">end</span></code></pre></div>
+<p>Rubyのブロック記法を利用して受信時等のイベント処理を記述することが出来ます。上のソースコードの場合、接続時に&rdquo;Connected&rdquo;と出力し、最新のブロック情報を受信するとそれのタイムスタンプを出力し続けるような動作を行います。また、スレッドで動作しているので、どこかでloopするなどしてメインスレッドを終了させないようにする必要があります。</p>
+
+<p>あるアカウントの直近のトランザクションを取得し続ける場合は以下のようになります。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">ws <span style="color:#f92672">=</span> <span style="color:#66d9ef">NemWebsocketClient</span><span style="color:#f92672">.</span>connect(host,port)
+ws<span style="color:#f92672">.</span>subscribe_recenttransactions(address) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>transaction,address<span style="color:#f92672">|</span>
+    p transaction
+<span style="color:#66d9ef">end</span>
+
+ws<span style="color:#f92672">.</span>request_recenttransactions(address)</code></pre></div>
+<p>このコードの場合、request_recenttransactions(address)でこちらからサーバーにデータを要求しています。よって、実行直後に必ず直近トランザクションがサーバーから取得でき、その後は直近トランザクションに変化がある度にサーバーからデータが送信されます。</p>
+
+<h2 id="詳細">詳細</h2>
+
+<p>メソッド名などはだいたいnem-sdkに準拠したものとしました。それぞれ、各メソッドで取得できる情報の対応は以下のとおりです。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">メソッド</th>
+<th align="left">取得できる情報</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">subscribe_block()</td>
+<td align="left">最新のブロックの情報</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_block_height()</td>
+<td align="left">ブロックの高さ</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_owned_namespace(address)</td>
+<td align="left">保有ネームスペース</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_owned_mosaic(address)</td>
+<td align="left">保有モザイク量</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_owned_mosaic_definition(address)</td>
+<td align="left">保有モザイク定義</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_transaction(address)</td>
+<td align="left">承認済みトランザクション</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_unconfirmed_transaction(address)</td>
+<td align="left">未承認トランザクション</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_recenttransactions(address)</td>
+<td align="left">直近トランザクション</td>
+</tr>
+
+<tr>
+<td align="left">subscribe_account(address)</td>
+<td align="left">アカウント情報</td>
+</tr>
+</tbody>
+</table>
+
+<p>一部を除いた大多数のメソッドはアドレスを引数に必要とします。また、ブロックの引数は第一引数にサーバーから送信されたjsonをJSON.parse()したものが入り、アドレスを渡す必要のあるメソッドの場合はブロックの第二引数にアドレスが入ります。</p>
+
+<p>SENDを送ってこちらからデータを要求できるメソッドも作りました。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">メソッド</th>
+<th align="left">要求できる情報</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">request_account(address)</td>
+<td align="left">アカウント情報</td>
+</tr>
+
+<tr>
+<td align="left">request_owned_namespace(address)</td>
+<td align="left">保有ネームスペース</td>
+</tr>
+
+<tr>
+<td align="left">request_owned_mosaic(address)</td>
+<td align="left">保有モザイク量</td>
+</tr>
+
+<tr>
+<td align="left">request_owned_mosaic_definition(address)</td>
+<td align="left">保有モザイク定義</td>
+</tr>
+
+<tr>
+<td align="left">request_recenttransactions(address)</td>
+<td align="left">直近トランザクション</td>
+</tr>
+</tbody>
+</table>
+
+<p>こちらのrequest~メソッドを使うことでサーバーにデータを要求することが出来ます。上のsubscribe~メソッドで予め処理を登録していることでデータを受け取ることが出来ます。</p>
+
+<p>他、以下のようなイベントに処理を登録できるメソッドがあります。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">メソッド</th>
+<th align="left">イベント</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">connected()</td>
+<td align="left">サーバーとの接続時</td>
+</tr>
+
+<tr>
+<td align="left">closed()</td>
+<td align="left">サーバーとの通信を切断した時</td>
+</tr>
+
+<tr>
+<td align="left">heartbeat()</td>
+<td align="left">サーバーからのハートビート受信時</td>
+</tr>
+
+<tr>
+<td align="left">errors()</td>
+<td align="left">エラーの発生時</td>
+</tr>
+</tbody>
+</table>
+
+<p>この他にサーバーとの通信を終了するclose()メソッドがあります。</p>
+
+<h1 id="todo">TODO</h1>
+
+<ul>
+<li>テスト用アカウントでネームスペースを作成できなかったのでsubscribe_owned_namespaceのテストをpendingしている。testnetのxemが充分に手に入り次第きちんとテストを行う。</li>
+<li>一つのメソッドで登録できる処理は一つまでとなっているので、例えばsubscribe_transactionを使って二つのアカウントの承認済みトランザクションを同時に受信することが出来ない。NemWebsocketClient::Clientのインスタンスを二つ生成することで対応可能だが、一つのインスタンスで複数のアカウントに対応できるようにしたい。</li>
+</ul>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/"><i class="fa fa-chevron-circle-left"></i> RubyでNEMのWebSocketを使う</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
