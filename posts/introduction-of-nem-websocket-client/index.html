@@ -345,7 +345,11 @@ ws<span style="color:#f92672">.</span>request_recenttransactions(address)</code>
 
 <ul>
 <li>テスト用アカウントでネームスペースを作成できなかったのでsubscribe_owned_namespaceのテストをpendingしている。testnetのxemが充分に手に入り次第きちんとテストを行う。</li>
-<li>一つのメソッドで登録できる処理は一つまでとなっているので、例えばsubscribe_transactionを使って二つのアカウントの承認済みトランザクションを同時に受信することが出来ない。NemWebsocketClient::Clientのインスタンスを二つ生成することで対応可能だが、一つのインスタンスで複数のアカウントに対応できるようにしたい。</li>
+<li><s>一つのメソッドで登録できる処理は一つまでとなっているので、例えばsubscribe_transactionを使って二つのアカウントの承認済みトランザクションを同時に受信することが出来ない。NemWebsocketClient::Clientのインスタンスを二つ生成することで対応可能だが、一つのインスタンスで複数のアカウントに対応できるようにしたい。</s>
+
+<ul>
+<li>v0.1.2で修正しました。</li>
+</ul></li>
 </ul>
 
 </article>
