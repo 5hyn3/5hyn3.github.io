@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Wed, 28 Mar 2018 14:58:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 30 Mar 2018 00:44:52 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>VMware workstation playerでゲストとホストのクリップボード共有をする方法</title>
+      <link>https://5hyn3.github.io/posts/share-clipboard-with-vmwareplayer/</link>
+      <pubDate>Fri, 30 Mar 2018 00:44:52 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/share-clipboard-with-vmwareplayer/</guid>
+      <description>&lt;p&gt;仮想環境を作り直す度に毎回ググってる気がするのでメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
