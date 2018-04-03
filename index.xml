@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 30 Mar 2018 00:44:52 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 Apr 2018 01:09:46 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>自分向けVue.jsチートシート</title>
+      <link>https://5hyn3.github.io/posts/vue-cheatsheet/</link>
+      <pubDate>Wed, 04 Apr 2018 01:09:46 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/vue-cheatsheet/</guid>
+      <description>&lt;p&gt;超簡潔に自分向けに、Vue.js について纏めました。所謂チートシートです。後日追記予定&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
