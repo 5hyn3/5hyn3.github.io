@@ -289,6 +289,43 @@
 &lt;<span style="color:#f92672">p</span>&gt;Message is: {{ message }}&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
 <hr />
 
+<h1 id="vue-router">vue-router</h1>
+
+<h2 id="ルーティング">ルーティング</h2>
+
+<p>基本的なもの</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Vue</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;vue&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Router</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;vue-router&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/components/HelloWorld&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">HelloWorldWithId</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/components/HelloWorldWithId&#39;</span>
+
+<span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">Router</span>)
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Router</span>({
+  <span style="color:#a6e22e">routes</span><span style="color:#f92672">:</span> [
+    <span style="color:#75715e">//静的ルーティング
+</span><span style="color:#75715e"></span>    {
+      <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/helloworld&#39;</span>,
+      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HelloWorld&#39;</span>,
+      <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">HelloWorld</span>
+    },
+    <span style="color:#75715e">//動的ルーティング(1)
+</span><span style="color:#75715e"></span>    {
+      <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/helloworld/:id&#39;</span>,
+      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HelloWorldWithId&#39;</span>,
+      <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">HelloWorldWithId</span>
+    }
+  ]
+})</code></pre></div>
+<p>(1)の場合のパラメータ取得方法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$route</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">id</span></code></pre></div>
+<p>遷移</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//パラメータなし
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$router</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HelloWorld&#39;</span>)
+<span style="color:#75715e">//パラメータあり
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$router</span>.<span style="color:#a6e22e">push</span>({ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HelloWorldWithId&#39;</span>, <span style="color:#a6e22e">params</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">123456</span> } })</code></pre></div>
+<hr />
+
 <h1 id="開発環境">開発環境</h1>
 
 <h2 id="vue-cli">vue-cli</h2>
