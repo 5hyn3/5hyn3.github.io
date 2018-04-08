@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on ls -al</title>
-    <link>https://5hyn3.github.io/tags/javascript/</link>
-    <description>Recent content in Javascript on ls -al</description>
+    <title>Spreadsheet on ls -al</title>
+    <link>https://5hyn3.github.io/tags/spreadsheet/</link>
+    <description>Recent content in Spreadsheet on ls -al</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
     <lastBuildDate>Mon, 09 Apr 2018 01:21:29 +0900</lastBuildDate>
     
-	<atom:link href="https://5hyn3.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://5hyn3.github.io/tags/spreadsheet/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       
       <guid>https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/</guid>
       <description>&lt;p&gt;最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>自分向けVue.jsチートシート</title>
-      <link>https://5hyn3.github.io/posts/vue-cheatsheet/</link>
-      <pubDate>Wed, 04 Apr 2018 01:09:46 +0900</pubDate>
-      
-      <guid>https://5hyn3.github.io/posts/vue-cheatsheet/</guid>
-      <description>&lt;p&gt;超簡潔に自分向けに、Vue.js について纏めました。所謂チートシートです。後日追記予定&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

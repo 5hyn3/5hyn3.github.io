@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Wed, 04 Apr 2018 01:09:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Apr 2018 01:21:29 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GASからSpreadsheetを難しいことを考えないで使う</title>
+      <link>https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/</link>
+      <pubDate>Mon, 09 Apr 2018 01:21:29 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/</guid>
+      <description>&lt;p&gt;最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>自分向けVue.jsチートシート</title>

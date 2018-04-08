@@ -1,0 +1,527 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>GASからSpreadsheetを難しいことを考えないで使う</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-04-09T01:21:29&#43;09:00">
+                Apr 9nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/gas/">#GAS</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/spreadsheet/">#Spreadsheet</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/javascript/">#javascript</a>
+                
+            </em>
+        </li>
+        
+
+        <li>3 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。</p>
+
+<p></p>
+
+<hr />
+
+<h1 id="gasをdbとして使いたい">GASをDBとして使いたい</h1>
+
+<p>GASからSpreadsheetをDB的に扱おうとした時、以下のような問題が存在します</p>
+
+<ul>
+<li>取り出してすぐの状態では2次元配列で扱いにくい
+
+<ul>
+<li>key-valueな形ではない</li>
+</ul></li>
+<li>書き込み範囲を毎回指定しなければならず面倒</li>
+<li>sheetという独自の世界を理解しなければならない
+
+<ul>
+<li>他のORMなどを扱った経験が生きない</li>
+</ul></li>
+</ul>
+
+<p>などなど、他にもIOが遅いなどの問題もありますが、ここでは以上について着目します。これらは、Spreadsheetを見栄えの良い出力先として扱う時には問題になりませんが、ただデータを溜め込み、使いたい時に取り出したいというDB的な扱いをした時に大変困ります。そこで、一定のルールに従って記入することで上記の問題を解決してお手軽にSpreadsheetをDB的に扱えるメソッド群を作成しました。</p>
+
+<hr />
+
+<h1 id="ルール">ルール</h1>
+
+<p>これから紹介するメソッド群を使うには以下の制約に従う必要があります。</p>
+
+<h2 id="一行目にはカラム名を定義">一行目にはカラム名を定義</h2>
+
+<h2 id="二行目以降には一行目のカラムに対応するデータ記入">二行目以降には一行目のカラムに対応するデータ記入</h2>
+
+<h2 id="必ずidカラムを含める">必ずidカラムを含める</h2>
+
+<p>以上3つの制約に従ってください。これは一行目に記入されたカラム名に従ってSpreadsheetを扱いやすい形に変換しているためです。</p>
+
+<h1 id="メソッド紹介">メソッド紹介</h1>
+
+<p>以下を自分のGASに貼り付けて使ってください。GASにはライブラリ公開機能もありますが、まだそこまで触れていないので一旦この形で。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getSpreadSheet</span>(<span style="color:#a6e22e">url</span>){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openByUrl</span>(<span style="color:#a6e22e">url</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getSheets</span>();
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheets</span>[<span style="color:#ae81ff">0</span>];
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sheet</span>
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getJson</span>(<span style="color:#a6e22e">sheet</span>){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rowIndex</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">colStartIndex</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rowNum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">keys</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getSheetValues</span>(<span style="color:#a6e22e">rowIndex</span>, <span style="color:#a6e22e">colStartIndex</span>, <span style="color:#a6e22e">rowNum</span>, <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastColumn</span>())[<span style="color:#ae81ff">0</span>];
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#a6e22e">rowIndex</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">colStartIndex</span>, <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastRow</span>(), <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastColumn</span>()).<span style="color:#a6e22e">getValues</span>();
+  
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tmp</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>];
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tmp1</span> <span style="color:#f92672">=</span> [];
+  
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [];
+
+  <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">elm</span>,<span style="color:#a6e22e">index</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">template</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">indexBy</span>(<span style="color:#a6e22e">keys</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">member</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generate</span>(<span style="color:#a6e22e">elm</span>,<span style="color:#a6e22e">template</span>);
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">member</span>.<span style="color:#a6e22e">id</span>){
+        <span style="color:#a6e22e">list</span>[<span style="color:#a6e22e">index</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">member</span>;
+    }
+  });  
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+    <span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generateGenesisItem</span>(<span style="color:#a6e22e">keys</span>);
+    <span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>);
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">list</span>;
+  
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">generate</span>(<span style="color:#a6e22e">elm</span>,<span style="color:#a6e22e">obj</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">obj</span>){
+      <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">elm</span>[<span style="color:#a6e22e">i</span>];
+      <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>;
+  }
+  
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">generateGenesisItem</span>(<span style="color:#a6e22e">ary</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {};
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ary</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">len</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ary</span>[<span style="color:#a6e22e">i</span>];
+      <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>;
+  }
+
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">indexBy</span>(<span style="color:#a6e22e">ary</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {};
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ary</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">len</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ary</span>[<span style="color:#a6e22e">i</span>];
+      <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">key</span>;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>;
+  }  
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getDb</span>(<span style="color:#a6e22e">url</span>){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getSpreadSheet</span>(<span style="color:#a6e22e">url</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">getJson</span>(<span style="color:#a6e22e">sheet</span>)
+  
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getLastId</span>(<span style="color:#a6e22e">db</span>){
+  <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>,<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">o</span>){<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">id</span>;}));
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#66d9ef">Infinity</span>){
+    <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">id</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">findById</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">id</span>){
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">db</span>){
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span>){
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">i</span>];
+    }
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">db</span>){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lastId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getLastId</span>(<span style="color:#a6e22e">db</span>)
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Utilities</span>.<span style="color:#a6e22e">formatDate</span>(<span style="color:#66d9ef">new</span> Date() , <span style="color:#e6db74">&#39;Asia/Tokyo&#39;</span> , <span style="color:#e6db74">&#39;yyyy/MM/dd HH:mm:ss&#39;</span>);
+  <span style="color:#a6e22e">newItemId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lastId</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> {};
+  <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">db</span>[<span style="color:#ae81ff">0</span>]){
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;id&#39;</span>){
+      <span style="color:#a6e22e">item</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">newItemId</span>;
+      <span style="color:#66d9ef">continue</span>;
+    }
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;datetime&#39;</span>){
+      <span style="color:#a6e22e">item</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>;
+      <span style="color:#66d9ef">continue</span>;
+    }
+    <span style="color:#a6e22e">item</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">item</span>
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">save</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">url</span>){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">table</span> <span style="color:#f92672">=</span> [];
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">key_list</span> <span style="color:#f92672">=</span> [];
+  <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">db</span>[<span style="color:#ae81ff">0</span>]){
+    <span style="color:#a6e22e">key_list</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">key</span>);
+  }
+  <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">key_list</span>);
+  <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">db</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">item_list</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">i</span>]){
+      <span style="color:#a6e22e">item_list</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">i</span>][<span style="color:#a6e22e">key</span>])
+    }
+    <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item_list</span>)
+  }
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openByUrl</span>(<span style="color:#a6e22e">url</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getSheets</span>();
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheets</span>[<span style="color:#ae81ff">0</span>];
+  
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rows</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">length</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cols</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">table</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">length</span>;
+  
+  <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#a6e22e">rows</span>,<span style="color:#a6e22e">cols</span>).<span style="color:#a6e22e">setValues</span>(<span style="color:#a6e22e">table</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">item</span>){
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;&#39;</span>){
+    <span style="color:#a6e22e">db</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>;
+    <span style="color:#66d9ef">return</span>;
+  }
+  
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">db</span>){
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">id</span>){
+      <span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>;
+      <span style="color:#66d9ef">return</span>;
+    }
+  }
+  <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>);
+}</code></pre></div>
+<p>各メソッドの解説をします。</p>
+
+<h2 id="getdb-url">getDb(url)</h2>
+
+<ul>
+<li>url
+
+<ul>
+<li>Spreadsheetのurl</li>
+</ul></li>
+</ul>
+
+<p>Spreadsheetのurlを引数として渡します。戻り値として対象のSpreadsheetをjsonの形に変換したものを返します。例えば以下のようなシートの場合</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">text</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">foo</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">bar</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">baz</td>
+</tr>
+</tbody>
+</table>
+
+<p>これは</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+    {
+        <span style="color:#960050;background-color:#1e0010">id:1,</span>
+        <span style="color:#960050;background-color:#1e0010">text:foo</span>
+    },
+    {
+        <span style="color:#960050;background-color:#1e0010">id:2,</span>
+        <span style="color:#960050;background-color:#1e0010">text:bar</span>
+        },
+    {
+        <span style="color:#960050;background-color:#1e0010">id:3,</span>
+        <span style="color:#960050;background-color:#1e0010">text:baz</span>
+    }
+]</code></pre></div>
+<p>となります。これで2次元配列に触れること無くspreadsheetを扱えます。このメソッドで取得したjson形式のデータは以降のメソッドで使用し、また、以降ではこれを&rdquo;データベース&rdquo;と表記します。</p>
+
+<h2 id="create-db">create(db)</h2>
+
+<ul>
+<li>db
+
+<ul>
+<li>getDb(url)で得られたデータベース</li>
+</ul></li>
+</ul>
+
+<p>getDb(url)で得られたデータベースを引数として渡します。戻り値としてidが最大のものから一つインクリメントされた新しいレコードを返します。この時点ではまだデータベース本体に書き込みはされていません。Spreadsheetにはユニークキー制約なる機能は存在していない(自分が知らないだけかも)ので、このメソッドを通して新しいレコードを生成して、idの重複が起こらないようにしてください。</p>
+
+<h2 id="update-db-item">update(db,item)</h2>
+
+<ul>
+<li>db
+
+<ul>
+<li>getDb(url)で得られたデータベース</li>
+</ul></li>
+<li>item
+
+<ul>
+<li>レコード</li>
+</ul></li>
+</ul>
+
+<p>データベースとレコードを引数として渡します。レコードの内容がデータベースに反映されます。レコードがデータベース内に既に存在しているものならそれを上書きし、無ければ新たに挿入されます。参照渡しのため、引数に渡したdbに変更が適用されます。</p>
+
+<h2 id="save-db-url">save(db,url)</h2>
+
+<ul>
+<li>db
+
+<ul>
+<li>getDb(url)で得られたデータベース</li>
+</ul></li>
+<li>url
+
+<ul>
+<li>Spreadsheetのurl</li>
+</ul></li>
+</ul>
+
+<p>データベースとSpreadsheetのurlを引数として渡します。データベースの内容がSpreadsheetに反映されます。saveを行うまではSpreadsheet自体に変更は適用されません。なにか操作を行った時は、上のupdateを行ってデータベースに変更を適用した後にこのメソッドを使ってSpreadsheetに保存してください。</p>
+
+<p>ちなみに、差分だけ変更を書き込むなどの賢い処理はしておらず、jsonの中身を2次元配列の形に変換してすべて書き込んでるので遅いです。今後の課題</p>
+
+<h2 id="findbyid-db-id">findById(db,id)</h2>
+
+<ul>
+<li>db
+
+<ul>
+<li>getDb(url)で得られたデータベース</li>
+</ul></li>
+<li>id
+
+<ul>
+<li>検索対象のurl</li>
+</ul></li>
+</ul>
+
+<p>データベースとidを引数として渡します。戻り値としてデータベースから同一のidを持つレコードを返します。idが範囲を超えたときの動作はまだ書いてません。扱う際はそのあたり改良したほうが良いです。</p>
+
+<h2 id="getlastid-db">getLastId(db)</h2>
+
+<ul>
+<li>db
+
+<ul>
+<li>getDb(url)で得られたデータベース</li>
+</ul></li>
+</ul>
+
+<p>データベースを引数として渡します。戻り値としてデータベースに存在する最大のidを返します。</p>
+
+<h2 id="getjson-sheet">getJson(sheet)</h2>
+
+<ul>
+<li>sheet
+
+<ul>
+<li>spreadsheet</li>
+</ul></li>
+</ul>
+
+<p>spreadsheetを引数として渡します。戻り値としてspreadsheetをjsonの形式に変換したものを返します。</p>
+
+<hr />
+
+<h1 id="例">例</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SpreadsheetのURL&#34;</span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getDb</span>(<span style="color:#a6e22e">url</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newRecord</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">db</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">record1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">findById</span>(<span style="color:#a6e22e">db</span>,<span style="color:#ae81ff">1</span>);
+  <span style="color:#a6e22e">newRecord</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;foo&#34;</span>;
+  <span style="color:#a6e22e">record1</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bar&#34;</span>;
+  <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">newRecord</span>);
+  <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">record1</span>);
+  <span style="color:#a6e22e">save</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">url</span>)
+}</code></pre></div>
+<p>なんだか随所にActiveRecordっぽさがありますが、こんな感じで使えます。2次元配列をそのまま扱ってSheetの作法に習って書き込むよりは楽になったかと思います。</p>
+
+<hr />
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>突貫で書いたものなので色々中途半端です。GASを使い込んでみて、もう少し発展させた後に更に追記します。</p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/vue-cheatsheet/"><i class="fa fa-chevron-circle-left"></i> 自分向けVue.jsチートシート</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
