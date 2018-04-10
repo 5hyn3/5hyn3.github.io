@@ -1,0 +1,298 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>SpreadsheetをDBのように気軽に使うGAS向けライブラリ</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-04-11T00:01:04&#43;09:00">
+                Apr 11nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/gas/">#GAS</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/spreadsheet/">#Spreadsheet</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/javascript/">#javascript</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>以前<u><a href="https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/">こちら</a></u>でGASからSpreadsheetをDB的に扱いやすくするメソッド群を公開しましたが、今回はそれを改修してきちんとライブラリとしたものを紹介します。</p>
+
+<p>
+本来なら以前の記事に追記等の変更を加えて紹介しようと思ってましたが、思っていたよりも大幅に変更されたので、こちらで新規に紹介します。</p>
+
+<h1 id="ライブラリ紹介">ライブラリ紹介</h1>
+
+<ul>
+<li><u><a href="https://github.com/5hyn3/GasSpreadsheetDBManager/blob/master/GasSpreadsheetsDBManager.js">ソースコード</a></u></li>
+<li><u><a href="https://script.google.com/macros/library/d/1sBkfBj0CUuEcoFLguajJ-cXl-ADTZt8uHJG403PUQOGQi3aOpOqox8mC/3">ドキュメント</a></u></li>
+<li>ScriptID
+
+<ul>
+<li>1sBkfBj0CUuEcoFLguajJ-cXl-ADTZt8uHJG403PUQOGQi3aOpOqox8mC</li>
+</ul></li>
+</ul>
+
+<p>ライブラリの導入方法はわかりやすく解説されているサイトが山程あるので、ここでは取り扱いません。</p>
+
+<h2 id="背景など">背景など</h2>
+
+<p><u><a href="https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/">以前の記事</a></u>を参照してください。</p>
+
+<h2 id="特徴">特徴</h2>
+
+<ul>
+<li><p>Spreadsheetを意識しないで使える</p>
+
+<ul>
+<li>Spreadsheetの存在を完全に隠匿した作りになっています。2次元配列なデータをどう扱うかなど考えないでORMを触っているような気軽さでSpreadsheetをDBのように扱うことが出来ます。</li>
+<li>DB的に扱いたい上で装飾を適用したいというニーズに答えるために、内部で持っているSpreadsheetを取得できるインターフェースが用意されています</li>
+</ul></li>
+
+<li><p>APIを多用しない</p>
+
+<ul>
+<li>最初の一度だけSpreadsheetからデータベースを取得した後はデータの変更などは全てGAS上で行われ、一々Spreadsheetにアクセスしない作りになっています。そのため、saveメソッドを呼ぶまでは変更は保存されない点には注意してください。</li>
+</ul></li>
+</ul>
+
+<h2 id="動作の詳細">動作の詳細</h2>
+
+<p>本ライブラリは以下のような構造のシートに対して適用できます</p>
+
+<ul>
+<li>シートの1行目にはカラム名が定義されている</li>
+<li>idという名称のカラムが定義されている</li>
+<li>2行目以降には1行目のカラム名に対応しているデータが入力されている</li>
+<li>1行目A列からスタートしている</li>
+<li>余計な空白などがなくデータが連続している</li>
+</ul>
+
+<p>他におまけとして、datetimeカラムが定義されている場合、生成時に生成された時間が自動で入力されます。</p>
+
+<p>例として以下のようなテーブルが上の条件を満たします。</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">id</td>
+<td align="center">datetime</td>
+<td align="center">text</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">2018/04/08 23:14:53</td>
+<td align="center">bar</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">2018/04/10 17:04:12</td>
+<td align="center">foo</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="例">例</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">example</span>(){
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;対象のスプレッドシートのURLを入力してください&#34;</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet_name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;シート名を入力してください&#34;</span>;
+
+  <span style="color:#75715e">//インスタンス取得
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dbManager</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">識別名</span>.<span style="color:#a6e22e">SpreadsheetsDBManager</span>(<span style="color:#a6e22e">url</span>, <span style="color:#a6e22e">sheet_name</span>);
+
+  <span style="color:#75715e">//新しいレコードの作成
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newRecord</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">create</span>();
+
+  <span style="color:#75715e">//IDが1のレコードの検索
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">record1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">findById</span>(<span style="color:#ae81ff">1</span>);
+
+  <span style="color:#75715e">//textカラムがbarのレコードの検索,古い順に上から一番目
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">record2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;text&#34;</span>,<span style="color:#e6db74">&#34;bar&#34;</span>);
+
+  <span style="color:#75715e">//textカラムがbarのレコードの検索,古い順に上から三番目
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">record2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;text&#34;</span>,<span style="color:#e6db74">&#34;bar&#34;</span>,<span style="color:#ae81ff">3</span>);
+
+  <span style="color:#75715e">//レコードの更新
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">newRecord</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;foo&#34;</span>;
+  <span style="color:#a6e22e">record1</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bar&#34;</span>;
+
+  <span style="color:#75715e">//変更の適用
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">newRecord</span>);
+  <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">record1</span>);
+
+  <span style="color:#75715e">//スプレッドシートへの保存
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dbManager</span>.<span style="color:#a6e22e">save</span>()
+}</code></pre></div>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/"><i class="fa fa-chevron-circle-left"></i> GASからSpreadsheetを難しいことを考えないで使う</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
