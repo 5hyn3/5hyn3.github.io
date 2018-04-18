@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>GASで日報作成を支援するbotを作る</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-04-19T01:47:18&#43;09:00">
+                Apr 19nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/gas/">#GAS</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/spreadsheet/">#Spreadsheet</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/javascript/">#javascript</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>日報を書くことはとても大切です。しかし同時にそれはとても面倒なことでもあります。継続しなければいけないけれども面倒なタスク。そんなものはテクノロジーの力を借りて効率化しちゃいましょう！ということで、GASを使って日報作成を支援してくれるbotを作りました。
+</p>
+
+<hr />
+
+<h1 id="ソースコード">ソースコード</h1>
+
+<ul>
+<li><u><a href="https://github.com/5hyn3/gasDailyReportBot">github</a></u></li>
+</ul>
+
+<p>tokenなどの変数は各々で取得したものを入力してください。ライブラリとして<u><a href="https://5hyn3.github.io/posts/gas-spreadsheetdbmanager-library/">こちら</a></u>を使用しています。識別名をGasSpreadsheetsDBManagerと設定してください</p>
+
+<hr />
+
+<h1 id="概要">概要</h1>
+
+<p>このbotはTodoist、Slack、Spreadsheetと連携して動作します。月～金曜日の21:30に、Todoistの特定のプロジェクトからタスクを取得し、完了したタスクは「Done!」の表示、完了していないタスクは「undone&hellip;」の表示をして、更に全体の何％のタスクが達成できたかを総評として計算し、Slackの自分のDMに投稿します。それと同時にSpreadsheetにタスクの達成可否と総評を記録します。これによって、以下の目標を達成できます。</p>
+
+<ul>
+<li><p>毎日の課題達成可否の部分を書く必要がなくなる</p>
+
+<ul>
+<li>Todoistと連携し、その部分を勝手に書いてくれます。日報の手を止めて目標を振り返り、出来たかどうか考える必要はありません</li>
+</ul></li>
+
+<li><p>振り返りを容易に</p>
+
+<ul>
+<li>目標達成の可否は自動的にSpreadsheetに記入されます。これは日報だけでなく、週報、月報を書くときにも役に立ちます</li>
+</ul></li>
+
+<li><p>日報作成を促す</p>
+
+<ul>
+<li>slackで送信することで、通知が飛び、日報の作成が促されます</li>
+<li>GoogleDocsに記入することも考えましたが、このように通知によって促すということが出来ないのでSlackにしました</li>
+</ul></li>
+</ul>
+
+<p>ちなみに、筆者がTodoistの無料アカウントである関係で、このソースコードは有料会員限定の機能(filterなど)を一切使用していません。誰でも使うことが出来ます。</p>
+
+<p>これを使用することで、日報を書く際の目標を入力し、達成できたか振り返り…といった本質ではない部分を省き、達成度合いを確認し、その理由を考え、明日に活かすという本質の部分に力を注ぐことが出来ます！</p>
+
+<hr />
+
+<h1 id="詳細">詳細</h1>
+
+<p>このプログラムを実際に使用する際には以下の変数を設定を行う必要があります。</p>
+
+<ul>
+<li><p>token</p>
+
+<ul>
+<li>Todoistのアクセストークンです。設定→連携機能から確認してください</li>
+</ul></li>
+
+<li><p>nextactionProjectId</p>
+
+<ul>
+<li>NextAction(次の課題)が設定されたProjectのIDです。TodoistのAPIを叩いて取得してください</li>
+</ul></li>
+
+<li><p>url</p>
+
+<ul>
+<li>目標達成の可否を記録するSpreadsheetのURLです</li>
+</ul></li>
+
+<li><p>sheet_name</p>
+
+<ul>
+<li>目標達成の可否を記録するSpreadsheetのシートの名前です</li>
+<li>sheetは以下のような構造にする必要があります。</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">id</td>
+<td align="center">datetime</td>
+<td align="center">総評</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>slackWebhockEndpoint
+
+<ul>
+<li>slackのincoming webhockのendpointです。通知が飛び、他人から見られないので、自分宛てのDMに設定することをオススメします。</li>
+</ul></li>
+</ul>
+
+<p>また、このbotは土日を休日と定めているため、その曜日には動作しません。</p>
+
+<hr />
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>いかがでしたでしょうか？ぶっちゃけこの記事はGASを使ってこんな事ができるよ！そのためにはこんなコードを書くとできるよ！程度のことを語りたいがために書いてる部分があり、実際にこのbotを利用したい！というニーズはあまり考えていない部分があります。反響があれば、コードを改良し、広く使える形にしていけたらなと思います。今のところは個人で利用する限りではこれで満足しているため、無ければやりませんが。</p>
+
+<p>この記事を読んでGASって便利だなーと思った方、是非GASしましょう！</p>
+
+<h1 id="参考">参考</h1>
+
+<p><u><a href="https://qiita.com/numanomanu/items/b7478dc2803226735291">Qiita - GAS から Slack に投稿するシンプルなコード(incoming webhooks)</a></u></p>
+
+<p><u><a href="https://qiita.com/sumi-engraphia/items/465dd027e17f44da4d6a">Qiita - Google Apps Scriptの日毎のトリガーで時間をもっと細かく設定する</a></u></p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/gas-spreadsheetdbmanager-library/"><i class="fa fa-chevron-circle-left"></i> SpreadsheetをDBのように気軽に使うGAS向けライブラリ</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

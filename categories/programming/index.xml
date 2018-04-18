@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Wed, 11 Apr 2018 00:01:04 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 01:47:18 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GASで日報作成を支援するbotを作る</title>
+      <link>https://5hyn3.github.io/posts/gas-daily-report-bot/</link>
+      <pubDate>Thu, 19 Apr 2018 01:47:18 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/gas-daily-report-bot/</guid>
+      <description>&lt;p&gt;日報を書くことはとても大切です。しかし同時にそれはとても面倒なことでもあります。継続しなければいけないけれども面倒なタスク。そんなものはテクノロジーの力を借りて効率化しちゃいましょう！ということで、GASを使って日報作成を支援してくれるbotを作りました。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>SpreadsheetをDBのように気軽に使うGAS向けライブラリ</title>
