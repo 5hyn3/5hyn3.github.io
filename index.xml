@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Thu, 19 Apr 2018 01:47:18 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Apr 2018 23:43:28 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>[Kotlinイン・アクション]を読んだので紹介してみる</title>
+      <link>https://5hyn3.github.io/posts/kotlin-in-action-review/</link>
+      <pubDate>Fri, 20 Apr 2018 23:43:28 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/kotlin-in-action-review/</guid>
+      <description>&lt;p&gt;業務で必要になったのでkotlinについて学びました。その一環として[Kotlinイン・アクション]を読破したので、これについて紹介してみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
