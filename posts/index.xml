@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 20 Apr 2018 23:43:28 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Apr 2018 01:58:11 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>僕が本を紹介するときのスタンス</title>
+      <link>https://5hyn3.github.io/posts/stance-to-introduce-books/</link>
+      <pubDate>Mon, 23 Apr 2018 01:58:11 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/stance-to-introduce-books/</guid>
+      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/kotlin-in-action-review/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;で僕が本を紹介する際のスタンスについて軽く書きましたが、今後様々な技術書を読む上で、同じように人に紹介する記事を書くことが多くなるだろうと思うので、ここに一つの記事として独立させます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GASでJSONPを返す</title>
+      <link>https://5hyn3.github.io/posts/gas-return-jsonp/</link>
+      <pubDate>Mon, 23 Apr 2018 01:41:56 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/gas-return-jsonp/</guid>
+      <description>&lt;p&gt;GASでJSONPを返す方法を調べたのでここにメモします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[Kotlinイン・アクション]を読んだので紹介してみる</title>

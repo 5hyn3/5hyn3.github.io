@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Thu, 19 Apr 2018 01:47:18 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Apr 2018 01:41:56 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GASでJSONPを返す</title>
+      <link>https://5hyn3.github.io/posts/gas-return-jsonp/</link>
+      <pubDate>Mon, 23 Apr 2018 01:41:56 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/gas-return-jsonp/</guid>
+      <description>&lt;p&gt;GASでJSONPを返す方法を調べたのでここにメモします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GASで日報作成を支援するbotを作る</title>
