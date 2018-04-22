@@ -1,0 +1,236 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>GASでJSONPを返す</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-04-23T01:41:56&#43;09:00">
+                Apr 23nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/gas/">#GAS</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/javascript/">#javascript</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/memo/">#memo</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>GASでJSONPを返す方法を調べたのでここにメモします。</p>
+
+<p></p>
+
+<hr />
+
+<h1 id="方法">方法</h1>
+
+<p>以下のようにします。これはGETリクエストに対して適当なデータをJSONP形式で返すメソッドです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doGet</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {};<span style="color:#75715e">//返したいデータをこの変数に格納してください
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span>   <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">parameter</span>.<span style="color:#a6e22e">callback</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;(&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;);&#39;</span>,
+    <span style="color:#a6e22e">mimeType</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ContentService</span>.<span style="color:#a6e22e">MimeType</span>.<span style="color:#a6e22e">JAVASCRIPT</span>
+  };
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ContentService</span>.<span style="color:#a6e22e">createTextOutput</span>(<span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">output</span>).<span style="color:#a6e22e">setMimeType</span>(<span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">mimeType</span>);
+}</code></pre></div>
+<p>ポイントは以下の2点です</p>
+
+<ul>
+<li><p>createTextOutputに渡すテキストを、&rsquo;&lt;e.parameter.callbackにセットされた文字列&gt;(&lt;シリアライズされたオブジェクト&gt;);&lsquo;という形式にする</p>
+
+<ul>
+<li>JSONPの形式に対応させるためです</li>
+</ul></li>
+
+<li><p>setMimeTypeにわたすMimeTypeをContentService.MimeType.JAVASCRIPTとする</p>
+
+<ul>
+<li>JSONPの形式に対応させるためです</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>GASでJSONPを扱うことができるようになりました。これでCORSを気にすること無く、外部からのリクエストに対してデータを返すことが出来ます。ただし、外部からGASに対してデータを渡す場合にはCORSを何とかする方法はありません。さすがのGASもそこまで融通は利かないようです。</p>
+
+<hr />
+
+<h1 id="参考">参考</h1>
+
+<ul>
+<li><a href="https://yhirano55.github.io/2015/09/19/6653458415121934273/">［GAS］送信結果をJSONPで返す</a>
+
+<ul>
+<li>ほぼこのページと同等の内容ですが、使用しているソースコードに間違いがありました
+
+<ul>
+<li>✕     ContentService.MimeType.JavaScript</li>
+<li>◯     ContentService.MimeType.JAVASCRIPT</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/kotlin-in-action-review/"><i class="fa fa-chevron-circle-left"></i> [Kotlinイン・アクション]を読んだので紹介してみる</a>
+        </li>
+        
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/stance-to-introduce-books/">僕が本を紹介するときのスタンス <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
