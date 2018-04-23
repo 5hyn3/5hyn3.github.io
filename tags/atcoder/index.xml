@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kotlin on ls -al</title>
-    <link>https://5hyn3.github.io/tags/kotlin/</link>
-    <description>Recent content in Kotlin on ls -al</description>
+    <title>Atcoder on ls -al</title>
+    <link>https://5hyn3.github.io/tags/atcoder/</link>
+    <description>Recent content in Atcoder on ls -al</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
     <lastBuildDate>Tue, 24 Apr 2018 01:18:48 +0900</lastBuildDate>
     
-	<atom:link href="https://5hyn3.github.io/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://5hyn3.github.io/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <guid>https://5hyn3.github.io/posts/try-atcoder-with-kotlin/</guid>
       <description>&lt;p&gt;せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。
 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Kotlinイン・アクション]を読んだので紹介してみる</title>
-      <link>https://5hyn3.github.io/posts/kotlin-in-action-review/</link>
-      <pubDate>Fri, 20 Apr 2018 23:43:28 +0900</pubDate>
-      
-      <guid>https://5hyn3.github.io/posts/kotlin-in-action-review/</guid>
-      <description>&lt;p&gt;業務で必要になったのでkotlinについて学びました。その一環として[Kotlinイン・アクション]を読破したので、これについて紹介してみたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

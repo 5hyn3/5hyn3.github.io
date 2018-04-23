@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Thu, 22 Feb 2018 00:58:55 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Apr 2018 01:18:48 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Atcoder</title>
+      <link>https://5hyn3.github.io/tags/atcoder/</link>
+      <pubDate>Tue, 24 Apr 2018 01:18:48 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/tags/atcoder/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ci</title>
@@ -18,6 +27,15 @@
       <pubDate>Thu, 22 Feb 2018 00:58:55 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Competitive Programming</title>
+      <link>https://5hyn3.github.io/tags/competitive-programming/</link>
+      <pubDate>Tue, 24 Apr 2018 01:18:48 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/tags/competitive-programming/</guid>
       <description></description>
     </item>
     
@@ -78,7 +96,7 @@
     <item>
       <title>Kotlin</title>
       <link>https://5hyn3.github.io/tags/kotlin/</link>
-      <pubDate>Fri, 20 Apr 2018 23:43:28 +0900</pubDate>
+      <pubDate>Tue, 24 Apr 2018 01:18:48 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/tags/kotlin/</guid>
       <description></description>

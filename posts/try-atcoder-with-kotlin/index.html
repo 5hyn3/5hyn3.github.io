@@ -100,14 +100,14 @@
 
 <article>
 
-    <h1>僕が本を紹介するときのスタンス</h1>
+    <h1>KotlinとAtCoderに挑戦してみる</h1>
 
     
         <aside>
     <ul>
         <li>
-            <time class="post-date" datetime="2018-04-23T01:58:11&#43;09:00">
-                Apr 23nd, 2018
+            <time class="post-date" datetime="2018-04-24T01:18:48&#43;09:00">
+                Apr 24nd, 2018
             </time>
         </li>
         
@@ -117,12 +117,27 @@
             <em>
                 
                     
-                    <a href="https://5hyn3.github.io/categories/book/">book</a>
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
                 
             </em>
         </li>
         
 
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/kotlin/">#kotlin</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/competitive-programming/">#Competitive programming</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/atcoder/">#AtCoder</a>
+                
+            </em>
+        </li>
         
 
         <li>1 min read</li>
@@ -130,19 +145,29 @@
 </aside>
     
 
-    <p>以前<u><a href="https://5hyn3.github.io/posts/kotlin-in-action-review/">こちら</a></u>で僕が本を紹介する際のスタンスについて軽く書きましたが、今後様々な技術書を読む上で、同じように人に紹介する記事を書くことが多くなるだろうと思うので、ここに一つの記事として独立させます。</p>
+    <p>せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。
+</p>
 
-<p></p>
+<h1 id="開発環境">開発環境</h1>
 
-<h1 id="スタンスについて">スタンスについて</h1>
+<p>AtCoderには「コードテスト」機能があり、動作を確認できます。しかし、当然サーバーでコンパイル及び実行してもらう形になるので遅いです。また、IDEのような高度な補完などはできません。そういった背景から、僕はIntelliJ Community Editionを使用しています。競プロしながら、ついでにIDEの扱いもさらに身に着けておこうという狙いもあります。</p>
 
-<p>僕が本を紹介する際のスタンスについて書きます。僕は以下のようなスタンスで本を紹介します。</p>
+<h1 id="所感">所感</h1>
 
-<p>「自らのレベルや背景を明かした上で、読んで欲しい人、読むべきではない人をはっきり伝える事に焦点を置く」</p>
+<p>以前に競技プログラミングを少し触った時はC++を使用していましたが、やはり最近の言語はとても扱いやすいです。数行で所望の機能が実装できてしまいました。当然ネイティブではないのでそこまでの速度は出ませんが、これは楽しそうです。</p>
 
-<p>今の時代、ネットでいくらでも目次程度の内容は把握できるので、なにが書かれているのかについて論ずるのは無駄です。そのような物は本の販売サイトを見てくればいくらでも正確な情報を得ることが出来ます。<br />
-かといって詳細を書きすぎると作者に失礼です。内容を書きすぎて、本を買う必要が無いほどの記事にしてしまえば、本を書いてくださった作者を不幸にします。<br />
-では、いったい何を書けばよいのでしょうか？確実な事は一つあります。僕が本について検索する時、その動機は大抵、「自分が買っても問題ないか」 ということを確かめるためでした。これは自分だけではなく、多くの人が持ちうる動機だと考えます。例えばC++のエキスパート向けの本をプログラミング初学者が購入しても手に余るだけですし、その逆に簡単すぎるものを買ってもお金の無駄になってしまうでしょう。技術書は高価なものですし、できれば自分のレベルに合ったものを吟味して選びたいという悩みは誰しも等しく持ち得るものです。そんな悩みを解決するために、上記のスタンスを守りたいと思います。</p>
+<h1 id="ハマった所">ハマった所</h1>
+
+<ul>
+<li><a href="https://practice.contest.atcoder.jp/submissions/2407798">https://practice.contest.atcoder.jp/submissions/2407798</a></li>
+<li><a href="https://practice.contest.atcoder.jp/submissions/2407801">https://practice.contest.atcoder.jp/submissions/2407801</a></li>
+</ul>
+
+<p>上二つのコードはほぼ同じに見えますが、片方はACで片方はWAです。なにが違うのでしょうか。12行目に注目してください。ACの方はprintln()で、WAの方はprint()を使用しています。AtCoderの解答のフォーマットとして、出力の末尾は改行で終わっていないといけません。ここでそれらメソッドの仕様を確認すると、println()は文字列の後ろに改行コードを挿入し、print()はしません。参考に上げた記事が分かりやすいです。AtCoderを行う時は、きちんと改行を行ってくれるprintln()を使うようにしましょう。僕はこの仕様に気づかずに数十分を無駄にしました。</p>
+
+<h1 id="参考">参考</h1>
+
+<p><u><a href="https://www.javascan.com/1127/kotlin-print-and-println">Kotlin Print And Println</a></u></p>
 
 </article>
 
@@ -151,13 +176,9 @@
     <ul>
         
         <li>
-            <a href="https://5hyn3.github.io/posts/gas-return-jsonp/"><i class="fa fa-chevron-circle-left"></i> GASでJSONPを返す</a>
+            <a href="https://5hyn3.github.io/posts/stance-to-introduce-books/"><i class="fa fa-chevron-circle-left"></i> 僕が本を紹介するときのスタンス</a>
         </li>
         
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/try-atcoder-with-kotlin/">KotlinとAtCoderに挑戦してみる <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
         
     </ul>
 </section>

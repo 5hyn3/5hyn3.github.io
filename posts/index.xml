@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Mon, 23 Apr 2018 01:58:11 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Apr 2018 01:18:48 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>KotlinとAtCoderに挑戦してみる</title>
+      <link>https://5hyn3.github.io/posts/try-atcoder-with-kotlin/</link>
+      <pubDate>Tue, 24 Apr 2018 01:18:48 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/try-atcoder-with-kotlin/</guid>
+      <description>&lt;p&gt;せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>僕が本を紹介するときのスタンス</title>

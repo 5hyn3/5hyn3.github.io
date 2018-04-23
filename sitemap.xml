@@ -20,7 +20,12 @@
   
   <url>
     <loc>https://5hyn3.github.io/posts/</loc>
-    <lastmod>2018-04-23T01:58:11+09:00</lastmod>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://5hyn3.github.io/posts/try-atcoder-with-kotlin/</loc>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
   </url>
   
   <url>
@@ -139,6 +144,12 @@
   </url>
   
   <url>
+    <loc>https://5hyn3.github.io/tags/atcoder/</loc>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://5hyn3.github.io/categories/book/</loc>
     <lastmod>2018-04-23T01:58:11+09:00</lastmod>
     <priority>0</priority>
@@ -153,6 +164,12 @@
   <url>
     <loc>https://5hyn3.github.io/tags/ci/</loc>
     <lastmod>2018-02-22T00:58:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://5hyn3.github.io/tags/competitive-programming/</loc>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -206,7 +223,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/kotlin/</loc>
-    <lastmod>2018-04-20T23:43:28+09:00</lastmod>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,7 +253,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/categories/programming/</loc>
-    <lastmod>2018-04-23T01:41:56+09:00</lastmod>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -266,7 +283,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/</loc>
-    <lastmod>2018-02-22T00:58:55+09:00</lastmod>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,7 +319,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/</loc>
-    <lastmod>2018-04-23T01:58:11+09:00</lastmod>
+    <lastmod>2018-04-24T01:18:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
