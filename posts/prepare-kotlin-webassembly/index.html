@@ -100,14 +100,14 @@
 
 <article>
 
-    <h1>KotlinとAtCoderに挑戦してみる</h1>
+    <h1>kotlinでWebAssemblyしてみる(環境構築編)</h1>
 
     
         <aside>
     <ul>
         <li>
-            <time class="post-date" datetime="2018-04-24T01:18:48&#43;09:00">
-                Apr 24nd, 2018
+            <time class="post-date" datetime="2018-04-27T01:38:50&#43;09:00">
+                Apr 27nd, 2018
             </time>
         </li>
         
@@ -128,13 +128,7 @@
             <em>
                 
                     
-                    <a href="https://5hyn3.github.io/tags/kotlin/">#kotlin</a>
-                
-                    , 
-                    <a href="https://5hyn3.github.io/tags/competitive-programming/">#Competitive programming</a>
-                
-                    , 
-                    <a href="https://5hyn3.github.io/tags/atcoder/">#AtCoder</a>
+                    <a href="https://5hyn3.github.io/tags/kotlinwebassembly/">#kotlin,WebAssembly</a>
                 
             </em>
         </li>
@@ -145,29 +139,102 @@
 </aside>
     
 
-    <p>せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。
-</p>
+    <p>ちまたでGoがWebAssemblyに対応する予定ということで話題になっていますが、実はkotlinをWebAssemblyにコンパイルすることが出来ます。</p>
 
-<h1 id="開発環境">開発環境</h1>
+<p>最近kotlinにハマっており、これはやるしかないと思い、やってみることにしました。</p>
 
-<p>AtCoderには「コードテスト」機能があり、動作を確認できます。しかし、当然サーバーでコンパイル及び実行してもらう形になるので遅いです。また、IDEのような高度な補完などはできません。そういった背景から、僕はIntelliJ Community Editionを使用しています。競プロしながら、ついでにIDEの扱いもさらに身に着けておこうという狙いもあります。</p>
+<p></p>
 
-<h1 id="所感">所感</h1>
-
-<p>以前に競技プログラミングを少し触った時はC++を使用していましたが、やはり最近の言語はとても扱いやすいです。数行で所望の機能が実装できてしまいました。当然ネイティブではないのでそこまでの速度は出ませんが、これは楽しそうです。</p>
-
-<h1 id="ハマった所">ハマった所</h1>
+<p>本記事ではkotlinをWebAssemblyにコンパイルできる環境構築と、それを用いて実際にサンプルコードを動作させるところまでやってみます。
+内容的には以下のウェブページと同一の事を行います。</p>
 
 <ul>
-<li><a href="https://practice.contest.atcoder.jp/submissions/2407798">https://practice.contest.atcoder.jp/submissions/2407798</a></li>
-<li><a href="https://practice.contest.atcoder.jp/submissions/2407801">https://practice.contest.atcoder.jp/submissions/2407801</a></li>
+<li><u><a href="https://superkotlin.com/kotlin-and-webassembly/">Kotlin and WebAssembly</a></u></li>
 </ul>
 
-<p>上二つのコードはほぼ同じに見えますが、片方はACで片方はWAです。なにが違うのでしょうか。12行目に注目してください。ACの方はprintln()で、WAの方はprint()を使用しています。AtCoderの解答のフォーマットとして、出力の末尾は改行で終わっていないといけません。ここでそれらメソッドの仕様を確認すると、println()は文字列の後ろに改行コードを挿入し、print()はしません。参考に上げた記事が分かりやすいです。AtCoderを行う時は、きちんと改行を行ってくれるprintln()を使うようにしましょう。僕はこの仕様に気づかずに数十分を無駄にしました。</p>
+<hr />
 
-<h1 id="参考">参考</h1>
+<h1 id="環境構築">環境構築</h1>
 
-<p><u><a href="https://www.javascan.com/1127/kotlin-print-and-println">Kotlin Print And Println</a></u></p>
+<p>まずはkotlin-nativeのセットアップを行います。Githubの<u><a href="https://github.com/JetBrains/kotlin-native">kotlin-native</a></u>リポジトリにあるReadme.mdと同じことをします。</p>
+
+<ol>
+<li>git clone <a href="https://github.com/JetBrains/kotlin-native.git">https://github.com/JetBrains/kotlin-native.git</a>
+
+<ul>
+<li>リポジトリをクローンします</li>
+</ul></li>
+<li>cd kotlin-native
+
+<ul>
+<li>kotlin-nativeディレクトリに移動します</li>
+</ul></li>
+<li>./gradlew dependencies:update
+
+<ul>
+<li>依存関係のダウンロードを行います</li>
+</ul></li>
+<li>./gradlew bundle
+
+<ul>
+<li>コンパイラとライブラリをビルドします</li>
+<li>時間がかかります。まったり待ちましょう。<br /></li>
+<li>MBPで1時間程かかります。</li>
+</ul></li>
+<li>dist/binにパスを通す
+<br /></li>
+</ol>
+
+<p>以上で終了です。きちんとパスを通せていれば、kotlincコマンドが動作するはずです。</p>
+
+<hr />
+
+<h1 id="サンプルを動作させてみる">サンプルを動作させてみる</h1>
+
+<ol>
+<li>git clone <a href="https://github.com/ftomassetti/kotlin-wasm-examples.git">https://github.com/ftomassetti/kotlin-wasm-examples.git</a>
+
+<ul>
+<li>リポジトリをクローンします</li>
+</ul></li>
+<li>cd kotlin-wasm-examples
+
+<ul>
+<li>kotlin-wasm-examplesに移動します</li>
+</ul></li>
+<li>./build.sh
+
+<ul>
+<li>コンパイルと成果物のコピーを行います</li>
+</ul></li>
+<li>cd web
+
+<ul>
+<li>webディレクトリに移動します</li>
+</ul></li>
+
+<li><p>simplehttp2server</p>
+
+<ul>
+<li>無ければ以下のコマンドでインストールしてください</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew tap GoogleChrome/simplehttp2server https://github.com/GoogleChrome/simplehttp2server
+brew install simplehttp2server</code></pre></div></li>
+
+<li><p><a href="http://localhost:5000にブラウザでアクセス">http://localhost:5000にブラウザでアクセス</a></p>
+
+<ul>
+<li>信頼書関係のエラーが出ますが無視してください</li>
+</ul></li>
+</ol>
+
+<p>以上で終了です。正しく動作していればカラフルな画像が表示されているはずです。</p>
+
+<hr />
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>kotlinをWebAssemblyにコンパイルすることができる環境が完成しました。次はこのサンプルコードの解説を行い、通常のJSとkotlinをコンパイルしたWebAssemblyで動作速度の比較も行いたいと思います。</p>
 
 </article>
 
@@ -176,13 +243,9 @@
     <ul>
         
         <li>
-            <a href="https://5hyn3.github.io/posts/stance-to-introduce-books/"><i class="fa fa-chevron-circle-left"></i> 僕が本を紹介するときのスタンス</a>
+            <a href="https://5hyn3.github.io/posts/try-atcoder-with-kotlin/"><i class="fa fa-chevron-circle-left"></i> KotlinとAtCoderに挑戦してみる</a>
         </li>
         
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/prepare-kotlin-webassembly/">kotlinでWebAssemblyしてみる(環境構築編) <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
         
     </ul>
 </section>

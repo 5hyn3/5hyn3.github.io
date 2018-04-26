@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Tue, 24 Apr 2018 01:18:48 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Apr 2018 01:38:50 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,19 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>kotlinでWebAssemblyしてみる(環境構築編)</title>
+      <link>https://5hyn3.github.io/posts/prepare-kotlin-webassembly/</link>
+      <pubDate>Fri, 27 Apr 2018 01:38:50 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/prepare-kotlin-webassembly/</guid>
+      <description>&lt;p&gt;ちまたでGoがWebAssemblyに対応する予定ということで話題になっていますが、実はkotlinをWebAssemblyにコンパイルすることが出来ます。&lt;/p&gt;
+
+&lt;p&gt;最近kotlinにハマっており、これはやるしかないと思い、やってみることにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
