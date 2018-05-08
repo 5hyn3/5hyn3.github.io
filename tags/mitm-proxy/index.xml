@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mitm Proxy on ls -al</title>
+    <link>https://5hyn3.github.io/tags/mitm-proxy/</link>
+    <description>Recent content in Mitm Proxy on ls -al</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
+    <lastBuildDate>Tue, 08 May 2018 21:28:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://5hyn3.github.io/tags/mitm-proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Androidエミュの通信をホストのmitmproxyに通す</title>
+      <link>https://5hyn3.github.io/posts/use-mitm-proxy-with-android-emulator/</link>
+      <pubDate>Tue, 08 May 2018 21:28:47 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/use-mitm-proxy-with-android-emulator/</guid>
+      <description>&lt;p&gt;&lt;span&gt;　&lt;span&gt;Android開発において、エミュレータ上のアプリで叩いているAPIを確認したかったのでやってみました。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

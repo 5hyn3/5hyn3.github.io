@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Mon, 07 May 2018 23:53:57 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 08 May 2018 21:28:47 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,16 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>Androidエミュの通信をホストのmitmproxyに通す</title>
+      <link>https://5hyn3.github.io/posts/use-mitm-proxy-with-android-emulator/</link>
+      <pubDate>Tue, 08 May 2018 21:28:47 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/use-mitm-proxy-with-android-emulator/</guid>
+      <description>&lt;p&gt;&lt;span&gt;　&lt;span&gt;Android開発において、エミュレータ上のアプリで叩いているAPIを確認したかったのでやってみました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
