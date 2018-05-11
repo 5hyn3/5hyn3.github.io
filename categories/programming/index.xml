@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Tue, 08 May 2018 21:28:47 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 11 May 2018 23:58:08 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>kotlinでWebAssemblyしてみる(サンプルコード読解編)</title>
+      <link>https://5hyn3.github.io/posts/commentary-kotlin-webassembly/</link>
+      <pubDate>Fri, 11 May 2018 23:58:08 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/commentary-kotlin-webassembly/</guid>
+      <description>&lt;p&gt;kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Androidエミュの通信をホストのmitmproxyに通す</title>

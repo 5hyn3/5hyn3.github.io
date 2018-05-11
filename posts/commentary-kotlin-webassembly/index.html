@@ -1,0 +1,352 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>kotlinでWebAssemblyしてみる(サンプルコード読解編)</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-05-11T23:58:08&#43;09:00">
+                May 11nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/kotlinwebassembly/">#kotlin,WebAssembly</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。</p>
+
+<p></p>
+
+<p><u><a href="https://5hyn3.github.io/posts/prepare-kotlin-webassembly">前回</a></u>は環境構築と、その動作確認のためにサンプルコードのビルドと実行を行いました。今回はそのサンプルコードがどのように動いているのか見てみたいと思います。</p>
+
+<p>サンプルコードは<u><a href="https://github.com/ftomassetti/kotlin-wasm-examples.git">こちら</a></u></p>
+
+<hr />
+
+<h1 id="ビルド周り">ビルド周り</h1>
+
+<p>　前回ビルドを実行する時にbuild.shを実行しましたが、その中身は以下のようになっています。</p>
+
+<p>build.sh</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew build
+cp ./build/konan/bin/wasm32/*.wasm web/
+cp ./build/konan/bin/wasm32/*.wasm.js web/</code></pre></div>
+<p>内容としては、gradleのビルドタスクを実行した後、成果物を配置しているようです。</p>
+
+<p>build.gradleの中身は以下のようになっています(後ろのコメントアウト部分は省きました)</p>
+
+<p>build.gradle</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">buildscript {
+    repositories {
+        jcenter()
+        maven { url &#34;http://kotlin.bintray.com/kotlinx&#34; }
+        maven { url &#34;https://plugins.gradle.org/m2/&#34; }
+        maven { url &#34;https://dl.bintray.com/jetbrains/kotlin-native-dependencies&#34; }
+    }
+    dependencies {
+        classpath &#34;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&#34;
+        classpath &#34;com.moowork.gradle:gradle-node-plugin:$gradle_node_version&#34;
+        classpath &#34;org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version&#34;
+    }
+}
+
+apply plugin: &#39;konan&#39;
+
+
+konanArtifacts {
+    
+    // This artifact will be built only for Linux and Wasm32
+    program(&#39;stats&#39;, targets: [&#39;wasm32&#39;]) {
+         srcDir &#39;src/main/kotlin&#39;        
+         libraries {
+             useRepo &#39;lib&#39;
+             klib &#39;dom&#39;
+         }
+    }
+}</code></pre></div>
+<p>　通常のgradleと同じように依存関係を記述しています。konanArtifactsの中でプログラムの名前(&lsquo;stats&rsquo;)とビルドのターゲット(wasm32)が指定され、そのソースの位置と使用するライブラリが定義されています。</p>
+
+<hr />
+
+<h1 id="ソースコード-wasm側">ソースコード(wasm側)</h1>
+
+<p>　次にソースコードの中身を見ていきます。ソースコードは</p>
+
+<ul>
+<li>main.kt</li>
+<li>model.kt</li>
+<li>view.kt</li>
+</ul>
+
+<p>の3つのファイルに記述されています。それぞれ見ていきましょう。</p>
+
+<h2 id="main-kt">main.kt</h2>
+
+<p>　このファイルにはmainとloopの二つのメソッドが定義されています。メインルーチンが纏められています。</p>
+
+<ul>
+<li><p>fun main(args: Array<String>)</p>
+
+<ul>
+<li>本プログラムのエントリポイント</li>
+<li>domライブラリを使用してIdがmyCanvasの要素をCanvasとして取得</li>
+<li>1000msごとにloopメソッドに取得したCanvasを引数として渡して実行</li>
+</ul></li>
+
+<li><p>fun loop(canvas: Canvas)</p>
+
+<ul>
+<li>/stats.jsonからデータを取得</li>
+<li>取得後の内容を引数としてModel.push()の実行</li>
+<li>View(canvas).render()を実行してキャンバスの表示の更新を行う</li>
+</ul></li>
+</ul>
+
+<h1 id="model-kt">model.kt</h1>
+
+<p>　このファイルにはModelオブジェクトが定義されています。表示するデータを保持するオブジェクトのようです。</p>
+
+<ul>
+<li>object Model
+
+<ul>
+<li>概要
+
+<ul>
+<li>各種データが定義されている</li>
+</ul></li>
+<li>メソッド
+
+<ul>
+<li>fun push(new: Array<Int>)
+
+<ul>
+<li>新しく受け取ったデータをメンバ変数にセットする</li>
+<li>igotdata()を実行している
+
+<ul>
+<li>ファイル最後尾で&rsquo;imported_igotdata&rsquo;としてigotdata()を外部に公開</li>
+<li>こうすることでWebassembly側からjsのリスナーに通知を送ることが出来る</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="view-kt">view.kt</h1>
+
+<p>このファイルにはStyleオブジェクトとLayout,Viewクラスが定義されています。canvasへの描画処理を行っています。</p>
+
+<ul>
+<li><p>object Style</p>
+
+<ul>
+<li>概要
+
+<ul>
+<li>背景色など、スタイルに関するデータの定義</li>
+</ul></li>
+</ul></li>
+
+<li><p>open class Layout(val rect: DOMRect)</p>
+
+<ul>
+<li>概要
+
+<ul>
+<li>キャンバスへの描画処理に必要なデータの定義</li>
+</ul></li>
+</ul></li>
+
+<li><p>class View(canvas: Canvas): Layout(canvas.getBoundingClientRect())</p>
+
+<ul>
+<li>概要
+
+<ul>
+<li>キャンバスへの描画処理の実装</li>
+<li>注目すべきはcontextの扱いです。main.ktでdocument.getElementByIdが使われていたように、ライブラリを活用することで通常のjsと同じメソッドで同じような処理を実行しています。</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="ソースコード-フロント側">ソースコード(フロント側)</h2>
+
+<p>フロント側のソースコードはindex.htmlのみです。その中でメインの処理が書かれている部分を抜粋します。</p>
+
+<p>index.htmlの一部</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./stats.wasm.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#a6e22e">konan</span>.<span style="color:#a6e22e">libraries</span>.<span style="color:#a6e22e">push</span>({<span style="color:#e6db74">&#34;imported_igotdata&#34;</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">msg</span>){ <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;I got the data, updating&#34;</span>);}})
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./stats.wasm&#34;</span>;
+    <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">filename</span>).<span style="color:#a6e22e">then</span>( <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">response</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">arrayBuffer</span>();
+    }).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">arraybuffer</span>) {
+        <span style="color:#a6e22e">instantiateAndRun</span>(<span style="color:#a6e22e">arraybuffer</span>, [<span style="color:#a6e22e">filename</span>]);
+    });
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span></code></pre></div>
+<p>./stats.wasm.jsはビルドすると生成されるファイルです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">konan</span>.<span style="color:#a6e22e">libraries</span>.<span style="color:#a6e22e">push</span>({<span style="color:#e6db74">&#34;imported_igotdata&#34;</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">msg</span>){ <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;I got the data, updating&#34;</span>);}})</code></pre></div>
+<p>ここでmodel.ktで外部に公開していたimported_igotdataが登場します。wasm側でigotdata()が実行される度に、こちらでアラートが実行されます。</p>
+
+<h1 id="おわりに">おわりに</h1>
+
+<p>雑な解説でしたがサンプルコードは以上のような構造となっていました。個人的には、wasm側からフロント側に簡単に通知する方法があったり、用意されたライブラリがjsにある機能をそっくりそのまま実装しちゃっているので思ってたよりも非常にお手軽に出来ると感じました。さすがにこれでjsがいらなくなる程になるわけではなさそうですが、wasmだけでも色々なことができそうです。</p>
+
+<p>次回はkotlin/nativeのwasmとjsで計算速度の比較を行ってみたいと思います。</p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/introduce-android-textbook/"><i class="fa fa-chevron-circle-left"></i> [黒帯エンジニアが教えるプロの技術 Android開発の教科書]を読んだので紹介してみる</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

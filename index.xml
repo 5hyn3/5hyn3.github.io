@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 11 May 2018 00:40:50 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 11 May 2018 23:58:08 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>kotlinでWebAssemblyしてみる(サンプルコード読解編)</title>
+      <link>https://5hyn3.github.io/posts/commentary-kotlin-webassembly/</link>
+      <pubDate>Fri, 11 May 2018 23:58:08 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/commentary-kotlin-webassembly/</guid>
+      <description>&lt;p&gt;kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
