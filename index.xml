@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 20 May 2018 00:55:40 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 25 May 2018 00:47:48 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>GoogleAdsenseの審査通りました</title>
+      <link>https://5hyn3.github.io/posts/pass-google-adsense/</link>
+      <pubDate>Fri, 25 May 2018 00:47:48 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/pass-google-adsense/</guid>
+      <description>&lt;p&gt;GoogleAdsenseの審査通りましたので、それまでの経緯などをまとめておきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

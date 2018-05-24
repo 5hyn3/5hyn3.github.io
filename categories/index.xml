@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 20 May 2018 00:55:40 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 25 May 2018 00:47:48 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Affiliate</title>
+      <link>https://5hyn3.github.io/categories/affiliate/</link>
+      <pubDate>Fri, 25 May 2018 00:47:48 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/categories/affiliate/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Book</title>
