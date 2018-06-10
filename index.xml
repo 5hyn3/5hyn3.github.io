@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 25 May 2018 22:58:39 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jun 2018 17:29:24 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>MobileApostilleの紹介</title>
+      <link>https://5hyn3.github.io/posts/introduction-of-mobileapostille/</link>
+      <pubDate>Sun, 10 Jun 2018 17:29:24 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/introduction-of-mobileapostille/</guid>
+      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
