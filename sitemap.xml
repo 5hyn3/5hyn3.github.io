@@ -20,7 +20,12 @@
   
   <url>
     <loc>https://5hyn3.github.io/posts/</loc>
-    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://5hyn3.github.io/posts/get-binary-from-url-with-kotlin/</loc>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
   </url>
   
   <url>
@@ -290,6 +295,12 @@
   </url>
   
   <url>
+    <loc>https://5hyn3.github.io/tags/java/</loc>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://5hyn3.github.io/tags/javascript/</loc>
     <lastmod>2018-04-23T01:41:56+09:00</lastmod>
     <priority>0</priority>
@@ -297,7 +308,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/kotlin/</loc>
-    <lastmod>2018-05-25T22:58:39+09:00</lastmod>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -315,7 +326,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/memo/</loc>
-    <lastmod>2018-04-23T01:41:56+09:00</lastmod>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -339,7 +350,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/categories/programming/</loc>
-    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -417,7 +428,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/</loc>
-    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
+    <lastmod>2018-06-25T01:50:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
