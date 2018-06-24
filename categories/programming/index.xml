@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 25 May 2018 22:58:39 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Jun 2018 21:08:35 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XCode10の早くなったビルドを試してみる</title>
+      <link>https://5hyn3.github.io/posts/try-building-with-xcode-10/</link>
+      <pubDate>Sun, 24 Jun 2018 21:08:35 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/try-building-with-xcode-10/</guid>
+      <description>&lt;p&gt;iOSアプリエンジニアの多くが感じる、「ビルドに時間がかかる」という苦悩が、XCode10の新しいビルドシステムでマシになるそうなので検証してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Androidでファイルハッシュを計算する</title>

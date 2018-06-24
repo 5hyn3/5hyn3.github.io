@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xcode on ls -al</title>
+    <link>https://5hyn3.github.io/tags/xcode/</link>
+    <description>Recent content in Xcode on ls -al</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
+    <lastBuildDate>Sun, 24 Jun 2018 21:08:35 +0900</lastBuildDate>
+    
+	<atom:link href="https://5hyn3.github.io/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>XCode10の早くなったビルドを試してみる</title>
+      <link>https://5hyn3.github.io/posts/try-building-with-xcode-10/</link>
+      <pubDate>Sun, 24 Jun 2018 21:08:35 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/try-building-with-xcode-10/</guid>
+      <description>&lt;p&gt;iOSアプリエンジニアの多くが感じる、「ビルドに時間がかかる」という苦悩が、XCode10の新しいビルドシステムでマシになるそうなので検証してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -20,7 +20,12 @@
   
   <url>
     <loc>https://5hyn3.github.io/posts/</loc>
-    <lastmod>2018-06-10T17:29:24+09:00</lastmod>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://5hyn3.github.io/posts/try-building-with-xcode-10/</loc>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
   </url>
   
   <url>
@@ -280,7 +285,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/ios/</loc>
-    <lastmod>2018-05-20T00:55:40+09:00</lastmod>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -334,7 +339,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/categories/programming/</loc>
-    <lastmod>2018-05-25T22:58:39+09:00</lastmod>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -364,7 +369,7 @@
   
   <url>
     <loc>https://5hyn3.github.io/tags/swift/</loc>
-    <lastmod>2018-05-20T00:55:40+09:00</lastmod>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -405,8 +410,14 @@
   </url>
   
   <url>
+    <loc>https://5hyn3.github.io/tags/xcode/</loc>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://5hyn3.github.io/</loc>
-    <lastmod>2018-06-10T17:29:24+09:00</lastmod>
+    <lastmod>2018-06-24T21:08:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   

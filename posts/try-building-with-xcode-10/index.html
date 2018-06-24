@@ -98,120 +98,133 @@
 
 
 
-<section id="list">
+<article>
+
+    <h1>XCode10の早くなったビルドを試してみる</h1>
 
     
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-06-24T21:08:35&#43;09:00">
+                Jun 24nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
 
-    
-        <h2>Programming</h2>
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/xcode/">#XCode</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/ios/">#iOS</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/swift/">#swift</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
     
 
-    
+    <p>iOSアプリエンジニアの多くが感じる、「ビルドに時間がかかる」という苦悩が、XCode10の新しいビルドシステムでマシになるそうなので検証してみました。</p>
 
-    
+<p></p>
 
-    <h3>2018</h3>
+<hr />
+
+<h1 id="環境">環境</h1>
+
+<ul>
+<li><p>マシン</p>
+
+<ul>
+<li>MacBook Pro 2017 13inch
+
+<ul>
+<li>OS: High Sierra ver 10.13.5</li>
+<li>CPU : Core i7-7660U</li>
+<li>RAM : 16GB</li>
+</ul></li>
+</ul></li>
+
+<li><p>IDE</p>
+
+<ul>
+<li>XCode10 beta2(10L177m)</li>
+</ul></li>
+
+<li><p>比較対象のIDE</p>
+
+<ul>
+<li>XCode9.4.1</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h1 id="方法">方法</h1>
+
+<p>　事前にビルド時間を表示するオプションを有効にした状態で、<u><a href="https://github.com/tryswift/trySwiftAppFinal/tree/2acf568e337003538c604c9e70b8cd4e66aebd63">TrySwift</a></u>をクリーンビルドして時間を測定してみます。TurboBoostを考慮して、10回ビルドをし続けて最速の結果を比較してみます。</p>
+
+<p>TurboBoostを切ってやっても良かったのですが、実際に利用する際の環境に近づけたかったので、切らずに検証します。</p>
+
+<hr />
+
+<h1 id="結果">結果</h1>
+
+<ul>
+<li>XCode 9.4.1</li>
+</ul>
+
+<p><img src="https://5hyn3.github.io/img/try-building-with-xcode-10/Xcode9.png" alt="XCode9" /></p>
+
+<ul>
+<li>XCode 10 beta2(10L177m)</li>
+</ul>
+
+<p><img src="https://5hyn3.github.io/img/try-building-with-xcode-10/Xcode10.png" alt="XCode10" /></p>
+
+<hr />
+
+<h1 id="結論">結論</h1>
+
+<p>XCode10を利用することでTrySwiftの場合、ビルド時間が3/5に短縮されることがわかりました。</p>
+
+<p>これまでビルド時間が長すぎて感じたつらさがある程度緩和されたのではないでしょうか。XCode10の正式リリースが楽しみですね！</p>
+
+</article>
+
+
+<section class="post-nav">
     <ul>
         
         <li>
-            <a href="https://5hyn3.github.io/posts/vue-cheatsheet/">自分向けVue.jsチートシート</a>
-            <time class="date-meta">Apr 4</time>
+            <a href="https://5hyn3.github.io/posts/introduction-of-mobileapostille/"><i class="fa fa-chevron-circle-left"></i> MobileApostilleの紹介</a>
         </li>
         
-        <li>
-            <a href="https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/">RubyでNEMのWebSocketを使う</a>
-            <time class="date-meta">Mar 7</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/make-content-published-only-on-twitter-followers-with-rails/">Rails5でOmniAuthを使ったTwitter連携(応用編)</a>
-            <time class="date-meta">Mar 5</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/practice-using-golang-with-travisci/">TravisCIでGo言語のCI環境を作る</a>
-            <time class="date-meta">Feb 22</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/">Rails5でOmniAuthを使ったTwitter連携(認証編)</a>
-            <time class="date-meta">Feb 21</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/golang-test-function-practice/">Go言語のテスト機能を触ってみる</a>
-            <time class="date-meta">Feb 19</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/">NEMAPIをGo言語で叩く(3)</a>
-            <time class="date-meta">Feb 16</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/">NEMAPIをGo言語で叩く(2)</a>
-            <time class="date-meta">Feb 14</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/knock-nemapi-with-golang/">NEMAPIをGo言語で叩く(1)</a>
-            <time class="date-meta">Feb 13</time>
-        </li>
         
     </ul>
-    
-    
-
 </section>
-
-
-
-<ul class="pagination">
     
-    <li>
-        <a href="https://5hyn3.github.io/categories/programming/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li
-    >
-    <a href="https://5hyn3.github.io/categories/programming/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li
-    ><a href="https://5hyn3.github.io/categories/programming/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li
-    class="active"><a href="https://5hyn3.github.io/categories/programming/page/2/">2</a></li>
-    
-    
-    <li
-    class="disabled">
-    <a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li>
-        <a href="https://5hyn3.github.io/categories/programming/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
 
 
 

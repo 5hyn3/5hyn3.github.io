@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 10 Jun 2018 17:29:24 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Jun 2018 21:08:35 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>XCode10の早くなったビルドを試してみる</title>
+      <link>https://5hyn3.github.io/posts/try-building-with-xcode-10/</link>
+      <pubDate>Sun, 24 Jun 2018 21:08:35 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/try-building-with-xcode-10/</guid>
+      <description>&lt;p&gt;iOSアプリエンジニアの多くが感じる、「ビルドに時間がかかる」という苦悩が、XCode10の新しいビルドシステムでマシになるそうなので検証してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
