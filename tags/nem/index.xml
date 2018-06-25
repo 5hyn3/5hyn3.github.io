@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 10 Jun 2018 17:29:24 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 26 Jun 2018 01:27:02 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/nem/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MobileApostille ver 0.2をリリースしました！</title>
+      <link>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_2/</link>
+      <pubDate>Tue, 26 Jun 2018 01:27:02 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_2/</guid>
+      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MobileApostilleの紹介</title>
