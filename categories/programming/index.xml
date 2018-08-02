@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Mon, 25 Jun 2018 01:50:37 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 03 Aug 2018 01:00:25 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Androidで「もっと読む」ボタン付TextViewを作ってみる</title>
+      <link>https://5hyn3.github.io/posts/android-read-more-text-view/</link>
+      <pubDate>Fri, 03 Aug 2018 01:00:25 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/android-read-more-text-view/</guid>
+      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Kotlin(Java)でURLによって指定したコンテンツをバイナリとしてダウンロードする</title>
