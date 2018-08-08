@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 03 Aug 2018 01:00:25 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Aug 2018 21:17:12 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>既存のプロジェクトにFlutterを追加する</title>
+      <link>https://5hyn3.github.io/posts/add-flutter-to-existing-apps/</link>
+      <pubDate>Wed, 08 Aug 2018 21:17:12 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/add-flutter-to-existing-apps/</guid>
+      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Androidで「もっと読む」ボタン付TextViewを作ってみる</title>
