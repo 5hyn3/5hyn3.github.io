@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 14 Sep 2018 01:14:36 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 16 Sep 2018 21:40:44 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/nem/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nemlogに投稿してみた</title>
+      <link>https://5hyn3.github.io/posts/post-nemlog/</link>
+      <pubDate>Sun, 16 Sep 2018 21:40:44 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/post-nemlog/</guid>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://nemlog.nem.social/&#34;&gt;nemlog&lt;/a&gt;&lt;/u&gt;に記事を投稿してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MobileApostille ver 0.4をリリースしました！</title>
