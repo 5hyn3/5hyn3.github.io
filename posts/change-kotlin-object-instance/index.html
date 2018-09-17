@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>KotlinのObjectのインスタンスを書き換える</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-09-17T19:46:36&#43;09:00">
+                Sep 17nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/kotlin/">#Kotlin</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>あまり褒められたものではないのですが、必要に迫られたので調査し、やってみました。</p>
+
+<p></p>
+
+<hr />
+
+<h1 id="まえがき">まえがき</h1>
+
+<p>　この記事ではKotlinのObjectのインスタンスを書き換える方法を紹介しますが、本来そのようなことはしない方が良いです。書き換える必要が発生した時点で設計を見直した方が良いです。この事を念頭に置いて読んでください。</p>
+
+<hr />
+
+<h1 id="方法">方法</h1>
+
+<p>以下のような関数を使います。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">changeObjectInstance</span>(target: Any, mock: Any) {
+    <span style="color:#66d9ef">val</span> kClass = Class.forName(target<span style="color:#f92672">::</span><span style="color:#66d9ef">class</span>.qualifiedName).kotlin
+    <span style="color:#66d9ef">val</span> field = kClass.java.fields.first()
+    <span style="color:#66d9ef">val</span> modifiersField = Field<span style="color:#f92672">::</span><span style="color:#66d9ef">class</span>.java<span style="color:#f92672">!!</span>.getDeclaredField(<span style="color:#e6db74">&#34;modifiers&#34;</span>)
+    modifiersField.isAccessible = <span style="color:#66d9ef">true</span>
+    modifiersField.setInt(field, field.modifiers and Modifier.FINAL.inv())
+    field.isAccessible = <span style="color:#66d9ef">true</span>
+    field.<span style="color:#66d9ef">set</span>(<span style="color:#66d9ef">null</span>, mock)
+}</code></pre></div>
+<p>　Objectのインスタンスを書き換えられるようにするために、リフレクションを活用して<code>INSTANCE</code>のfinalを外したりして無理やり書き換えてしまいます。</p>
+
+<hr />
+
+<h1 id="使用例">使用例</h1>
+
+<p>　これは関数の引数名に<code>mock</code>とあるように、テスト時にObjectのインスタンスをmockに差し替えるために使うことができます。例えば以下のようなFooオブジェクトとそれを利用するHogeクラスがあります。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">Foo</span> {
+    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">bar</span>() = <span style="color:#ae81ff">1</span>
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hoge</span> {
+    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">huga</span>() = Foo.bar()
+}</code></pre></div>
+<p>この時、</p>
+
+<p><code>Hoge::huga()を実行した時、Foo.bar()が1度だけ呼ばれている事</code></p>
+
+<p>という事を確認できるテストをしたいと考えたとします。プロパティとして定義されている変数であれば、Mockitoでfiled injectionしてやれば良いのですが、Objectを使ってしまっているとそうもいきません。そこで上記の<code>changeObjectInstance</code>を使います。Objectのmockを作成して、以下のようにします。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">changeObjectInstance(Foo, mockFoo)</code></pre></div>
+<p>こうする事で、Objectのインスタンスがmockに書き換えられました。あとはMockitoであれば、</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> hoge = Hoge()
+hoge.huga()
+Mockito.verify(mockFoo,times(<span style="color:#ae81ff">1</span>)).bar()</code></pre></div>
+<p>としてやる事で、所望のテストを書くことができます。テスト実行後は他のテストに影響しないように、書き換えたインスタンスを元に戻しておきましょう。</p>
+
+<hr />
+
+<h1 id="背景">背景</h1>
+
+<p>　携わっているプロジェクトにて、なんとかテストを導入していきたいという思いがあったのですが、シングルトンオブジェクトをいたるところで多用しており、それらを直接使わないように書き換えるにはあまりに多くの工数が発生することが予見されたため、このような方法を用いることとなりました。</p>
+
+<hr />
+
+<h1 id="おわりに">おわりに</h1>
+
+<p>リフレクションを使いすぎるとコードの可読性が悪化するなど、デメリットが多数存在します。くれぐれも、用法用量を守って使ってください。冒頭にも書いたように、可能であれば設計を見直すなど、使わない方向での解決策を模索する事をお勧めします。</p>
+
+<hr />
+
+<h1 id="参考">参考</h1>
+
+<p><a href="https://stackoverflow.com/questions/3301635/change-private-static-final-field-using-java-reflection">https://stackoverflow.com/questions/3301635/change-private-static-final-field-using-java-reflection</a></p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/post-nemlog/"><i class="fa fa-chevron-circle-left"></i> nemlogに投稿してみた</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>
