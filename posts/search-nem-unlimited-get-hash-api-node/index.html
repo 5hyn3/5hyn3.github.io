@@ -1,0 +1,239 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>/transaction/get?hash={{txhash}}が時間制限無しに使えるノードを探してみる</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-09-30T21:05:27&#43;09:00">
+                Sep 30nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/nem/">#NEM</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/python/">#Python</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。</p>
+
+<p></p>
+
+<h1 id="はじめに">はじめに</h1>
+
+<p>Apostilleされたファイルを監査する際、/transaction/get?hash={{txhash}}というAPIを使います。<br />
+これは、txhashを渡すと、該当のトランザクションの情報を渡してくれる便利なものです。<br />
+しかし、このAPIはノードの設定によって仕様が異なっており、設定によって参照できるトランザクションに時間制限があります。<br />
+このあたりを正しく把握していないと</p>
+
+<p>古いトランザクションが見つからない = 監査が正しく出来ない</p>
+
+<p>という事態が発生してしまいます。<br />
+そこで、<u><a href="https://nemnodes.org/nodes/">こちら</a></u>のノードリストから、この時間制限が無制限に設定されており、<br />
+古いトランザクションでも問題なくこのAPIで見つけられるノードを探してみました。</p>
+
+<h1 id="方法">方法</h1>
+
+<p>総当たりで該当のAPIのステータスコードが200であるものを探索しました。</p>
+
+<p><u><a href="https://github.com/5hyn3/search_nis.transactionHashRetentionTime_-_-1_node/blob/master/main.py">こちら</a></u>のスクリプトを使います。</p>
+
+<h1 id="結果">結果</h1>
+
+<p>以下のノードは/transaction/get?hash={{txhash}}の時間制限が無制限に設定されているようです。</p>
+
+<pre><code>88.99.87.132:7890
+178.63.1.41:7890
+185.122.58.130:7890
+62.75.251.134:7890
+121.50.43.168:7890
+103.207.68.57:7890
+45.124.65.125:7890
+185.53.131.101:7890
+108.61.96.212:7890
+sky.loxal.net:7890
+94.130.207.176:7890
+108.61.182.27:7890
+160.119.248.49:7890
+108.61.168.86:7890
+104.238.161.61:7890
+104.251.212.131:7890
+supernode.host:7890
+62.75.171.41:7890
+45.76.120.189:7890
+160.119.248.48:7890
+176.9.240.102:7890
+178.63.217.101:7890
+</code></pre>
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>Apostille含め、txhashからトランザクションを取得する処理が必要なアプリでは是非これらのノードを活用していきましょう！</p>
+
+<p>また、ノードの設定がいつまでも変わらないとも限らないので、時々自分の手で追試し、使えるノードのリストを更新することをおすすめします。</p>
+
+<p>ソースコードは<u><a href="https://github.com/5hyn3/search_nis.transactionHashRetentionTime_-_-1_node/tree/master">こちら</a></u></p>
+
+<p><u><a href="https://nemlog.nem.social/blog/1551">nemlog</a></u>にも同様の記事を書いています。ためになったと感じたら是非投銭をお願いします！！！！</p>
+
+<div style="text-align:center;">
+    <iframe style="border:1px solid #999;" src="https://nemlog.nem.social/iframe/78ee48fe423067bd169611842f8564731537085465/f7a800ffffff" width="330px" height="330px" frameborder="1" scrolling="no">
+    </iframe>
+</div>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/change-kotlin-object-instance/"><i class="fa fa-chevron-circle-left"></i> KotlinのObjectのインスタンスを書き換える</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

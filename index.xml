@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Mon, 17 Sep 2018 19:46:36 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Sep 2018 21:05:27 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>/transaction/get?hash={{txhash}}が時間制限無しに使えるノードを探してみる</title>
+      <link>https://5hyn3.github.io/posts/search-nem-unlimited-get-hash-api-node/</link>
+      <pubDate>Sun, 30 Sep 2018 21:05:27 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/search-nem-unlimited-get-hash-api-node/</guid>
+      <description>&lt;p&gt;NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
