@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 30 Sep 2018 21:05:27 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 20:40:37 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -32,7 +32,10 @@
       
       <guid>https://5hyn3.github.io/products/</guid>
       <description> 今までに作った制作物について。
-Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き込むことでグラフィカルにピンに割り振った役割を確認、共有することの出来るGUIツールです。Qtの練習のために制作。LPC1768、NucleoF401のArduinoピン、Morphoピンに対応。詳細(後ほど追加予定)   Android  eXClipBoard/eXClipBoardFree  Android向けクリップボード拡張アプリ。通知領域を活用し、スマートにコピペができます。   ChromeExtention  WebApostille  NEMのアポスティーユをChrome上で使用出来るようにしました。わざわざnanoWalletにファイルをD&amp;amp;Dする必要なく、Chromeを操作したままファイルを監査することが可能です。詳細   その他  RasPi自宅サーバー一号
+Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き込むことでグラフィカルにピンに割り振った役割を確認、共有することの出来るGUIツールです。Qtの練習のために制作。LPC1768、NucleoF401のArduinoピン、Morphoピンに対応。詳細(後ほど追加予定)   Android  eXClipBoard/eXClipBoardFree
+ Android向けクリップボード拡張アプリ。通知領域を活用し、スマートにコピペができます。  MobileApostille
+ NEMのアポスティーユによる監査をAndroid上で使用出来るようにしました。詳細  VibrationCompass
+ 設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かるアプリです。詳細   ChromeExtention  WebApostille  NEMのアポスティーユによる監査をChrome上で使用出来るようにしました。わざわざnanoWalletにファイルをD&amp;amp;Dする必要なく、Chromeを操作したままファイルを監査することが可能です。詳細   その他  RasPi自宅サーバー一号
  RasPiに家電遠隔操作兼ファイルサーバーとして動いてもらいました。しかし、さすがに荷が重かったらしく、ファイルサーバーとしてはうまく使うことが出来ず、三ヶ月程度でSDカードの方に限界が来てしまいました。詳細(後ほど追加予定)  RasPi自宅サーバー二号
  現在運用中。以前の反省を活かして家電遠隔操作サーバーとしての機能に特化。ついでにTwitterBotも動作させています。詳細(後ほど追加予定)  MonsterEnergy検出器
  OpenCVでカスケード分類器を使用してMonsterEnergyを検出する物体検出器を作成しました。  nem_websocket_client
@@ -57,6 +60,17 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>VibrationCompassの紹介</title>
+      <link>https://5hyn3.github.io/posts/release-vibrationcompass/</link>
+      <pubDate>Sun, 18 Nov 2018 20:40:37 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/release-vibrationcompass/</guid>
+      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

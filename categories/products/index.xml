@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Fri, 14 Sep 2018 01:14:36 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 20:40:37 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/products/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VibrationCompassの紹介</title>
+      <link>https://5hyn3.github.io/posts/release-vibrationcompass/</link>
+      <pubDate>Sun, 18 Nov 2018 20:40:37 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/release-vibrationcompass/</guid>
+      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MobileApostille ver 0.4をリリースしました！</title>
