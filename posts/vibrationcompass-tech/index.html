@@ -1,0 +1,418 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>VibrationCompassを作り上げるために使った技術たち</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-11-20T02:02:10&#43;09:00">
+                Nov 20nd, 2018
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/android/">#Android</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>VibrationCompassで使ったツール・ライブラリなどピンからキリまでまとめ</p>
+
+<p></p>
+
+<p>　<u><a href="https://5hyn3.github.io/posts/release-vibrationcompass/">こちら</a></u>のアプリで使った技術を小さなものから大きなものまで全て羅列しています。アプリを実際に触りながら読んでみると参考になると思います。</p>
+
+<hr />
+
+<h1 id="目的">目的</h1>
+
+<p>　Androidアプリ作りについて基礎は勉強したけども、そこから先については右も左も分からない開発者に対して、ここを見て気になったところをググれば、アプリを0から作れる程度の知識を得られるインデックスを提供すること。
+詳細は書かずに、ググるのに必要な各種の名前と、一文程度の概要を記述する。</p>
+
+<p>アプリ内で使ってる技術のみを紹介するので、ここにあるものが全てでは無い。例えばRecyclerViewのような重要な要素があったりするが、本アプリでは使用していないので紹介しない。</p>
+
+<hr />
+
+<h1 id="想定する読者">想定する読者</h1>
+
+<ul>
+<li>Androidアプリ開発の基礎を学んで、その先の知識を身に付けたい開発者</li>
+<li>このアプリを作った時の詳細を忘れた数ヶ月後の自分</li>
+</ul>
+
+<p>半分くらいは自分のためのメモ書きです</p>
+
+<hr />
+
+<h1 id="androidアプリ作りで使ったツール-ライブラリ">Androidアプリ作りで使ったツール・ライブラリ</h1>
+
+<h2 id="ide">IDE</h2>
+
+<ul>
+<li>AndroidStudio</li>
+</ul>
+
+<p>まずはこれが無いと始まらない。</p>
+
+<h2 id="言語">言語</h2>
+
+<ul>
+<li>Kotlin</li>
+</ul>
+
+<p>　以前はJavaで開発されていたが、今から開発するのであればより開発効率の高いKotlinを使うことを推奨する。</p>
+
+<h2 id="ui周り">UI周り</h2>
+
+<ul>
+<li>androidx</li>
+</ul>
+
+<p>　互換性を保ちながら、UI周りをいい感じにしてくれるライブラリ。以前はSupportLibraryと言う名前で提供されていた。</p>
+
+<ul>
+<li>AppCompatActivity</li>
+</ul>
+
+<p>　androidxに入っている。下位互換性を保ったまま最新の機能が使えるActivity。Activityで何か作るなら大抵はこれを使えば間違いない。</p>
+
+<ul>
+<li>Maps SDK for Android</li>
+</ul>
+
+<p>　アプリ内でGoogleMapの機能を使えるようにできるSDK。</p>
+
+<ul>
+<li>constraintlayout</li>
+</ul>
+
+<p>　以前はRelativeLayoutとかLinearLayoutとかでレイアウトを組むことが多かったが、今はだいたいこれ一つでサクサク作る。</p>
+
+<ul>
+<li>DialogFragment</li>
+</ul>
+
+<p>　Dialog表示を行うために使う。AlertDialogなどは手軽に使いすぎるとメモリリークの危険があるが、こちらなら基本安全。</p>
+
+<ul>
+<li>BottomSheetDialogFragment</li>
+</ul>
+
+<p>　BottomSheetの実装に使う。</p>
+
+<ul>
+<li>NavigationView</li>
+</ul>
+
+<p>　メニューを作るのに使う。本アプリでは上記BottomSheetDialogFragmentと合わせて、BottomSheetの実装に使っている。</p>
+
+<ul>
+<li>BottomAppBar</li>
+</ul>
+
+<p>　画面下に表示されるタイプのAppBar。昨今流行りのノッチデザインでもこれなら指が届く位置にボタンを置いたりできる。以下FloatingActionButtonと組み合わせると、かっこいいデザインにしてくれる。</p>
+
+<ul>
+<li>FloatingActionButton</li>
+</ul>
+
+<p>　多くのアプリで見かける、画面右下で浮いているボタン。</p>
+
+<ul>
+<li>kotlin-android-extensions</li>
+</ul>
+
+<p>　面倒なfindViewByIdをせずにViewにアクセスできるライブラリ。</p>
+
+<ul>
+<li>calligraphy</li>
+</ul>
+
+<p>　Androidで外部フォントを楽にアプリに組み込めるようにできるアプリ。</p>
+
+<ul>
+<li>material-design-icons</li>
+</ul>
+
+<p>　Apache2.0ライセンスで使えるアイコンを提供している。本アプリで使用しているアイコンからアプリ自体のアイコンまで、全てここにあるものを使って作成されている。</p>
+
+<p><a href="https://material.io/tools/icons/?style=baseline">https://material.io/tools/icons/?style=baseline</a></p>
+
+<ul>
+<li>源真ゴシック</li>
+</ul>
+
+<p>　本アプリで使用しているフォント。</p>
+
+<h2 id="バックグランドサービス">バックグランドサービス</h2>
+
+<ul>
+<li>Service</li>
+</ul>
+
+<p>　バックグラウンドで何かしらのタスクを実行するのに必要なもの。Oreo以降からバックグラウンドサービスの扱いが厳しくなり、扱いが若干面倒になった。</p>
+
+<ul>
+<li>startForegroundService</li>
+</ul>
+
+<p>　Oreoより前はstartServiceでバックグラウンドサービスを起動できたが、Oreo以降はこちらで起動した上で、制限時間内に通知を表示したりstartForegroundを呼んだりしないとクラッシュしてしまう。</p>
+
+<ul>
+<li>Doze</li>
+</ul>
+
+<p>　Mushroom以降から搭載された省電力機能。これにより、スリープ中にバックグラウンドで動作するアプリに様々な制約が発生する。</p>
+
+<ul>
+<li>ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</li>
+</ul>
+
+<p>　上記Dozeの影響を受けないようにアプリをホワイトリストに入れてもらうようユーザーにお願いするIntentを発行できるAction。</p>
+
+<ul>
+<li>wakelock</li>
+</ul>
+
+<p>　端末をスリープさせないようにするためのlock。これを取得することで端末をスリープさせなくし、スリープ中にも安定して様々な処理を行わせることができる。ただし、上記Dozeで一部例外はあれど基本的にはあまり使えないものになっている。本アプリではスリープ中にも安定してセンシングを行うために上記ActionでDozeを回避し、wakelockを取得しているが、本来であれば可能な限り使わない方向で実装を進めるべきだと思う。</p>
+
+<h2 id="通知周り">通知周り</h2>
+
+<ul>
+<li>NotificationChannel</li>
+</ul>
+
+<p>　Oreo以降で導入された機能。全ての通知は予め生成したチャンネルを割り当てる必要がある。ユーザーはこのチャンネル単位で通知の表示・非表示を切り替えることができる。</p>
+
+<ul>
+<li>NotificationCompat</li>
+</ul>
+
+<p>　下位互換性を保ちながらNotificationを扱えるようにしてくれるライブラリ。上記チャンネルの影響で通知を表示する際のコードにもバージョン分岐が発生してしまうが、これを使うことでそういった面倒な部分を回避できる。</p>
+
+<h2 id="ハードウェア周り">ハードウェア周り</h2>
+
+<ul>
+<li>LocationServices</li>
+</ul>
+
+<p>　位置情報を提供してくれるライブラリ。GPSに限らず、各種センサを統合して高精度に位置を推定してくれるFusedLocationProviderClientを使うことができる。また、位置情報を活用した各種の便利な関数(2地点間の距離を計算したり、現在の移動方向を計算したり)を内包している。</p>
+
+<ul>
+<li>SensorManager</li>
+</ul>
+
+<p>　各種センサ(地磁気や加速度など)を取り扱うことができる。GPSはここではなく、上記LocationServicesで取り扱う。</p>
+
+<ul>
+<li>Vibrator</li>
+</ul>
+
+<p>　端末を振動させることができる。</p>
+
+<h2 id="ビルド周り">ビルド周り</h2>
+
+<ul>
+<li>Android App Bundle</li>
+</ul>
+
+<p>　ユーザーの使用するリソースに絞って配布するapkを最適化することでアプリサイズを削減できる仕組み。</p>
+
+<ul>
+<li>bundle-tool</li>
+</ul>
+
+<p>　Android App Bundle形式でビルドしたアプリをインストールするのに必要なツール。apkのときとは異なり、現在の最新のやり方に従うと、こういったツールなしではアプリをインストールすることができない。</p>
+
+<p><a href="https://github.com/google/bundletool">https://github.com/google/bundletool</a></p>
+
+<ul>
+<li>applicationIdSuffix</li>
+</ul>
+
+<p>　Gradleで使用することでapplicationIdにsuffixを付けられる。これによって、デバッグ時のアプリとリリース時のアプリのapplicationIdを別にできる。</p>
+
+<ul>
+<li>main.java.srcDirs += &lsquo;src/main/kotlin&rsquo;</li>
+</ul>
+
+<p>　Kotlinを使用する際に、デフォルトで存在するJavaディレクトリ以下ではなく、kotlinディレクトリ以下をソースとして認識させたくなった際のおまじない。</p>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>play-services-oss-licenses</li>
+</ul>
+
+<p>　アプリ内で使用している各種ライブラリのOSSライセンスを表示するActivityを作ってくれる。</p>
+
+<ul>
+<li>play-services-ads</li>
+</ul>
+
+<p>　広告を貼って収益化するのに必要。合わせて、admobというサービスを利用する必要あり。</p>
+
+<ul>
+<li>permissionsdispatcher</li>
+</ul>
+
+<p>　面倒なMushroom以降で必要なRuntimePermission周りをよしなにしてくれる。</p>
+
+<ul>
+<li>SharedPreferences</li>
+</ul>
+
+<p>　アプリの設定値などを保存できる機能。簡易的なデータベースとして扱えないこともないが、そういうことをする場合はSQLiteやRealmを活用した方が良い。</p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/release-vibrationcompass/"><i class="fa fa-chevron-circle-left"></i> VibrationCompassの紹介</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

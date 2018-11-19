@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 18 Nov 2018 20:40:37 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 02:02:10 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VibrationCompassを作り上げるために使った技術たち</title>
+      <link>https://5hyn3.github.io/posts/vibrationcompass-tech/</link>
+      <pubDate>Tue, 20 Nov 2018 02:02:10 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/vibrationcompass-tech/</guid>
+      <description>&lt;p&gt;VibrationCompassで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>VibrationCompassの紹介</title>
