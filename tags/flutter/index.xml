@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Wed, 08 Aug 2018 21:17:12 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 29 Dec 2018 22:31:12 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Flutter入門]を読んだので紹介してみる</title>
+      <link>https://5hyn3.github.io/posts/introduce-4798055832/</link>
+      <pubDate>Sat, 29 Dec 2018 22:31:12 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/introduce-4798055832/</guid>
+      <description>&lt;p&gt;　Android/iOSクロス開発フレームワーク Flutter入門を読んだので紹介してみます。&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;&#34;&gt;
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4798055832&amp;linkId=3d414440a92159251f272107ed2bd4c9&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>既存のプロジェクトにFlutterを追加する</title>
@@ -18,9 +31,7 @@
       <pubDate>Wed, 08 Aug 2018 21:17:12 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/add-flutter-to-existing-apps/</guid>
-      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;</description>
     </item>
     
   </channel>

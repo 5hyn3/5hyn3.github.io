@@ -100,14 +100,14 @@
 
 <article>
 
-    <h1>/transaction/get?hash={{txhash}}が時間制限無しに使えるノードを探してみる</h1>
+    <h1>[Flutter入門]を読んだので紹介してみる</h1>
 
     
         <aside>
     <ul>
         <li>
-            <time class="post-date" datetime="2018-09-30T21:05:27&#43;09:00">
-                Sep 30nd, 2018
+            <time class="post-date" datetime="2018-12-29T22:31:12&#43;09:00">
+                Dec 29nd, 2018
             </time>
         </li>
         
@@ -117,7 +117,7 @@
             <em>
                 
                     
-                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                    <a href="https://5hyn3.github.io/categories/book/">book</a>
                 
             </em>
         </li>
@@ -128,10 +128,13 @@
             <em>
                 
                     
-                    <a href="https://5hyn3.github.io/tags/nem/">#NEM</a>
+                    <a href="https://5hyn3.github.io/tags/flutter/">#Flutter</a>
                 
                     , 
-                    <a href="https://5hyn3.github.io/tags/python/">#Python</a>
+                    <a href="https://5hyn3.github.io/tags/android/">#Android</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/ios/">#iOS</a>
                 
             </em>
         </li>
@@ -142,69 +145,60 @@
 </aside>
     
 
-    <p>NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。</p>
-
-<h1 id="はじめに">はじめに</h1>
-
-<p>Apostilleされたファイルを監査する際、/transaction/get?hash={{txhash}}というAPIを使います。<br />
-これは、txhashを渡すと、該当のトランザクションの情報を渡してくれる便利なものです。<br />
-しかし、このAPIはノードの設定によって仕様が異なっており、設定によって参照できるトランザクションに時間制限があります。<br />
-このあたりを正しく把握していないと</p>
-
-<p>古いトランザクションが見つからない = 監査が正しく出来ない</p>
-
-<p>という事態が発生してしまいます。<br />
-そこで、<u><a href="https://nemnodes.org/nodes/">こちら</a></u>のノードリストから、この時間制限が無制限に設定されており、<br />
-古いトランザクションでも問題なくこのAPIで見つけられるノードを探してみました。</p>
-
-<h1 id="方法">方法</h1>
-
-<p>総当たりで該当のAPIのステータスコードが200であるものを探索しました。</p>
-
-<p><u><a href="https://github.com/5hyn3/search_nis.transactionHashRetentionTime_-_-1_node/blob/master/main.py">こちら</a></u>のスクリプトを使います。</p>
-
-<h1 id="結果">結果</h1>
-
-<p>以下のノードは/transaction/get?hash={{txhash}}の時間制限が無制限に設定されているようです。</p>
-
-<pre><code>88.99.87.132:7890
-178.63.1.41:7890
-185.122.58.130:7890
-62.75.251.134:7890
-121.50.43.168:7890
-103.207.68.57:7890
-45.124.65.125:7890
-185.53.131.101:7890
-108.61.96.212:7890
-sky.loxal.net:7890
-94.130.207.176:7890
-108.61.182.27:7890
-160.119.248.49:7890
-108.61.168.86:7890
-104.238.161.61:7890
-104.251.212.131:7890
-supernode.host:7890
-62.75.171.41:7890
-45.76.120.189:7890
-160.119.248.48:7890
-176.9.240.102:7890
-178.63.217.101:7890
-</code></pre>
-
-<h1 id="まとめ">まとめ</h1>
-
-<p>Apostille含め、txhashからトランザクションを取得する処理が必要なアプリでは是非これらのノードを活用していきましょう！</p>
-
-<p>また、ノードの設定がいつまでも変わらないとも限らないので、時々自分の手で追試し、使えるノードのリストを更新することをおすすめします。</p>
-
-<p>ソースコードは<u><a href="https://github.com/5hyn3/search_nis.transactionHashRetentionTime_-_-1_node/tree/master">こちら</a></u></p>
-
-<p><u><a href="https://nemlog.nem.social/blog/1551">nemlog</a></u>にも同様の記事を書いています。ためになったと感じたら是非投銭をお願いします！！！！</p>
+    <p>　Android/iOSクロス開発フレームワーク Flutter入門を読んだので紹介してみます。</p>
 
 <div style="text-align:center;">
-    <iframe style="border:1px solid #999;" src="https://nemlog.nem.social/iframe/78ee48fe423067bd169611842f8564731537085465/f7a800ffffff" width="330px" height="330px" frameborder="1" scrolling="no">
-    </iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=ewvss-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4798055832&linkId=3d414440a92159251f272107ed2bd4c9"></iframe>
 </div>
+
+<hr />
+
+<h1 id="本の内容">本の内容</h1>
+
+<p>　<u><a href="https://amzn.to/2EVSpj2">こちら</a></u>を参照してください。</p>
+
+<h2 id="リンクを開くのが面倒な人向けの要約">リンクを開くのが面倒な人向けの要約</h2>
+
+<p>　最近話題のFlutterを使ったアプリ制作の入門書です。</p>
+
+<hr />
+
+<h1 id="紹介者のレベル">紹介者のレベル</h1>
+
+<p>　この本を読むに当たり、僕の持つスキルは以下の通りでした</p>
+
+<ul>
+<li><p>Androidアプリ開発経験あり</p>
+
+<ul>
+<li>Androidアプリを個人で複数製作</li>
+</ul></li>
+
+<li><p>Flutter開発経験あり</p>
+
+<ul>
+<li>独学でドキュメントを読み、一つちょっとしたアプリを作ったくらい</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h1 id="背景">背景</h1>
+
+<p>　独学でFlutterでのアプリ開発方法を学んだが、もう少し体系的に学習がしたいのと、さらに知識を深めたいと感じたため。</p>
+
+<hr />
+
+<h1 id="どんな人におすすめ">どんな人におすすめ？</h1>
+
+<h2 id="間違いなくおすすめできる人">間違いなくおすすめできる人</h2>
+
+<p>　
+　内容が非常に丁寧なので、「話題のFlutterが気になるけど、どう学べばいいのかわからない」と悩んでいる人にとてもおすすめです！まだあまり日本語での情報が出回っていない中での貴重な日本語での文献なので、日本語を母国語とする人にはこれ以上にわかりやすい入門方法はそんなにないかなと思います。Flutterの環境構築から、各Widgetの使い方、そして実際に一つのアプリを作られるレベルになるところまで、しっかりこの書籍がサポートしてくれるはずです！</p>
+
+<h2 id="読まないほうが良い人">読まないほうが良い人</h2>
+
+<p>　本書はあくまで入門書であり、読んでみた感じ、環境構築からDart言語の使い方、そしてUIの組み方などを学んで、一つのアプリを作られるようになるところまでをサポートしていると感じました。そのため、Dart言語のより応用的な使い方や、BLoCパターンを使うなどのアーキテクチャの話のような、コードをより良くしていくような話題までは取り扱っていません。そのような深い情報を期待している人にはあまりおすすめできません。</p>
 
 </article>
 
@@ -213,13 +207,9 @@ supernode.host:7890
     <ul>
         
         <li>
-            <a href="https://5hyn3.github.io/posts/change-kotlin-object-instance/"><i class="fa fa-chevron-circle-left"></i> KotlinのObjectのインスタンスを書き換える</a>
+            <a href="https://5hyn3.github.io/posts/vibrationcompass-tech/"><i class="fa fa-chevron-circle-left"></i> VibrationCompassを作り上げるために使った技術たち</a>
         </li>
         
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/release-vibrationcompass/">VibrationCompassの紹介 <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
         
     </ul>
 </section>

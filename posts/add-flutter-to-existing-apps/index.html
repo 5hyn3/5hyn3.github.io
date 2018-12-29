@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ls -al</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -144,8 +144,6 @@
 
     <p>既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。</p>
 
-<p></p>
-
 <hr />
 
 <h1 id="まえがき">まえがき</h1>
@@ -174,16 +172,16 @@
 
 <li><p>既存プロジェクトの<code>settings.gradle</code>を編集する<br />
 参考元を踏襲して既存プロジェクトの一つ上のパスにFlutterモジュールを作った場合は以下を追記</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">setBinding(new Binding([gradle: this]))
-evaluate(new File(
-settingsDir.parentFile,
-&#39;{{module_name}}/.android/include_flutter.groovy&#39;
-))</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">setBinding<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Binding</span><span style="color:#f92672">([</span>gradle: <span style="color:#66d9ef">this</span><span style="color:#f92672">]))</span>
+evaluate<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">File</span><span style="color:#f92672">(</span>
+settingsDir<span style="color:#f92672">.</span><span style="color:#a6e22e">parentFile</span><span style="color:#f92672">,</span>
+<span style="color:#e6db74">&#39;{{module_name}}/.android/include_flutter.groovy&#39;</span>
+<span style="color:#f92672">))</span></code></pre></div>
 <p><code>evaluate()</code>に使いたいFlutterモジュールの<code>include_flutter.groovy</code>を指すFileクラスのインスタンスを渡すようにしてください</p></li>
 
 <li><p>既存プロジェクトの<code>app/build.gradle</code>を編集する<br />
 <code>dependencies</code>に以下を追記</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">implementation project(&#39;:flutter&#39;)</code></pre></div></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">implementation <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:flutter&#39;</span><span style="color:#f92672">)</span></code></pre></div></li>
 </ol>
 
 <p>これで既存プロジェクトでFlutterを扱えるようになりました。</p>

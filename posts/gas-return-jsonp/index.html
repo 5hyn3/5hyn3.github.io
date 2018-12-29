@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ls -al</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -147,8 +147,6 @@
 
     <p>GASでJSONPを返す方法を調べたのでここにメモします。</p>
 
-<p></p>
-
 <hr />
 
 <h1 id="方法">方法</h1>
@@ -161,7 +159,8 @@
     <span style="color:#a6e22e">mimeType</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ContentService</span>.<span style="color:#a6e22e">MimeType</span>.<span style="color:#a6e22e">JAVASCRIPT</span>
   };
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ContentService</span>.<span style="color:#a6e22e">createTextOutput</span>(<span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">output</span>).<span style="color:#a6e22e">setMimeType</span>(<span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">mimeType</span>);
-}</code></pre></div>
+}
+</code></pre></div>
 <p>ポイントは以下の2点です</p>
 
 <ul>
