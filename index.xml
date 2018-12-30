@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sat, 29 Dec 2018 22:31:12 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Dec 2018 02:35:08 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -60,6 +60,15 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>UltraSpeedMemoの紹介</title>
+      <link>https://5hyn3.github.io/posts/release-ultraspeedmemo/</link>
+      <pubDate>Sun, 30 Dec 2018 02:35:08 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/release-ultraspeedmemo/</guid>
+      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;</description>
     </item>
     
     <item>

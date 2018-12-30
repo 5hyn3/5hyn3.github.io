@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 18 Nov 2018 20:40:37 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Dec 2018 02:35:08 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/categories/products/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UltraSpeedMemoの紹介</title>
+      <link>https://5hyn3.github.io/posts/release-ultraspeedmemo/</link>
+      <pubDate>Sun, 30 Dec 2018 02:35:08 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/release-ultraspeedmemo/</guid>
+      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>VibrationCompassの紹介</title>
