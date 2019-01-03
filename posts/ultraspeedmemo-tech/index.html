@@ -1,0 +1,376 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>UltraSpeedMemoを作り上げるために使った技術たち</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2019-01-03T18:47:58&#43;09:00">
+                Jan 3nd, 2019
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/android/">#Android</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>UltraSpeedMemoで使ったツール・ライブラリなどピンからキリまでまとめ</p>
+
+<p><u><a href="https://5hyn3.github.io/posts/release-ultraspeedmemo/">こちら</a></u>のアプリで使った技術を小さなものから大きなものまで全て羅列しています。アプリを実際に触りながら読んでみると参考になると思います。</p>
+
+<hr />
+
+<h1 id="目的">目的</h1>
+
+<p>　Androidアプリ作りについて基礎は勉強したけども、そこから先については右も左も分からない開発者に対して、ここを見て気になったところをググれば、アプリを0から作れる程度の知識を得られるインデックスを提供すること。
+詳細は書かずに、ググるのに必要な各種の名前と、一文程度の概要を記述する。</p>
+
+<hr />
+
+<h1 id="想定する読者">想定する読者</h1>
+
+<ul>
+<li>Androidアプリ開発の基礎を学んで、その先の知識を身に付けたい開発者</li>
+<li>このアプリを作った時の詳細を忘れた数ヶ月後の自分</li>
+</ul>
+
+<p>半分くらいは自分のためのメモ書きです</p>
+
+<hr />
+
+<h1 id="androidアプリ作りで使ったツール-ライブラリ">Androidアプリ作りで使ったツール・ライブラリ</h1>
+
+<h2 id="ide">IDE</h2>
+
+<ul>
+<li>AndroidStudio</li>
+</ul>
+
+<p>まずはこれが無いと始まらない。</p>
+
+<h2 id="言語">言語</h2>
+
+<ul>
+<li>Kotlin</li>
+</ul>
+
+<p>　以前はJavaで開発されていたが、今から開発するのであればより開発効率の高いKotlinを使うことを推奨する。</p>
+
+<h2 id="ui周り">UI周り</h2>
+
+<ul>
+<li>androidx</li>
+</ul>
+
+<p>　互換性を保ちながら、UI周りをいい感じにしてくれるライブラリ。以前はSupportLibraryと言う名前で提供されていた。</p>
+
+<ul>
+<li>AppCompatActivity</li>
+</ul>
+
+<p>　androidxに入っている。下位互換性を保ったまま最新の機能が使えるActivity。Activityで何か作るなら大抵はこれを使えば間違いない。</p>
+
+<ul>
+<li>Navigation Architecture Component</li>
+</ul>
+
+<p>　現在α版のライブラリ。Androidの画面遷移周りをよしなにしてくれる。遷移グラフを定義することで、画面と画面のつながりを視覚的に理解しやすく出来、お好みで遷移アニメーションや型付の引数渡しなどができるようになる。</p>
+
+<p><img src="https://5hyn3.github.io/img/UltraSpeedMemo-tech/Screenshot from 2019-01-03 19-08-02.png" alt="1" />
+<div style="text-align:center;">
+Navigation Architecture Componentを利用することで遷移が視覚的にわかりやすくなる
+</div></p>
+
+<ul>
+<li>Fragment
+<br /></li>
+</ul>
+
+<p>　Activityでは対処できない、無数の画面サイズに対応するために生まれた仕組み。上記Navigation Architecture Componentを活用するために、本アプリはSingle Activity, Many Fragmentな作りになっている。</p>
+
+<p><img src="https://5hyn3.github.io/img/UltraSpeedMemo-tech/untitled.gif#float-right" alt="" /></p>
+
+<ul>
+<li>MotionLayout<br /></li>
+</ul>
+
+<p>　現在α版のライブラリ。Androidのアニメーション周りをよしなにしてくれる。遷移開始時のConstraintと、開始後のConstraintを定義し、その他いくつかのパラメータを設定することでアニメーションを行ってくれる。<br />
+  　このアプリでは、右図のように、FABのhide/show的なポジションのメソッドがないMaterialButtonに対して、それっぽい動きをさせるために使用している。<br />
+  　一点落とし穴として、MotionLayoutを使用している際、AndroidAppBundleを利用すると、アニメーションが動作しなかった。どうもMotionを定義したXMLがビルド時に省かれてしまったようで、通常のAPKを生成することで動くように出来た。</p>
+
+<p><br>
+<br></p>
+
+<ul>
+<li>DataBinding
+<br /></li>
+</ul>
+
+<p>　面倒なView層の作業（テキストをセットしたり、onClickの動作を紐づけたり&hellip;）をXML上で出来るようにしてくれる仕組み</p>
+
+<ul>
+<li>ViewModel<br /></li>
+</ul>
+
+<p>　Androidのライフサイクルを気にせずデータを保持できる仕組み。onSaveInstancestateでstateを保存してonRestoreInstanceStateで復元するような面倒なコードを書く必要がなくなる</p>
+
+<ul>
+<li>RecyclerView
+<br /></li>
+</ul>
+
+<p>　Androidにおいて、多数ある項目を並べて表示するために使われるUIコンポーネント。名前の通り、単にリストを表示するというものではなく、Viewをリサイクルして表示する必要のあるもの全般に使える。</p>
+
+<ul>
+<li>bindingcollectionadapter
+<br /></li>
+</ul>
+
+<p><a href="https://github.com/evant/binding-collection-adapter">https://github.com/evant/binding-collection-adapter</a><br />
+　上記RecylerViewはAdapterを書くのが面倒だが、DataBindingを活用することで、XML上でデータとViewの紐付け方を定義することで、Adapterを全く書かなくてもRecyclerViewが使えてしまうライブラリ。実際、本アプリはRecyclerViewのAdapterを一行も書いていない。非常に楽</p>
+
+<ul>
+<li>constraintlayout</li>
+</ul>
+
+<p>　以前はRelativeLayoutとかLinearLayoutとかでレイアウトを組むことが多かったが、今はだいたいこれ一つでサクサク作る。</p>
+
+<ul>
+<li>material-design-icons</li>
+</ul>
+
+<p>　Apache2.0ライセンスで使えるアイコンを提供している。本アプリで使用しているアイコンからアプリ自体のアイコンまで、全てここにあるものを使って作成されている。</p>
+
+<p><a href="https://material.io/tools/icons/?style=baseline">https://material.io/tools/icons/?style=baseline</a></p>
+
+<h2 id="バックグランドサービス">バックグランドサービス</h2>
+
+<ul>
+<li>Service</li>
+</ul>
+
+<p>　バックグラウンドで何かしらのタスクを実行するのに必要なもの。Oreo以降からバックグラウンドサービスの扱いが厳しくなり、扱いが若干面倒になった。</p>
+
+<ul>
+<li>startForegroundService</li>
+</ul>
+
+<p>　Oreoより前はstartServiceでバックグラウンドサービスを起動できたが、Oreo以降はこちらで起動した上で、制限時間内に通知を表示したりstartForegroundを呼んだりしないとクラッシュしてしまう。</p>
+
+<h2 id="通知周り">通知周り</h2>
+
+<ul>
+<li>NotificationChannel</li>
+</ul>
+
+<p>　Oreo以降で導入された機能。全ての通知は予め生成したチャンネルを割り当てる必要がある。ユーザーはこのチャンネル単位で通知の表示・非表示を切り替えることができる。</p>
+
+<ul>
+<li>NotificationCompat</li>
+</ul>
+
+<p>　下位互換性を保ちながらNotificationを扱えるようにしてくれるライブラリ。上記チャンネルの影響で通知を表示する際のコードにもバージョン分岐が発生してしまうが、これを使うことでそういった面倒な部分を回避できる。</p>
+
+<ul>
+<li>DirectReply
+<br /></li>
+</ul>
+
+<p>　Android7.0以降で使えるようになった、通知上でテキストを入力し、アプリでその入力を受け取れる仕組み。これのために、本アプリを扱える端末はだいぶ限られてしまっている。</p>
+
+<h2 id="データ永続化">データ永続化</h2>
+
+<ul>
+<li>Realm</li>
+</ul>
+
+<p>　モバイルアプリケーション向けデータベース。いわゆるNoSQLで、オブジェクト指向な作りになっている。SQLiteよりも高速で動作する。若干癖があるが、慣れるとSQLiteよりも簡単に扱えると思う。</p>
+
+<h2 id="ビルド周り">ビルド周り</h2>
+
+<ul>
+<li>applicationIdSuffix</li>
+</ul>
+
+<p>　Gradleで使用することでapplicationIdにsuffixを付けられる。これによって、デバッグ時のアプリとリリース時のアプリのapplicationIdを別にできる。</p>
+
+<ul>
+<li>main.java.srcDirs += &lsquo;src/main/kotlin&rsquo;</li>
+</ul>
+
+<p>　Kotlinを使用する際に、デフォルトで存在するJavaディレクトリ以下ではなく、kotlinディレクトリ以下をソースとして認識させたくなった際のおまじない。</p>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>play-services-oss-licenses</li>
+</ul>
+
+<p>　アプリ内で使用している各種ライブラリのOSSライセンスを表示するActivityを作ってくれる。</p>
+
+<ul>
+<li>play-services-ads</li>
+</ul>
+
+<p>　広告を貼って収益化するのに必要。合わせて、admobというサービスを利用する必要あり。</p>
+
+<ul>
+<li>KOIN</li>
+</ul>
+
+<p>　DIに使っている。各Activityで書きがちなViewModelの初期化だったり、Repositoryの生成だったり、そういうお決まりのボイラープレートを1ヶ所に纏め、コード量を減らすと共に、DIによるコンポーネントの差し替えの仕組みを提供できる。</p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/release-ultraspeedmemo/"><i class="fa fa-chevron-circle-left"></i> UltraSpeedMemoの紹介</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 30 Dec 2018 02:35:08 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jan 2019 18:47:58 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -61,6 +61,15 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>UltraSpeedMemoを作り上げるために使った技術たち</title>
+      <link>https://5hyn3.github.io/posts/ultraspeedmemo-tech/</link>
+      <pubDate>Thu, 03 Jan 2019 18:47:58 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/ultraspeedmemo-tech/</guid>
+      <description>&lt;p&gt;UltraSpeedMemoで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;</description>
     </item>
     
     <item>
