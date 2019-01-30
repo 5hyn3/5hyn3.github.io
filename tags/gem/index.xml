@@ -18,7 +18,8 @@
       <pubDate>Fri, 09 Mar 2018 20:27:49 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-nem-websocket-client/</guid>
-      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。
+&lt;/p&gt;</description>
     </item>
     
   </channel>

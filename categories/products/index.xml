@@ -18,7 +18,9 @@
       <pubDate>Sun, 30 Dec 2018 02:35:08 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-ultraspeedmemo/</guid>
-      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +29,9 @@
       <pubDate>Sun, 18 Nov 2018 20:40:37 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-vibrationcompass/</guid>
-      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +40,9 @@
       <pubDate>Fri, 14 Sep 2018 01:14:36 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_4/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +51,9 @@
       <pubDate>Sun, 22 Jul 2018 16:40:04 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_3/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,7 +62,9 @@
       <pubDate>Tue, 26 Jun 2018 01:27:02 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_2/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,7 +73,9 @@
       <pubDate>Sun, 10 Jun 2018 17:29:24 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-mobileapostille/</guid>
-      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -72,7 +84,8 @@
       <pubDate>Fri, 09 Mar 2018 20:27:49 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-nem-websocket-client/</guid>
-      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,7 +94,8 @@
       <pubDate>Fri, 02 Mar 2018 14:58:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-webapostille/</guid>
-      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。
+&lt;/p&gt;</description>
     </item>
     
   </channel>

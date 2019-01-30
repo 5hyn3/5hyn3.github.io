@@ -19,7 +19,9 @@
       
       <guid>https://5hyn3.github.io/posts/practice-using-golang-with-travisci/</guid>
       <description>&lt;p&gt;Githubとの連携機能を使って、TravisCIでGo言語のCI環境を作りました。&lt;br /&gt;
-&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;</description>
+&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,7 +31,8 @@
       
       <guid>https://5hyn3.github.io/posts/golang-test-function-practice/</guid>
       <description>&lt;p&gt;今回はGo言語のテスト機能を使ってみます。&lt;br /&gt;
-まずは&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;で紹介したソースコードをモジュール化してみます。&lt;/p&gt;</description>
+まずは&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;で紹介したソースコードをモジュール化してみます。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,7 +41,8 @@
       <pubDate>Fri, 16 Feb 2018 01:31:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/</guid>
-      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;br /&gt;
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +53,8 @@
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/</guid>
       <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でGo言語を用いてNEMのAPIを叩きましたが、&lt;br /&gt;
 この時点では生のjsonを文字列として表示しただけでした。&lt;br /&gt;
-今回はjsonをパースし、構造体に代入する部分までを行います。&lt;/p&gt;</description>
+今回はjsonをパースし、構造体に代入する部分までを行います。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -59,7 +64,8 @@
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang/</guid>
       <description>&lt;p&gt;現在Go言語を勉強中です。&lt;br /&gt;
-一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。&lt;/p&gt;</description>
+一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。
+&lt;/p&gt;</description>
     </item>
     
   </channel>

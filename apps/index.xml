@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 20 Jan 2019 22:38:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 18:42:38 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/apps/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使い方</title>
+      <link>https://5hyn3.github.io/apps/ultraspeedmemo/how-to-use/</link>
+      <pubDate>Wed, 30 Jan 2019 18:42:38 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/apps/ultraspeedmemo/how-to-use/</guid>
+      <description>ただいま製作中&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Privacy Policy</title>
