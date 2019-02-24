@@ -18,9 +18,7 @@
       <pubDate>Sun, 30 Sep 2018 21:05:27 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/search-nem-unlimited-get-hash-api-node/</guid>
-      <description>&lt;p&gt;NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Sun, 16 Sep 2018 21:40:44 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/post-nemlog/</guid>
-      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://nemlog.nem.social/&#34;&gt;nemlog&lt;/a&gt;&lt;/u&gt;に記事を投稿してみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://nemlog.nem.social/&#34;&gt;nemlog&lt;/a&gt;&lt;/u&gt;に記事を投稿してみました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Fri, 14 Sep 2018 01:14:36 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_4/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,9 +45,7 @@
       <pubDate>Sun, 22 Jul 2018 16:40:04 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_3/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,9 +54,7 @@
       <pubDate>Tue, 26 Jun 2018 01:27:02 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_2/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,9 +63,7 @@
       <pubDate>Sun, 10 Jun 2018 17:29:24 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-mobileapostille/</guid>
-      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,8 +72,7 @@
       <pubDate>Fri, 09 Mar 2018 20:27:49 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-nem-websocket-client/</guid>
-      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,8 +81,7 @@
       <pubDate>Wed, 07 Mar 2018 20:23:24 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/</guid>
-      <description>&lt;p&gt;RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -104,8 +90,7 @@
       <pubDate>Fri, 02 Mar 2018 14:58:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-webapostille/</guid>
-      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -114,8 +99,7 @@
       <pubDate>Fri, 16 Feb 2018 01:31:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/</guid>
-      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;br /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,8 +110,7 @@
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/</guid>
       <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でGo言語を用いてNEMのAPIを叩きましたが、&lt;br /&gt;
 この時点では生のjsonを文字列として表示しただけでした。&lt;br /&gt;
-今回はjsonをパースし、構造体に代入する部分までを行います。
-&lt;/p&gt;</description>
+今回はjsonをパースし、構造体に代入する部分までを行います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -137,8 +120,7 @@
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang/</guid>
       <description>&lt;p&gt;現在Go言語を勉強中です。&lt;br /&gt;
-一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。
-&lt;/p&gt;</description>
+一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。&lt;/p&gt;</description>
     </item>
     
   </channel>

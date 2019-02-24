@@ -18,9 +18,7 @@
       <pubDate>Wed, 04 Apr 2018 01:09:46 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/vue-cheatsheet/</guid>
-      <description>&lt;p&gt;超簡潔に自分向けに、Vue.js について纏めました。所謂チートシートです。後日追記予定&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;超簡潔に自分向けに、Vue.js について纏めました。所謂チートシートです。後日追記予定&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,8 +27,7 @@
       <pubDate>Mon, 05 Mar 2018 14:53:42 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/make-content-published-only-on-twitter-followers-with-rails/</guid>
-      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +37,7 @@
       
       <guid>https://5hyn3.github.io/posts/practice-using-golang-with-travisci/</guid>
       <description>&lt;p&gt;Githubとの連携機能を使って、TravisCIでGo言語のCI環境を作りました。&lt;br /&gt;
-&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -52,8 +47,7 @@
       
       <guid>https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/</guid>
       <description>&lt;p&gt;Rails5.1.5でOmniAuthを使ったTwitter連携機能を実装してみます。&lt;br /&gt;
-今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。
-&lt;/p&gt;</description>
+今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,8 +57,7 @@
       
       <guid>https://5hyn3.github.io/posts/golang-test-function-practice/</guid>
       <description>&lt;p&gt;今回はGo言語のテスト機能を使ってみます。&lt;br /&gt;
-まずは&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;で紹介したソースコードをモジュール化してみます。
-&lt;/p&gt;</description>
+まずは&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;で紹介したソースコードをモジュール化してみます。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,8 +66,7 @@
       <pubDate>Fri, 16 Feb 2018 01:31:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/</guid>
-      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;br /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,8 +77,7 @@
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/</guid>
       <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でGo言語を用いてNEMのAPIを叩きましたが、&lt;br /&gt;
 この時点では生のjsonを文字列として表示しただけでした。&lt;br /&gt;
-今回はjsonをパースし、構造体に代入する部分までを行います。
-&lt;/p&gt;</description>
+今回はjsonをパースし、構造体に代入する部分までを行います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -96,8 +87,7 @@
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang/</guid>
       <description>&lt;p&gt;現在Go言語を勉強中です。&lt;br /&gt;
-一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。
-&lt;/p&gt;</description>
+一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。&lt;/p&gt;</description>
     </item>
     
   </channel>

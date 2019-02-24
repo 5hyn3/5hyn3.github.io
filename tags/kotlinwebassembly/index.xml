@@ -18,9 +18,7 @@
       <pubDate>Fri, 11 May 2018 23:58:08 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/commentary-kotlin-webassembly/</guid>
-      <description>&lt;p&gt;kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,9 +29,7 @@
       <guid>https://5hyn3.github.io/posts/prepare-kotlin-webassembly/</guid>
       <description>&lt;p&gt;ちまたでGoがWebAssemblyに対応する予定ということで話題になっていますが、実はkotlinをWebAssemblyにコンパイルすることが出来ます。&lt;/p&gt;
 
-&lt;p&gt;最近kotlinにハマっており、これはやるしかないと思い、やってみることにしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;最近kotlinにハマっており、これはやるしかないと思い、やってみることにしました。&lt;/p&gt;</description>
     </item>
     
   </channel>

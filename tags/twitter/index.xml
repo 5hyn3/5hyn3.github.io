@@ -18,8 +18,7 @@
       <pubDate>Mon, 05 Mar 2018 14:53:42 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/make-content-published-only-on-twitter-followers-with-rails/</guid>
-      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,8 +28,7 @@
       
       <guid>https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/</guid>
       <description>&lt;p&gt;Rails5.1.5でOmniAuthを使ったTwitter連携機能を実装してみます。&lt;br /&gt;
-今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。
-&lt;/p&gt;</description>
+今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。&lt;/p&gt;</description>
     </item>
     
   </channel>
