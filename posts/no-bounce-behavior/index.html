@@ -93,7 +93,7 @@
         </li>
         
         <li>
-            <a class="active" href="https://5hyn3.github.io/posts/">
+            <a class="" href="https://5hyn3.github.io/posts/">
                 <i class="fa-li fa  fa-lg"></i><span>Posts</span>
             </a>
         </li>
@@ -105,161 +105,80 @@
 
 
 
-<section id="list">
+<article>
+
+    <h1>CoordinatorLayoutのヘッダを勢い良くスワイプするとスクロール方向が反転する不具合を直すBehavior</h1>
 
     
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2019-02-24T21:57:52&#43;09:00">
+                Feb 24nd, 2019
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
 
-    
-        <h2>Posts</h2>
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/android/">#Android</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
     
 
-    
+    <p>タイトル長いですが、その通りの内容です。</p>
 
-    
+<p>CoordinatorLayout + AppBarLayoutでヘッダ + スクロール部分という構成の画面を作るというのはよくある話です。
+このときにヘッダにした部分を勢い良くスワイプすると、ヘッダ部分が全て画面外まで隠れたタイミングでスクロール方向が反転してしまう不具合があります。
+これを直してみました。</p>
 
-    <h3>2019</h3>
+<hr />
+
+<h1 id="方法">方法</h1>
+
+<p>以下のようなBehaviorを使います。
+スクロール中であることを保持するフラグ、及び、それを使って処理をブロックすることによって、こういった挙動を抑制できるようです。</p>
+
+<script src="https://gist.github.com/5hyn3/c722f18046d724b8bee73b0b0b438f1b.js"></script>
+
+<h1 id="参考">参考</h1>
+
+<p><a href="https://stackoverflow.com/questions/47152764/how-do-i-remove-the-bouncing-effect-on-appbar/47298312">https://stackoverflow.com/questions/47152764/how-do-i-remove-the-bouncing-effect-on-appbar/47298312</a></p>
+
+</article>
+
+
+<section class="post-nav">
     <ul>
         
         <li>
-            <a href="https://5hyn3.github.io/posts/no-bounce-behavior/">CoordinatorLayoutのヘッダを勢い良くスワイプするとスクロール方向が反転する不具合を直すBehavior</a>
-            <time class="date-meta">Feb 24</time>
+            <a href="https://5hyn3.github.io/posts/ultraspeedmemo-tech/"><i class="fa fa-chevron-circle-left"></i> UltraSpeedMemoを作り上げるために使った技術たち</a>
         </li>
         
-        <li>
-            <a href="https://5hyn3.github.io/posts/ultraspeedmemo-tech/">UltraSpeedMemoを作り上げるために使った技術たち</a>
-            <time class="date-meta">Jan 3</time>
-        </li>
         
     </ul>
-    
-    
-
-    <h3>2018</h3>
-    <ul>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/release-ultraspeedmemo/">UltraSpeedMemoの紹介</a>
-            <time class="date-meta">Dec 30</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/introduce-4798055832/">[Flutter入門]を読んだので紹介してみる</a>
-            <time class="date-meta">Dec 29</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/vibrationcompass-tech/">VibrationCompassを作り上げるために使った技術たち</a>
-            <time class="date-meta">Nov 20</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/release-vibrationcompass/">VibrationCompassの紹介</a>
-            <time class="date-meta">Nov 18</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/search-nem-unlimited-get-hash-api-node/">/transaction/get?hash={{txhash}}が時間制限無しに使えるノードを探してみる</a>
-            <time class="date-meta">Sep 30</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/change-kotlin-object-instance/">KotlinのObjectのインスタンスを書き換える</a>
-            <time class="date-meta">Sep 17</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/post-nemlog/">nemlogに投稿してみた</a>
-            <time class="date-meta">Sep 16</time>
-        </li>
-        
-        <li>
-            <a href="https://5hyn3.github.io/posts/release-mobileapostille-ver-0_4/">MobileApostille ver 0.4をリリースしました！</a>
-            <time class="date-meta">Sep 14</time>
-        </li>
-        
-    </ul>
-    
-    
-
 </section>
-
-
-
-<ul class="pagination">
     
-    <li class="page-item">
-        <a href="https://5hyn3.github.io/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="https://5hyn3.github.io/posts/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="https://5hyn3.github.io/posts/page/2/">2</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="https://5hyn3.github.io/posts/page/3/">3</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="https://5hyn3.github.io/posts/page/5/">5</a></li>
-    
-    
-    <li class="page-item">
-    <a href="https://5hyn3.github.io/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="https://5hyn3.github.io/posts/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
 
 
 
