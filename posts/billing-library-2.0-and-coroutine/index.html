@@ -1,0 +1,293 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ls -al</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://5hyn3.github.io/css/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111638465-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111638465-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5779360095164816",
+            enable_page_level_ads: true
+        });
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-5779360095164816",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>
+                <a href="https://5hyn3.github.io/">ls -al</a>
+            </h1>
+
+            <ul id="social-media">
+                
+                <li>
+                    <a href="https://twitter.com/5hy_n3">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="https://github.com/5hyn3">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                   
+            </ul>
+            
+            <p>
+                <em>仮想通貨やプログラミングに関する事などをつらつらと書き綴ります</em>
+            </p>
+            
+        </header>
+
+        
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/products/">
+                <i class="fa-li fa  fa-lg"></i><span>Products</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/categories/">
+                <i class="fa-li fa  fa-lg"></i><span>Categories</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/tags/">
+                <i class="fa-li fa  fa-lg"></i><span>Tags</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="https://5hyn3.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+        <main>
+
+
+
+<article>
+
+    <h1>Google Play Billing Library 2.0を触ってみた</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2019-05-27T01:48:29&#43;09:00">
+                May 27nd, 2019
+            </time>
+        </li>
+        
+        
+        <li>
+            Categories: 
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/categories/programming/">Programming</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://5hyn3.github.io/tags/android/">#Android</a>
+                
+                    , 
+                    <a href="https://5hyn3.github.io/tags/kotlin/">#Kotlin</a>
+                
+            </em>
+        </li>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。</p>
+
+<h1 id="注意点">注意点</h1>
+
+<p>　本記事は決済周りの処理を取り扱います。本記事の内容に従って実装を行ったことによる損害の責任は取りかねますので、<strong>自己責任で</strong>参考にしてください。</p>
+
+<h1 id="google-play-billing-library-2-0とは">Google Play Billing Library 2.0とは</h1>
+
+<p>　Googleが提供するアプリ内課金を実装するためのライブラリです。<code>Kotlin First</code>が提唱されているAndroidですが、このライブラリは相変わらずJavaで実装されており、当然KotlinCoroutineなどでいい感じにはなっておらず、Callback形式で泥臭いインターフェースを触ることになります。決済周りを扱うので、これも当然なのですがテストも結構面倒です。</p>
+
+<h1 id="いい感じにしてみよう">いい感じにしてみよう</h1>
+
+<p>　色々苦戦したのでいい感じにしてみました。
+今回やりたかったのは、<strong>一度払えば以後ずっと適用される広告除去機能の実装</strong>です。以下のようなコードでそのような要件を満たす機能が実装できました。</p>
+
+<h2 id="各クラスの役割">各クラスの役割</h2>
+
+<ul>
+<li><p>BillingRepository</p>
+
+<ul>
+<li>Google Play Billing Libraryをラップして扱いやすいインターフェースを提供するRepository。一部Repositoryらしくない処理が混じってるのでリファクタ推奨（コメントを参照してください）</li>
+</ul></li>
+
+<li><p>BillingModel</p>
+
+<ul>
+<li>取得した支払い情報を格納しておくModel</li>
+</ul></li>
+
+<li><p>Skus</p>
+
+<ul>
+<li>登録したSkuのidとかを登録しておくEntity</li>
+</ul></li>
+</ul>
+
+<h2 id="コード">コード</h2>
+
+<script src="https://gist.github.com/5hyn3/f34f1f9e781bffc5ff609f612693170c.js"></script>
+
+<p>こんな感じで使えます。</p>
+
+<script src="https://gist.github.com/5hyn3/708753c6a6aac85b3b52d96566ccf458.js"></script>
+
+<p>KotlinCoroutineでラップしておいたので、Callbackと格闘することなく非常に簡単に扱えます。</p>
+
+<h1 id="テストのやり方">テストのやり方</h1>
+
+<ul>
+<li><p>テストに使う端末はどうしよう？</p>
+
+<ul>
+<li>支払いのテストにはエミュレータは使用できません。正しいテストを行うには実機でテストをする必要があります。</li>
+</ul></li>
+
+<li><p>支払いが行えることをテストしたい</p>
+
+<ul>
+<li><code>android.test.purchased</code>というIDで指定できるskuを使用してください。これはGoogleが用意した支払いが可能なskuです。なお、テスト用のIDは以下のようなものがあります。
+
+<ul>
+<li><code>android.test.purchased</code>
+
+<ul>
+<li>正常に購入出来るID</li>
+</ul></li>
+<li><code>android.test.canceled</code>
+
+<ul>
+<li>購入するとGooglePlayにキャンセルされるID</li>
+</ul></li>
+<li><code>android.test.item_unavailable</code>
+
+<ul>
+<li>商品が存在しないID</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>支払ったことを確認するテストをしたい</p>
+
+<ul>
+<li><code>android.test.purchased</code>というIDで指定できるskuを使用してください。これに対してlaunchBillingFlowを使って実際に購入すると、GooglePlayに購入履歴が残ります。これによって、どうやって購入履歴を取得するかのテストが可能になります。</li>
+</ul></li>
+
+<li><p>アプリは出来たので結合して実際のアイテムに対して動作を確認したい</p>
+
+<ul>
+<li>アプリをGooglePlayにアップロードし、α版でクローズドリリースする必要があります。リリース後、Google Play Consoleのトップ -&gt; 設定 -&gt; アカウントの詳細へ移動し、ライセンステストという欄を確認します。ここに「テスト用のアクセス権がある Gmail アカウント」という項目があるので、テスト時に支払いを行うアカウントのGmailアカウントを登録してください。その後、クローズドリリースしたアプリをインストールし、支払いを行うことで、実際に購入しなくてもテストを行うことが出来ます。詳しくは<u><a href="https://developer.android.com/google/play/billing/billing_testing.html#testing-purchases">こちら</a></u>を確認してください。</li>
+</ul></li>
+</ul>
+
+<h1 id="ハマったところ">ハマったところ</h1>
+
+<ul>
+<li><p>エミュレータではテストできない</p>
+
+<ul>
+<li>launchBillingFlowなどは動いてしまいます&hellip;それに騙されてエミュレータでテストをしていると、<code>queryPurchase</code>が動かないという問題に直面します。公式ドキュメントにも記載のあるとおり、きちんと実機でやりましょう。</li>
+</ul></li>
+
+<li><p><code>queryPurchase</code>では正確な支払い情報が取得できない</p>
+
+<ul>
+<li><code>queryPurchase</code>というメソッドがあり、最初はそちらで実装していたのですが、どうやらこのメソッドが取得できるのは、<strong>今インストールされているアプリ上で</strong>、<strong>そのデバイスが</strong>支払った情報みたいです。つまり、以前にインストールしていてその時に支払った情報や、ほかデバイスで支払った情報はこれでは取得できません。<code>queryPurchaseHistoryAsync</code>を使うことで、そういった問題点を回避して支払い情報を所得出来ます。おそらく大抵のユースケースでは、<code>queryPurchase</code>を使ってしまうと余計な不具合を発生させてしまうので、気をつけましょう。</li>
+</ul></li>
+</ul>
+
+<h1 id="参考">参考</h1>
+
+<p><a href="https://developer.android.com/google/play/billing/billing_library_overview">Use the Google Play Billing Library</a></p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://5hyn3.github.io/posts/no-bounce-behavior/"><i class="fa fa-chevron-circle-left"></i> CoordinatorLayoutのヘッダを勢い良くスワイプするとスクロール方向が反転する不具合を直すBehavior</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2017 - shyne | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://5hyn3.github.io/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="https://5hyn3.github.io/js/scripts.js"></script>
+</body>
+
+</html>

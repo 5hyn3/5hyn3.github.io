@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>Copyright &amp;copy; 2017 - shyne</copyright>
-    <lastBuildDate>Sun, 24 Feb 2019 21:57:52 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 01:48:29 +0900</lastBuildDate>
     
 	<atom:link href="https://5hyn3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -61,6 +61,15 @@ Windows  PinAssignor  ピンアサインが書かれた画像に文字を書き�
       <guid>https://5hyn3.github.io/tags/</guid>
       <description>このサイトはHugoで制作されました。
 テーマにはKieraを使用しています</description>
+    </item>
+    
+    <item>
+      <title>Google Play Billing Library 2.0を触ってみた</title>
+      <link>https://5hyn3.github.io/posts/billing-library-2.0-and-coroutine/</link>
+      <pubDate>Mon, 27 May 2019 01:48:29 +0900</pubDate>
+      
+      <guid>https://5hyn3.github.io/posts/billing-library-2.0-and-coroutine/</guid>
+      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;</description>
     </item>
     
     <item>
