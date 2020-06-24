@@ -18,7 +18,9 @@
       <pubDate>Mon, 27 May 2019 01:48:29 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/billing-library-2.0-and-coroutine/</guid>
-      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +29,9 @@
       <pubDate>Mon, 17 Sep 2018 19:46:36 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/change-kotlin-object-instance/</guid>
-      <description>&lt;p&gt;あまり褒められたものではないのですが、必要に迫られたので調査し、やってみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;あまり褒められたものではないのですが、必要に迫られたので調査し、やってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +40,9 @@
       <pubDate>Fri, 03 Aug 2018 01:00:25 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/android-read-more-text-view/</guid>
-      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +51,9 @@
       <pubDate>Mon, 25 Jun 2018 01:50:37 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/get-binary-from-url-with-kotlin/</guid>
-      <description>&lt;p&gt;Androidアプリを作っている際に必要になったので調査してやってみました。内容的にはJavaも殆ど同じように出来るのでタグに入れてあります。個人的なメモ。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidアプリを作っている際に必要になったので調査してやってみました。内容的にはJavaも殆ど同じように出来るのでタグに入れてあります。個人的なメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,7 +62,9 @@
       <pubDate>Fri, 25 May 2018 22:58:39 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/culc-filehash-on-android/</guid>
-      <description>&lt;p&gt;Androidでファイルハッシュを計算する処理を実装しました。調べても、AndroidではなくJavaでやっているとか、文字列のハッシュを計算しているとかで、Androidを扱う上で面倒なURIの取扱まで通してカバーできる情報が見当たらなかったので、ここで共有します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidでファイルハッシュを計算する処理を実装しました。調べても、AndroidではなくJavaでやっているとか、文字列のハッシュを計算しているとかで、Androidを扱う上で面倒なURIの取扱まで通してカバーできる情報が見当たらなかったので、ここで共有します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,7 +75,9 @@
       <guid>https://5hyn3.github.io/posts/introduce-kotlin-start-book/</guid>
       <description>&lt;p&gt;Kotlinスタートブック 新しいAndroidプログラミングを読破したので紹介してみます。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4865940391&amp;linkId=92ff6b485406ee5c647ea1314b3cffb2&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4865940391&amp;linkId=92ff6b485406ee5c647ea1314b3cffb2&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -74,7 +86,8 @@
       <pubDate>Tue, 24 Apr 2018 01:18:48 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/try-atcoder-with-kotlin/</guid>
-      <description>&lt;p&gt;せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +98,9 @@
       <guid>https://5hyn3.github.io/posts/kotlin-in-action-review/</guid>
       <description>&lt;p&gt;業務で必要になったのでkotlinについて学びました。その一環として[Kotlinイン・アクション]を読破したので、これについて紹介してみたいと思います。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;text-align:center;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4839961743&amp;linkId=4ed794b6467be521c9399a0422d32987&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;text-align:center;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4839961743&amp;linkId=4ed794b6467be521c9399a0422d32987&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

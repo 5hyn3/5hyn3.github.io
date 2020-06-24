@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ls -al</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -132,6 +132,8 @@
     
 
     <p>最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。</p>
+
+<p></p>
 
 <hr />
 
@@ -318,8 +320,7 @@
     }
   }
   <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>);
-}
-</code></pre></div>
+}</code></pre></div>
 <p>各メソッドの解説をします。</p>
 
 <h2 id="getdb-url">getDb(url)</h2>
@@ -479,8 +480,7 @@
   <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">newRecord</span>);
   <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">record1</span>);
   <span style="color:#a6e22e">save</span>(<span style="color:#a6e22e">db</span>,<span style="color:#a6e22e">url</span>)
-}
-</code></pre></div>
+}</code></pre></div>
 <p>なんだか随所にActiveRecordっぽさがありますが、こんな感じで使えます。2次元配列をそのまま扱ってSheetの作法に習って書き込むよりは楽になったかと思います。</p>
 
 <hr />

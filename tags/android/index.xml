@@ -18,7 +18,9 @@
       <pubDate>Mon, 27 May 2019 01:48:29 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/billing-library-2.0-and-coroutine/</guid>
-      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +33,9 @@
 
 &lt;p&gt;CoordinatorLayout + AppBarLayoutでヘッダ + スクロール部分という構成の画面を作るというのはよくある話です。
 このときにヘッダにした部分を勢い良くスワイプすると、ヘッダ部分が全て画面外まで隠れたタイミングでスクロール方向が反転してしまう不具合があります。
-これを直してみました。&lt;/p&gt;</description>
+これを直してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +44,9 @@
       <pubDate>Thu, 03 Jan 2019 18:47:58 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/ultraspeedmemo-tech/</guid>
-      <description>&lt;p&gt;UltraSpeedMemoで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;</description>
+      <description>&lt;p&gt;UltraSpeedMemoで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +55,9 @@
       <pubDate>Sun, 30 Dec 2018 02:35:08 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-ultraspeedmemo/</guid>
-      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,11 +66,13 @@
       <pubDate>Sat, 29 Dec 2018 22:31:12 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduce-4798055832/</guid>
-      <description>&lt;p&gt;　Android/iOSクロス開発フレームワーク Flutter入門を読んだので紹介してみます。&lt;/p&gt;
+      <description>&lt;p&gt;Android/iOSクロス開発フレームワーク Flutter入門を読んだので紹介してみます。&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;&#34;&gt;
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4798055832&amp;linkId=3d414440a92159251f272107ed2bd4c9&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,7 +81,9 @@
       <pubDate>Tue, 20 Nov 2018 02:02:10 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/vibrationcompass-tech/</guid>
-      <description>&lt;p&gt;VibrationCompassで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;</description>
+      <description>&lt;p&gt;VibrationCompassで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,7 +92,9 @@
       <pubDate>Sun, 18 Nov 2018 20:40:37 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-vibrationcompass/</guid>
-      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -89,7 +103,9 @@
       <pubDate>Fri, 14 Sep 2018 01:14:36 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_4/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -98,7 +114,9 @@
       <pubDate>Wed, 08 Aug 2018 21:17:12 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/add-flutter-to-existing-apps/</guid>
-      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -107,7 +125,9 @@
       <pubDate>Fri, 03 Aug 2018 01:00:25 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/android-read-more-text-view/</guid>
-      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,7 +136,9 @@
       <pubDate>Sun, 22 Jul 2018 16:40:04 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_3/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -125,7 +147,9 @@
       <pubDate>Tue, 26 Jun 2018 01:27:02 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_2/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -134,7 +158,9 @@
       <pubDate>Sun, 10 Jun 2018 17:29:24 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-mobileapostille/</guid>
-      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -143,7 +169,9 @@
       <pubDate>Fri, 25 May 2018 22:58:39 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/culc-filehash-on-android/</guid>
-      <description>&lt;p&gt;Androidでファイルハッシュを計算する処理を実装しました。調べても、AndroidではなくJavaでやっているとか、文字列のハッシュを計算しているとかで、Androidを扱う上で面倒なURIの取扱まで通してカバーできる情報が見当たらなかったので、ここで共有します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidでファイルハッシュを計算する処理を実装しました。調べても、AndroidではなくJavaでやっているとか、文字列のハッシュを計算しているとかで、Androidを扱う上で面倒なURIの取扱まで通してカバーできる情報が見当たらなかったので、ここで共有します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -152,9 +180,11 @@
       <pubDate>Fri, 11 May 2018 00:40:50 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduce-android-textbook/</guid>
-      <description>&lt;p&gt;　黒帯エンジニアが教えるプロの技術 Android開発の教科書を読んだので紹介してみます。&lt;/p&gt;
+      <description>&lt;p&gt;黒帯エンジニアが教えるプロの技術 Android開発の教科書を読んだので紹介してみます。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4797385367&amp;linkId=461038f3dba2b7e2edcd35e3f5416bff&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4797385367&amp;linkId=461038f3dba2b7e2edcd35e3f5416bff&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -163,7 +193,8 @@
       <pubDate>Tue, 08 May 2018 21:28:47 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/use-mitm-proxy-with-android-emulator/</guid>
-      <description>&lt;p&gt;&lt;span&gt;　&lt;span&gt;Android開発において、エミュレータ上のアプリで叩いているAPIを確認したかったのでやってみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;span&gt;　&lt;span&gt;Android開発において、エミュレータ上のアプリで叩いているAPIを確認したかったのでやってみました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -174,7 +205,9 @@
       <guid>https://5hyn3.github.io/posts/introduce-kotlin-start-book/</guid>
       <description>&lt;p&gt;Kotlinスタートブック 新しいAndroidプログラミングを読破したので紹介してみます。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4865940391&amp;linkId=92ff6b485406ee5c647ea1314b3cffb2&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4865940391&amp;linkId=92ff6b485406ee5c647ea1314b3cffb2&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

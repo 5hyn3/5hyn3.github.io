@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ls -al</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -135,7 +135,8 @@
     
 
     <p>Rails5.1.5でOmniAuthを使ったTwitter連携機能を実装してみます。<br />
-今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。</p>
+今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。
+</p>
 
 <h2 id="目標">目標</h2>
 
@@ -170,21 +171,21 @@ gem <span style="color:#e6db74">&#39;omniauth-twitter&#39;</span></code></pre></
 <p>config/secrets.ymlにAPIキーを追記します。</p>
 
 <p>config/secrets.yml</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">twitter: <span style="color:#75715e">&amp;twitter</span>
-  twitter_api_key: &lt;%= ENV[<span style="color:#e6db74">&#34;TWITTER_API_KEY&#34;</span>] %<span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">  twitter_api_secret: &lt;%= ENV[&#34;TWITTER_API_SECRET&#34;] %&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">twitter: &amp;twitter
+  twitter_api_key: &lt;%= ENV[&#34;TWITTER_API_KEY&#34;] %&gt;
+  twitter_api_secret: &lt;%= ENV[&#34;TWITTER_API_SECRET&#34;] %&gt;
 
 development:
-  secret_key_base: &lt;hogehoge<span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">  &lt;&lt;: *twitter</span>
+  secret_key_base: &lt;hogehoge&gt;
+  &lt;&lt;: *twitter
 
 test:
-  secret_key_base: &lt;fugafuga<span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">  &lt;&lt;: *twitter</span>
+  secret_key_base: &lt;fugafuga&gt;
+  &lt;&lt;: *twitter
 
 production:
-  secret_key_base: &lt;%= ENV[<span style="color:#e6db74">&#34;SECRET_KEY_BASE&#34;</span>] %<span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">  &lt;&lt;: *twitter</span></code></pre></div>
+  secret_key_base: &lt;%= ENV[&#34;SECRET_KEY_BASE&#34;] %&gt;
+  &lt;&lt;: *twitter</code></pre></div>
 <p>config/initializers/omniauth.rbにconfig/secrets.ymlを利用した設定を追記します。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>middleware<span style="color:#f92672">.</span>use <span style="color:#66d9ef">OmniAuth</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Builder</span> <span style="color:#66d9ef">do</span>
     provider <span style="color:#e6db74">:twitter</span>,<span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>secrets<span style="color:#f92672">.</span>twitter_api_key,<span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>secrets<span style="color:#f92672">.</span>twitter_api_secret
@@ -230,13 +231,13 @@ rails generate controller Home index login</code></pre></div>
 
 <p>sessions_controller.rb</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SessionsController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">create</span>
     user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_or_create_from_auth(request<span style="color:#f92672">.</span>env<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;omniauth.auth&#39;</span><span style="color:#f92672">]</span>)
     session<span style="color:#f92672">[</span><span style="color:#e6db74">:user_id</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>id
     redirect_to root_path
   <span style="color:#66d9ef">end</span>
 
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">destroy</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">destroy</span>
     reset_session
     redirect_to root_path
   <span style="color:#66d9ef">end</span>
@@ -245,7 +246,7 @@ rails generate controller Home index login</code></pre></div>
 
 <p>home_controller.rb</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">index</span>
     <span style="color:#66d9ef">if</span> session<span style="color:#f92672">[</span><span style="color:#e6db74">:user_id</span><span style="color:#f92672">].</span>nil?
       redirect_to <span style="color:#e6db74">action</span>:<span style="color:#e6db74">&#39;login&#39;</span>
     <span style="color:#66d9ef">else</span>
@@ -253,7 +254,7 @@ rails generate controller Home index login</code></pre></div>
     <span style="color:#66d9ef">end</span>
   <span style="color:#66d9ef">end</span>
   
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">login</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">login</span>
     
   <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span></code></pre></div>

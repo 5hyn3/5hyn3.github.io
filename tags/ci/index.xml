@@ -19,7 +19,9 @@
       
       <guid>https://5hyn3.github.io/posts/practice-using-golang-with-travisci/</guid>
       <description>&lt;p&gt;Githubとの連携機能を使って、TravisCIでGo言語のCI環境を作りました。&lt;br /&gt;
-&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;</description>
+&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

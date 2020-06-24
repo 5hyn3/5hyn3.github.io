@@ -18,7 +18,9 @@
       <pubDate>Mon, 27 May 2019 01:48:29 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/billing-library-2.0-and-coroutine/</guid>
-      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;アプリ内課金を実装しようと思い、Google Play Billing Library 2.0を使って実際に実装、リリースするところまで出来たので、引っかかった部分など今回得たノウハウを纏めてみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +33,9 @@
 
 &lt;p&gt;CoordinatorLayout + AppBarLayoutでヘッダ + スクロール部分という構成の画面を作るというのはよくある話です。
 このときにヘッダにした部分を勢い良くスワイプすると、ヘッダ部分が全て画面外まで隠れたタイミングでスクロール方向が反転してしまう不具合があります。
-これを直してみました。&lt;/p&gt;</description>
+これを直してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +44,9 @@
       <pubDate>Thu, 03 Jan 2019 18:47:58 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/ultraspeedmemo-tech/</guid>
-      <description>&lt;p&gt;UltraSpeedMemoで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;</description>
+      <description>&lt;p&gt;UltraSpeedMemoで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +55,9 @@
       <pubDate>Sun, 30 Dec 2018 02:35:08 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-ultraspeedmemo/</guid>
-      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidの通知機能を活用し、いつでもどこでも一瞬でメモを記録することを可能とする自作アプリ、「UltraSpeedMemo」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,11 +66,13 @@
       <pubDate>Sat, 29 Dec 2018 22:31:12 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduce-4798055832/</guid>
-      <description>&lt;p&gt;　Android/iOSクロス開発フレームワーク Flutter入門を読んだので紹介してみます。&lt;/p&gt;
+      <description>&lt;p&gt;Android/iOSクロス開発フレームワーク Flutter入門を読んだので紹介してみます。&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;&#34;&gt;
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4798055832&amp;linkId=3d414440a92159251f272107ed2bd4c9&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,7 +81,9 @@
       <pubDate>Tue, 20 Nov 2018 02:02:10 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/vibrationcompass-tech/</guid>
-      <description>&lt;p&gt;VibrationCompassで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;</description>
+      <description>&lt;p&gt;VibrationCompassで使ったツール・ライブラリなどピンからキリまでまとめ&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,7 +92,9 @@
       <pubDate>Sun, 18 Nov 2018 20:40:37 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-vibrationcompass/</guid>
-      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;設定した目的地にスマートフォンを向けると、バイブレーションが作動し、画面を見なくても目的地が分かる自作アプリ「VibrationCompass」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -89,7 +103,9 @@
       <pubDate>Sun, 30 Sep 2018 21:05:27 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/search-nem-unlimited-get-hash-api-node/</guid>
-      <description>&lt;p&gt;NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;NisAPIの/transaction/get?hash={{txhash}}の時間制限が無制限となっているノードを探してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -98,7 +114,9 @@
       <pubDate>Mon, 17 Sep 2018 19:46:36 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/change-kotlin-object-instance/</guid>
-      <description>&lt;p&gt;あまり褒められたものではないのですが、必要に迫られたので調査し、やってみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;あまり褒められたものではないのですが、必要に迫られたので調査し、やってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -107,7 +125,9 @@
       <pubDate>Sun, 16 Sep 2018 21:40:44 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/post-nemlog/</guid>
-      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://nemlog.nem.social/&#34;&gt;nemlog&lt;/a&gt;&lt;/u&gt;に記事を投稿してみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://nemlog.nem.social/&#34;&gt;nemlog&lt;/a&gt;&lt;/u&gt;に記事を投稿してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,7 +136,9 @@
       <pubDate>Fri, 14 Sep 2018 01:14:36 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_4/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.4をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -125,7 +147,9 @@
       <pubDate>Wed, 08 Aug 2018 21:17:12 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/add-flutter-to-existing-apps/</guid>
-      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;既にJava/Kotlinで制作されている旧来のプロジェクトに後からFlutterを導入する方法を調べました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -134,7 +158,9 @@
       <pubDate>Fri, 03 Aug 2018 01:00:25 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/android-read-more-text-view/</guid>
-      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidで「もっと読む」ボタン付のTextViewを作ってみました。具体的には、「長文のテキストを省略して途中まで表示し、かつ、後ろ部分に透明なグラデーションをかけて続きがあることを期待させ、下にあるボタンを押すことで続きが表示されるTextView」です。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -143,7 +169,9 @@
       <pubDate>Sun, 22 Jul 2018 16:40:04 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_3/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.3をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -152,7 +180,9 @@
       <pubDate>Tue, 26 Jun 2018 01:27:02 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/release-mobileapostille-ver-0_2/</guid>
-      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;「MobileApostille」のver 0.2をリリースしました！更新内容などをお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -161,7 +191,9 @@
       <pubDate>Mon, 25 Jun 2018 01:50:37 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/get-binary-from-url-with-kotlin/</guid>
-      <description>&lt;p&gt;Androidアプリを作っている際に必要になったので調査してやってみました。内容的にはJavaも殆ど同じように出来るのでタグに入れてあります。個人的なメモ。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidアプリを作っている際に必要になったので調査してやってみました。内容的にはJavaも殆ど同じように出来るのでタグに入れてあります。個人的なメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -170,7 +202,9 @@
       <pubDate>Sun, 24 Jun 2018 21:08:35 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/try-building-with-xcode-10/</guid>
-      <description>&lt;p&gt;iOSアプリエンジニアの多くが感じる、「ビルドに時間がかかる」という苦悩が、XCode10の新しいビルドシステムでマシになるそうなので検証してみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;iOSアプリエンジニアの多くが感じる、「ビルドに時間がかかる」という苦悩が、XCode10の新しいビルドシステムでマシになるそうなので検証してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -179,7 +213,9 @@
       <pubDate>Sun, 10 Jun 2018 17:29:24 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-mobileapostille/</guid>
-      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;AndroidでNEMのApostille機能を扱うことが出来る自作アプリ「MobileApostille」を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -188,7 +224,9 @@
       <pubDate>Fri, 25 May 2018 22:58:39 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/culc-filehash-on-android/</guid>
-      <description>&lt;p&gt;Androidでファイルハッシュを計算する処理を実装しました。調べても、AndroidではなくJavaでやっているとか、文字列のハッシュを計算しているとかで、Androidを扱う上で面倒なURIの取扱まで通してカバーできる情報が見当たらなかったので、ここで共有します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Androidでファイルハッシュを計算する処理を実装しました。調べても、AndroidではなくJavaでやっているとか、文字列のハッシュを計算しているとかで、Androidを扱う上で面倒なURIの取扱まで通してカバーできる情報が見当たらなかったので、ここで共有します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -197,7 +235,9 @@
       <pubDate>Fri, 25 May 2018 00:47:48 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/pass-google-adsense/</guid>
-      <description>&lt;p&gt;GoogleAdsenseの審査通りましたので、それまでの経緯などをまとめておきます。&lt;/p&gt;</description>
+      <description>&lt;p&gt;GoogleAdsenseの審査通りましたので、それまでの経緯などをまとめておきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -208,7 +248,9 @@
       <guid>https://5hyn3.github.io/posts/introduce-swift-4-programming-primer/</guid>
       <description>&lt;p&gt;Swift 4プログラミング入門を読んだので紹介します。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4802611536&amp;linkId=a0bebb632af7f72c48cb21e784e238e8&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4802611536&amp;linkId=a0bebb632af7f72c48cb21e784e238e8&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -217,7 +259,9 @@
       <pubDate>Fri, 11 May 2018 23:58:08 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/commentary-kotlin-webassembly/</guid>
-      <description>&lt;p&gt;kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -226,9 +270,11 @@
       <pubDate>Fri, 11 May 2018 00:40:50 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduce-android-textbook/</guid>
-      <description>&lt;p&gt;　黒帯エンジニアが教えるプロの技術 Android開発の教科書を読んだので紹介してみます。&lt;/p&gt;
+      <description>&lt;p&gt;黒帯エンジニアが教えるプロの技術 Android開発の教科書を読んだので紹介してみます。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4797385367&amp;linkId=461038f3dba2b7e2edcd35e3f5416bff&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4797385367&amp;linkId=461038f3dba2b7e2edcd35e3f5416bff&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -237,7 +283,8 @@
       <pubDate>Tue, 08 May 2018 21:28:47 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/use-mitm-proxy-with-android-emulator/</guid>
-      <description>&lt;p&gt;&lt;span&gt;　&lt;span&gt;Android開発において、エミュレータ上のアプリで叩いているAPIを確認したかったのでやってみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;span&gt;　&lt;span&gt;Android開発において、エミュレータ上のアプリで叩いているAPIを確認したかったのでやってみました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -248,7 +295,9 @@
       <guid>https://5hyn3.github.io/posts/introduce-kotlin-start-book/</guid>
       <description>&lt;p&gt;Kotlinスタートブック 新しいAndroidプログラミングを読破したので紹介してみます。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4865940391&amp;linkId=92ff6b485406ee5c647ea1314b3cffb2&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4865940391&amp;linkId=92ff6b485406ee5c647ea1314b3cffb2&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -259,7 +308,9 @@
       <guid>https://5hyn3.github.io/posts/prepare-kotlin-webassembly/</guid>
       <description>&lt;p&gt;ちまたでGoがWebAssemblyに対応する予定ということで話題になっていますが、実はkotlinをWebAssemblyにコンパイルすることが出来ます。&lt;/p&gt;
 
-&lt;p&gt;最近kotlinにハマっており、これはやるしかないと思い、やってみることにしました。&lt;/p&gt;</description>
+&lt;p&gt;最近kotlinにハマっており、これはやるしかないと思い、やってみることにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -268,7 +319,8 @@
       <pubDate>Tue, 24 Apr 2018 01:18:48 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/try-atcoder-with-kotlin/</guid>
-      <description>&lt;p&gt;せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;せっかくkotlinを学んだので、これを使う場を用意しないと技術が定着しなくて勿体無い、かといってプログラミングを必要とするアイデアが都合よく湧くとも限らない。ということでkotlinでAtCoderを始めてみました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -277,7 +329,9 @@
       <pubDate>Mon, 23 Apr 2018 01:58:11 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/stance-to-introduce-books/</guid>
-      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/kotlin-in-action-review/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;で僕が本を紹介する際のスタンスについて軽く書きましたが、今後様々な技術書を読む上で、同じように人に紹介する記事を書くことが多くなるだろうと思うので、ここに一つの記事として独立させます。&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/kotlin-in-action-review/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;で僕が本を紹介する際のスタンスについて軽く書きましたが、今後様々な技術書を読む上で、同じように人に紹介する記事を書くことが多くなるだろうと思うので、ここに一つの記事として独立させます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -286,7 +340,9 @@
       <pubDate>Mon, 23 Apr 2018 01:41:56 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/gas-return-jsonp/</guid>
-      <description>&lt;p&gt;GASでJSONPを返す方法を調べたのでここにメモします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;GASでJSONPを返す方法を調べたのでここにメモします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -297,7 +353,9 @@
       <guid>https://5hyn3.github.io/posts/kotlin-in-action-review/</guid>
       <description>&lt;p&gt;業務で必要になったのでkotlinについて学びました。その一環として[Kotlinイン・アクション]を読破したので、これについて紹介してみたいと思います。&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;text-align:center;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4839961743&amp;linkId=4ed794b6467be521c9399a0422d32987&#34;&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;width:120px;height:240px;text-align:center;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=ewvss-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4839961743&amp;linkId=4ed794b6467be521c9399a0422d32987&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -306,7 +364,8 @@
       <pubDate>Thu, 19 Apr 2018 01:47:18 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/gas-daily-report-bot/</guid>
-      <description>&lt;p&gt;日報を書くことはとても大切です。しかし同時にそれはとても面倒なことでもあります。継続しなければいけないけれども面倒なタスク。そんなものはテクノロジーの力を借りて効率化しちゃいましょう！ということで、GASを使って日報作成を支援してくれるbotを作りました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;日報を書くことはとても大切です。しかし同時にそれはとても面倒なことでもあります。継続しなければいけないけれども面倒なタスク。そんなものはテクノロジーの力を借りて効率化しちゃいましょう！ということで、GASを使って日報作成を支援してくれるbotを作りました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -324,7 +383,9 @@
       <pubDate>Mon, 09 Apr 2018 01:21:29 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/</guid>
-      <description>&lt;p&gt;最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -333,7 +394,9 @@
       <pubDate>Wed, 04 Apr 2018 01:09:46 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/vue-cheatsheet/</guid>
-      <description>&lt;p&gt;超簡潔に自分向けに、Vue.js について纏めました。所謂チートシートです。後日追記予定&lt;/p&gt;</description>
+      <description>&lt;p&gt;超簡潔に自分向けに、Vue.js について纏めました。所謂チートシートです。後日追記予定&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -342,7 +405,9 @@
       <pubDate>Fri, 30 Mar 2018 00:44:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/share-clipboard-with-vmwareplayer/</guid>
-      <description>&lt;p&gt;仮想環境を作り直す度に毎回ググってる気がするのでメモ。&lt;/p&gt;</description>
+      <description>&lt;p&gt;仮想環境を作り直す度に毎回ググってる気がするのでメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -351,7 +416,8 @@
       <pubDate>Wed, 28 Mar 2018 14:58:00 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/proceeding_to_the_capital/</guid>
-      <description>&lt;p&gt;私事ですが、数日前に田舎を抜け出し東京都民となりました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;私事ですが、数日前に田舎を抜け出し東京都民となりました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -360,7 +426,8 @@
       <pubDate>Fri, 09 Mar 2018 20:27:49 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-nem-websocket-client/</guid>
-      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でRubyを使ってNEMのWebSocketを扱う方法を書きましたが、その内容をgemとして纏めて公開しました。本記事はその紹介と使い方の説明を行います。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -369,7 +436,8 @@
       <pubDate>Wed, 07 Mar 2018 20:23:24 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/use-nem-websocket-with-ruby/</guid>
-      <description>&lt;p&gt;RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -378,7 +446,8 @@
       <pubDate>Mon, 05 Mar 2018 14:53:42 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/make-content-published-only-on-twitter-followers-with-rails/</guid>
-      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事ではOmniAuthを使ってTwitterアカウントでの認証機能をもったWebアプリを作ってみました。今回の記事ではその続きということで、認証後にTwitterのアカウントの情報を使ったWebアプリを作ってみたいと思います。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -387,7 +456,8 @@
       <pubDate>Fri, 02 Mar 2018 14:58:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/introduction-of-webapostille/</guid>
-      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;WebApostilleの紹介及び使い方等を解説します。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -397,7 +467,9 @@
       
       <guid>https://5hyn3.github.io/posts/practice-using-golang-with-travisci/</guid>
       <description>&lt;p&gt;Githubとの連携機能を使って、TravisCIでGo言語のCI環境を作りました。&lt;br /&gt;
-&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;</description>
+&lt;u&gt;&lt;a href=&#34;posts/golang-test-function-practice/&#34;&gt;こちら&lt;/a&gt;&lt;/u&gt;の記事で作成したテストを実行してみたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -407,7 +479,8 @@
       
       <guid>https://5hyn3.github.io/posts/twitter-cooperation-using-omniauth-with-rails/</guid>
       <description>&lt;p&gt;Rails5.1.5でOmniAuthを使ったTwitter連携機能を実装してみます。&lt;br /&gt;
-今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。&lt;/p&gt;</description>
+今回の記事は参考記事の追試の側面が大きいので、参考記事を見たほうが速いかもしれません。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -417,7 +490,8 @@
       
       <guid>https://5hyn3.github.io/posts/golang-test-function-practice/</guid>
       <description>&lt;p&gt;今回はGo言語のテスト機能を使ってみます。&lt;br /&gt;
-まずは&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;で紹介したソースコードをモジュール化してみます。&lt;/p&gt;</description>
+まずは&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;で紹介したソースコードをモジュール化してみます。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -426,7 +500,8 @@
       <pubDate>Fri, 16 Feb 2018 01:31:52 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-3/</guid>
-      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;/p&gt;</description>
+      <description>&lt;p&gt;今回はGo言語の機能である「goroutine」を使います。&lt;br /&gt;
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -437,7 +512,8 @@
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang-2/</guid>
       <description>&lt;p&gt;以前&lt;u&gt;&lt;a href=&#34;https://5hyn3.github.io/posts/knock-nemapi-with-golang/&#34;&gt;こちらの記事&lt;/a&gt;&lt;/u&gt;でGo言語を用いてNEMのAPIを叩きましたが、&lt;br /&gt;
 この時点では生のjsonを文字列として表示しただけでした。&lt;br /&gt;
-今回はjsonをパースし、構造体に代入する部分までを行います。&lt;/p&gt;</description>
+今回はjsonをパースし、構造体に代入する部分までを行います。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -447,7 +523,8 @@
       
       <guid>https://5hyn3.github.io/posts/knock-nemapi-with-golang/</guid>
       <description>&lt;p&gt;現在Go言語を勉強中です。&lt;br /&gt;
-一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。&lt;/p&gt;</description>
+一通り機能を学べたので、練習としてNEMのAPIを叩く簡単なコードを作成しました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -456,7 +533,8 @@
       <pubDate>Sun, 11 Feb 2018 22:20:07 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/function-of-hugo-introduced/</guid>
-      <description>&lt;p&gt;　ブログ執筆のために便利なHugoの機能を幾つか紹介します。適宜追記予定。&lt;/p&gt;</description>
+      <description>&lt;p&gt;ブログ執筆のために便利なHugoの機能を幾つか紹介します。適宜追記予定。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -465,7 +543,8 @@
       <pubDate>Tue, 26 Dec 2017 23:10:12 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/how-to-hugo/</guid>
-      <description>&lt;p&gt;　自分用メモとして、また、同じようにHugoを使ってブログを書きたい人向けに、Hugoの使い方を簡単にまとめました。なお、ブログ立ち上げについてはここでは取り扱いません。&lt;/p&gt;</description>
+      <description>&lt;p&gt;自分用メモとして、また、同じようにHugoを使ってブログを書きたい人向けに、Hugoの使い方を簡単にまとめました。なお、ブログ立ち上げについてはここでは取り扱いません。
+&lt;/p&gt;</description>
     </item>
     
     <item>

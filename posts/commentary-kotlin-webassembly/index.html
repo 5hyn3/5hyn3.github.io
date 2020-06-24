@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ls -al</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -127,6 +127,8 @@
 
     <p>kotlinを使ったWebAssemblyについて、サンプルコードの読解をしてみたいと思います。</p>
 
+<p></p>
+
 <p><u><a href="https://5hyn3.github.io/posts/prepare-kotlin-webassembly">前回</a></u>は環境構築と、その動作確認のためにサンプルコードのビルドと実行を行いました。今回はそのサンプルコードがどのように動いているのか見てみたいと思います。</p>
 
 <p>サンプルコードは<u><a href="https://github.com/ftomassetti/kotlin-wasm-examples.git">こちら</a></u></p>
@@ -146,34 +148,34 @@ cp ./build/konan/bin/wasm32/*.wasm.js web/</code></pre></div>
 <p>build.gradleの中身は以下のようになっています(後ろのコメントアウト部分は省きました)</p>
 
 <p>build.gradle</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">buildscript <span style="color:#f92672">{</span>
-    repositories <span style="color:#f92672">{</span>
-        jcenter<span style="color:#f92672">()</span>
-        maven <span style="color:#f92672">{</span> url <span style="color:#e6db74">&#34;http://kotlin.bintray.com/kotlinx&#34;</span> <span style="color:#f92672">}</span>
-        maven <span style="color:#f92672">{</span> url <span style="color:#e6db74">&#34;https://plugins.gradle.org/m2/&#34;</span> <span style="color:#f92672">}</span>
-        maven <span style="color:#f92672">{</span> url <span style="color:#e6db74">&#34;https://dl.bintray.com/jetbrains/kotlin-native-dependencies&#34;</span> <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-    dependencies <span style="color:#f92672">{</span>
-        classpath <span style="color:#e6db74">&#34;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&#34;</span>
-        classpath <span style="color:#e6db74">&#34;com.moowork.gradle:gradle-node-plugin:$gradle_node_version&#34;</span>
-        classpath <span style="color:#e6db74">&#34;org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version&#34;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">buildscript {
+    repositories {
+        jcenter()
+        maven { url &#34;http://kotlin.bintray.com/kotlinx&#34; }
+        maven { url &#34;https://plugins.gradle.org/m2/&#34; }
+        maven { url &#34;https://dl.bintray.com/jetbrains/kotlin-native-dependencies&#34; }
+    }
+    dependencies {
+        classpath &#34;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&#34;
+        classpath &#34;com.moowork.gradle:gradle-node-plugin:$gradle_node_version&#34;
+        classpath &#34;org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version&#34;
+    }
+}
 
-apply plugin: <span style="color:#e6db74">&#39;konan&#39;</span>
+apply plugin: &#39;konan&#39;
 
 
-konanArtifacts <span style="color:#f92672">{</span>
+konanArtifacts {
     
-    <span style="color:#75715e">// This artifact will be built only for Linux and Wasm32
-</span><span style="color:#75715e"></span>    program<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;stats&#39;</span><span style="color:#f92672">,</span> targets: <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;wasm32&#39;</span><span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-         srcDir <span style="color:#e6db74">&#39;src/main/kotlin&#39;</span>        
-         libraries <span style="color:#f92672">{</span>
-             useRepo <span style="color:#e6db74">&#39;lib&#39;</span>
-             klib <span style="color:#e6db74">&#39;dom&#39;</span>
-         <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
+    // This artifact will be built only for Linux and Wasm32
+    program(&#39;stats&#39;, targets: [&#39;wasm32&#39;]) {
+         srcDir &#39;src/main/kotlin&#39;        
+         libraries {
+             useRepo &#39;lib&#39;
+             klib &#39;dom&#39;
+         }
+    }
+}</code></pre></div>
 <p>　通常のgradleと同じように依存関係を記述しています。konanArtifactsの中でプログラムの名前(&lsquo;stats&rsquo;)とビルドのターゲット(wasm32)が指定され、そのソースの位置と使用するライブラリが定義されています。</p>
 
 <hr />
@@ -294,11 +296,9 @@ konanArtifacts <span style="color:#f92672">{</span>
     }).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">arraybuffer</span>) {
         <span style="color:#a6e22e">instantiateAndRun</span>(<span style="color:#a6e22e">arraybuffer</span>, [<span style="color:#a6e22e">filename</span>]);
     });
-<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-</code></pre></div>
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span></code></pre></div>
 <p>./stats.wasm.jsはビルドすると生成されるファイルです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">konan</span>.<span style="color:#a6e22e">libraries</span>.<span style="color:#a6e22e">push</span>({<span style="color:#e6db74">&#34;imported_igotdata&#34;</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">msg</span>){ <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;I got the data, updating&#34;</span>);}})
-</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">konan</span>.<span style="color:#a6e22e">libraries</span>.<span style="color:#a6e22e">push</span>({<span style="color:#e6db74">&#34;imported_igotdata&#34;</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">msg</span>){ <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;I got the data, updating&#34;</span>);}})</code></pre></div>
 <p>ここでmodel.ktで外部に公開していたimported_igotdataが登場します。wasm側でigotdata()が実行される度に、こちらでアラートが実行されます。</p>
 
 <h1 id="おわりに">おわりに</h1>

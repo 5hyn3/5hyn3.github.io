@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ls -al</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.53" />
+    <meta name="author" content="shyne"> <meta name="generator" content="Hugo 0.30.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -134,7 +134,8 @@
 </aside>
     
 
-    <p>RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。</p>
+    <p>RailsでNEMのアプリを作ろうとしたとき、RubyでWebSocketを扱った前例が無かったので調査しました。うまくWebSocketを扱うことに成功したので、その解説なども交えて説明します。
+</p>
 
 <h2 id="websocketとは">WebSocketとは</h2>
 
@@ -190,10 +191,10 @@ require <span style="color:#e6db74">&#39;securerandom&#39;</span>
 
 host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://alice3.nem.ninja&#34;</span>
 port <span style="color:#f92672">=</span> <span style="color:#ae81ff">7778</span>
-path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/w/messages/&#34;</span>
-server <span style="color:#f92672">=</span> format(<span style="color:#e6db74">&#34;%0</span><span style="color:#e6db74">#{</span><span style="color:#ae81ff">3</span><span style="color:#e6db74">}</span><span style="color:#e6db74">d&#34;</span>, <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>random_number(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">3</span>))
+<span style="color:#f92672"></span>path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/w/messages/&#34;</span>
+server <span style="color:#f92672">=</span> format(<span style="color:#e6db74">&#34;%0</span><span style="color:#e6db74">#{</span><span style="color:#ae81ff">3</span><span style="color:#f92672"></span><span style="color:#e6db74">}</span><span style="color:#e6db74">d&#34;</span>, <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>random_number(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">3</span><span style="color:#f92672"></span>))
 strings <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>(<span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">..</span><span style="color:#e6db74">&#39;z&#39;</span>), (<span style="color:#e6db74">&#39;0&#39;</span><span style="color:#f92672">..</span><span style="color:#e6db74">&#39;5&#39;</span>)<span style="color:#f92672">].</span>map { <span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> i<span style="color:#f92672">.</span>to_a }<span style="color:#f92672">.</span>flatten
-session <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">...</span><span style="color:#ae81ff">8</span>)<span style="color:#f92672">.</span>map { strings<span style="color:#f92672">[</span>rand(strings<span style="color:#f92672">.</span>length)<span style="color:#f92672">]</span> }<span style="color:#f92672">.</span>join
+session <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">...</span><span style="color:#ae81ff">8</span><span style="color:#f92672"></span>)<span style="color:#f92672">.</span>map { strings<span style="color:#f92672">[</span>rand(strings<span style="color:#f92672">.</span>length)<span style="color:#f92672">]</span> }<span style="color:#f92672">.</span>join
 
 endpoint <span style="color:#f92672">=</span> host <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> port<span style="color:#f92672">.</span>to_s <span style="color:#f92672">+</span> path <span style="color:#f92672">+</span> server<span style="color:#f92672">.</span>to_s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span>session <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/websocket/&#34;</span>
 
@@ -214,8 +215,8 @@ ws<span style="color:#f92672">.</span>on <span style="color:#e6db74">:message</s
   <span style="color:#66d9ef">end</span>
   <span style="color:#66d9ef">if</span> msg<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;a&#34;</span>
     data <span style="color:#f92672">=</span> msg<span style="color:#f92672">.</span>data
-    data<span style="color:#f92672">.</span>slice!(<span style="color:#ae81ff">0</span>,data<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#34;[&#34;</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)
-    data<span style="color:#f92672">.</span>slice!(data<span style="color:#f92672">.</span>rindex(<span style="color:#e6db74">&#34;]&#34;</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,data<span style="color:#f92672">.</span>length)
+    data<span style="color:#f92672">.</span>slice!(<span style="color:#ae81ff">0</span><span style="color:#f92672"></span>,data<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#34;[&#34;</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#f92672"></span>)
+    data<span style="color:#f92672">.</span>slice!(data<span style="color:#f92672">.</span>rindex(<span style="color:#e6db74">&#34;]&#34;</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672"></span>,data<span style="color:#f92672">.</span>length)
     data<span style="color:#f92672">.</span>gsub!(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">n&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
     data<span style="color:#f92672">.</span>gsub!(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">r&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>)
     data<span style="color:#f92672">.</span>gsub!(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">/&#34;</span>,<span style="color:#e6db74">&#34;\/&#34;</span>)

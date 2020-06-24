@@ -18,7 +18,9 @@
       <pubDate>Mon, 23 Apr 2018 01:41:56 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/gas-return-jsonp/</guid>
-      <description>&lt;p&gt;GASでJSONPを返す方法を調べたのでここにメモします。&lt;/p&gt;</description>
+      <description>&lt;p&gt;GASでJSONPを返す方法を調べたのでここにメモします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +29,8 @@
       <pubDate>Thu, 19 Apr 2018 01:47:18 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/gas-daily-report-bot/</guid>
-      <description>&lt;p&gt;日報を書くことはとても大切です。しかし同時にそれはとても面倒なことでもあります。継続しなければいけないけれども面倒なタスク。そんなものはテクノロジーの力を借りて効率化しちゃいましょう！ということで、GASを使って日報作成を支援してくれるbotを作りました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;日報を書くことはとても大切です。しかし同時にそれはとても面倒なことでもあります。継続しなければいけないけれども面倒なタスク。そんなものはテクノロジーの力を借りて効率化しちゃいましょう！ということで、GASを使って日報作成を支援してくれるbotを作りました。
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +48,9 @@
       <pubDate>Mon, 09 Apr 2018 01:21:29 +0900</pubDate>
       
       <guid>https://5hyn3.github.io/posts/use-spreadsheets-from-gas-without-thinking-about-difficulties/</guid>
-      <description>&lt;p&gt;最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近GASを勉強しています。GAS、良いですね。サーバーレスで運用が必要でないお手軽さに、Spreadsheetを使ってステートフルなアプリも作れる。アイデア次第で色々できそうです。今回はそんなGASからSpreadsheetを手軽に扱うメソッド群を紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
